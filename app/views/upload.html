@@ -1,0 +1,208 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+
+C110a - Documents
+{% endblock %}
+
+{% block content %}
+
+
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-full column-minimum"><div class="temp-notification"> </div>
+
+      <div class="phase-banner">
+        <p>
+          <strong class="phase-tag">ALPHA</strong>
+          <span>This is a new service – your <a href="#">feedback</a> will help us to improve it.</span>
+        </p>
+      </div>
+
+<a href="javascript: history.go(-1)" class="link-back">Back</a>
+
+{% if data['change'] == "true" %}
+  <form action="-c110a-review">
+
+{% else %}
+
+  <form action="-c110a">
+{% endif %}
+   <h1 class="heading-large"> Annex Documents</h1>
+<p> The documents specified in this annex must be uploaded with the application if available. If any relevant document is not  uploaded with the application, the reason and any expected date of  filing must be stated. If you are using <a href="http://adcs.org.uk/care/article/SWET" target="_blank">SWET(Social Work Evidence Template) </a>you can upload SWET instead of the below documents by clicking on the "Upload other doucments" button at the bottom.</p>
+
+
+
+			   <h2 class="heading-medium">  1. Social Work Chronology</h2>
+
+			<div class="form-group">
+  <label class="form-label" for="file-input">
+    Upload a file
+  </label>
+  <input type="file" id="file-input">
+</div>
+
+
+       <div class="panel">
+        <div class="multiple-choice">
+          <input id="ammex-d-01" name="ammex-documents-01" type="radio" value="attached">
+          <label for="Interim-supervision-order">attached</label>
+        </div>
+
+
+        <div class="multiple-choice" data-target="others-2">
+          <input id="ammex-d-01" name="ammex-documents-01" type="radio" value="to-follow">
+          <label for="Others">to follow</label>
+        </div>
+        <div class="panel panel-border-narrow js-hidden" id="others-2">
+          <label class="form-label" for="other-2">Please give reasons why not included and the date when the document will be sent to the court. </label>
+          <textarea class="form-control" type="text" id="other-2y" name="other-2"></textarea>
+        </div>
+			</div><hr />
+				   <h2 class="heading-medium">  2. Social Work Statement and genogram
+</h2>
+						<div class="form-group">
+  <label class="form-label" for="file-input">
+    Upload a file
+  </label>
+  <input type="file" id="file-input">
+</div>
+		 <div class="panel">
+        <div class="multiple-choice">
+          <input id="ammex-d-01" name="ammex-documents-01" type="radio" value="attached">
+          <label for="Interim-supervision-order">attached</label>
+        </div>
+
+
+        <div class="multiple-choice" data-target="others-2">
+          <input id="ammex-d-01" name="ammex-documents-01" type="radio" value="to-follow">
+          <label for="Others">to follow</label>
+        </div>
+        <div class="panel panel-border-narrow js-hidden" id="others-2">
+          <label class="form-label" for="other-2">Please give reasons why not included and the date when the document will be sent to the court. </label>
+          <textarea class="form-control" type="text" id="other-2y" name="other-2"></textarea>
+        </div>
+			</div>	<hr />
+				   <h2 class="heading-medium">  3. The current assessment relating to the child and/or the family and friends of the child to which the Social Work Statement refers and on which the local authority relies
+</h2><div class="form-group">
+  <label class="form-label" for="file-input">
+    Upload a file
+  </label>
+  <input type="file" id="file-input">
+</div>
+			 <div class="panel">
+        <div class="multiple-choice">
+          <input id="ammex-d-01" name="ammex-documents-01" type="radio" value="attached">
+          <label for="Interim-supervision-order">attached</label>
+        </div>
+
+
+        <div class="multiple-choice" data-target="others-2">
+          <input id="ammex-d-01" name="ammex-documents-01" type="radio" value="to-follow">
+          <label for="Others">to follow</label>
+        </div>
+        <div class="panel panel-border-narrow js-hidden" id="others-2">
+          <label class="form-label" for="other-2">Please give reasons why not included and the date when the document will be sent to the court. </label>
+          <textarea class="form-control" type="text" id="other-2y" name="other-2"></textarea>
+        </div>
+			</div>
+
+			<hr />
+				   <h2 class="heading-medium">  4. Care plan
+</h2>
+						<div class="form-group">
+  <label class="form-label" for="file-input">
+    Upload a file
+  </label>
+  <input type="file" id="file-input">
+</div>
+
+			 <div class="panel">
+        <div class="multiple-choice">
+          <input id="ammex-d-01" name="ammex-documents-01" type="radio" value="attached">
+          <label for="Interim-supervision-order">attached</label>
+        </div>
+
+
+        <div class="multiple-choice" data-target="others-2">
+          <input id="ammex-d-01" name="ammex-documents-01" type="radio" value="to-follow">
+          <label for="Others">to follow</label>
+        </div>
+        <div class="panel panel-border-narrow js-hidden" id="others-2">
+          <label class="form-label" for="other-2">Please give reasons why not included and the date when the document will be sent to the court. </label>
+          <textarea class="form-control" type="text" id="other-2y" name="other-2"></textarea>
+        </div>
+			</div>
+		<!--Add extra documents-->	<script>
+
+
+var counter = 1;
+
+var limit = 5;
+
+function addInput(divName){
+
+     if (counter == limit)  {
+          alert("You have reached the limit of adding " + counter + " inputs");
+
+     }
+
+     else {
+
+          var newdiv = document.createElement('div');
+
+          newdiv.innerHTML =  "<div class='form-group'><label class='form-label' for='child-1-full-name'>Document title<span class='form-hint'>Example: SWET</span></label><input type='text' class='form-control' id='document title' name='document-title'></div><div class='form-group'></div><div class='form-group'><label class='form-label' for='file-input'>Upload a file</label><input type='file' id='file-input'>";
+
+          document.getElementById(divName).appendChild(newdiv);
+
+
+
+
+          counter++;
+
+     }
+
+}
+
+
+</script>
+			<hr /><!--<form method="POST">-->
+     <div id="dynamicInput">
+         <!-- Entry 1<br><input type="text" name="myInputs[]">-->
+
+     </div>
+     <input type="button" class="button" value="Upload other documents" onClick="addInput('dynamicInput');">
+
+
+
+<br/><hr/>
+
+
+		<input class="button" type="submit" value="Save ">
+
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}

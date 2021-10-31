@@ -1,0 +1,152 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+<div class="govuk-phase-banner" style="margin:-50px 0 30px 0" >
+
+
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">
+      Provide copies of documents to show you are entitled to tax relief
+        <!-- <span class="govuk-caption-xl">{{releaseVersion}}</span> -->
+      </h1>
+      <div class="govuk-inset-text">
+You can provide any 2 of the following documents.
+  </div>
+
+  <form action="-child-tax">
+
+
+    <h2 class="govuk-heading-m">Provide your tax credit claim details</h2>
+
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="file-upload-1">
+              Upload a file
+            </label>
+            <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
+          </div>
+
+<h2 class="govuk-heading-m">Provide your P60</h2>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="file-upload-1">
+          Upload a file
+        </label>
+        <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
+      </div>
+
+
+
+      <h2 class="govuk-heading-m">Provide one of your 3 most recent payslips</h2>
+
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="file-upload-1">
+                Upload a file
+              </label>
+              <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
+            </div>
+
+            <h2 class="govuk-heading-m">Provide your UK passport details</h2>
+
+                  <div class="govuk-form-group">
+                    <label class="govuk-label" for="file-upload-1">
+                      Upload a file
+                    </label>
+                    <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
+                  </div>
+
+                  <h2 class="govuk-heading-m">Provide information held on your credit file (such as loans, credit cards or mortgages)</h2>
+
+                        <div class="govuk-form-group">
+                          <label class="govuk-label" for="file-upload-1">
+                            Upload a file
+                          </label>
+                          <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
+                        </div>
+
+                        <h2 class="govuk-heading-m">Provide details from your Self Assessment tax return (in the last 3 years)</h2>
+
+                              <div class="govuk-form-group">
+                                <label class="govuk-label" for="file-upload-1">
+                                  Upload a file
+                                </label>
+                                <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
+                              </div>
+
+                              <h2 class="govuk-heading-m">Provide your Northern Ireland driving licence</h2>
+
+                                    <div class="govuk-form-group">
+                                      <label class="govuk-label" for="file-upload-1">
+                                        Upload a file
+                                      </label>
+                                      <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
+                                    </div>
+
+                  <!--Add extra documents-->	<script>
+
+
+              var counter = 1;
+
+              var limit = 5;
+
+              function addInput(divName){
+
+                   if (counter == limit)  {
+                        alert("You have reached the limit of adding " + counter + " inputs");
+
+                   }
+
+                   else {
+
+                        var newdiv = document.createElement('div');
+
+                        newdiv.innerHTML =  "<div class='govuk-form-group'><label class='govuk-label' for='child-1-full-name'>Document title<span class='govuk-hint'> For example, P60</span></label><input type='text' class='govuk-input govuk-input--width-20'  id='document title' name='document-title'></div><div class='form-group'></div><div class='form-group'><label class='govuk-label' for='file-input'>Upload a file</label><input type='file' id='file-input'>";
+
+                        document.getElementById(divName).appendChild(newdiv);
+
+
+
+
+                        counter++;
+
+                   }
+
+              }
+
+
+              </script>
+              			<hr /><!--<form method="POST">-->
+                   <div id="dynamicInput">
+                       <!-- Entry 1<br><input type="text" name="myInputs[]">-->
+
+                   </div>
+                   <br/>
+                   <input type="button" class="govuk-button" value="Upload other documents" onClick="addInput('dynamicInput');">
+
+
+<br/>
+
+
+            <button class="govuk-button" data-module="govuk-button">
+              Save and continue
+            </button>
+
+            </form>
+    </div>
+  </div>
+
+{% endblock %}

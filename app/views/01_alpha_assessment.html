@@ -1,0 +1,602 @@
+
+{% extends "layout_unbranded.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds govuk-grid-column-full">
+      <!-- <h1 class="page-header" style="font-size: 2.42em;  font-family: Arial; font-weight:bold;">
+      Alpha assessment by criteria
+
+      </h1>
+      <!-- {{releaseVersion | log }} -->
+      <span class="govuk-caption-m">Information and documents to support</span>
+      <h1 class="govuk-heading-l">    Alpha assessment by criteria</h1>
+
+
+
+
+
+
+      <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-with-summary-sections">
+        <div class="govuk-accordion__section ">
+          <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading">
+              <span class="govuk-accordion__section-button" id="accordion-with-summary-sections-heading-1">
+              Service descirption
+              </span>
+            </h2>
+            <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-1">
+              Find a solution to your employment dispute
+            </div>
+          </div>
+          <div id="accordion-with-summary-sections-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-with-summary-sections-heading-1">
+      <p>Use this service to start the legal process in which you tell Acas that:</p>
+
+            <ul class="govuk-list govuk-list--bullet">
+              <li>
+              you have a dispute with your employer
+              </li>
+              <li>
+              you intend to make a claim to an employment tribunal
+              </li>
+
+            </ul>
+          </div>
+        </div>
+        <div class="govuk-accordion__section ">
+          <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading">
+              <span class="govuk-accordion__section-button" id="accordion-with-summary-sections-heading-2">
+                Service users
+              </span>
+            </h2>
+            <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-2">
+            Claimant and Conciliator.
+            </div>
+          </div>
+          <div id="accordion-with-summary-sections-content-2" class="govuk-accordion__section-content" aria-labelledby="accordion-with-summary-sections-heading-2">
+              <ol class="govuk-list govuk-list--number">
+            <li>  As a claimant I need to understand what information I need to provide so that a concialiator can effectively handle my case</li>
+            <li>  As a conciliator I need parties to provide correct legal and representation details (e.g. legal identity of employer, own details, representation details), so that I can avoid jeopardising their case, progress the case swiftly and reduce the risk of running out of time </li>
+
+            </ol>
+
+          </div>
+        </div>
+        <div class="govuk-accordion__section ">
+          <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading">
+              <span class="govuk-accordion__section-button" id="accordion-with-summary-sections-heading-3">
+                1. Understand users and their needs
+              </span>
+            </h2>
+            <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-3">
+               User needs, personas, pain points, accessibility needs and opportunities.
+            </div>
+          </div>
+          <div id="accordion-with-summary-sections-content-3" class="govuk-accordion__section-content" aria-labelledby="accordion-with-summary-sections-heading-3">
+            <ul class="govuk-list govuk-list--bullet">
+
+              <li>A discovery was completed in Spring 2021 to map the entire end to end service. The discovery has resulted in a programme of work to transform the individual dispute resolution service, incuding the notification element which can be found at <a class="govuk-link" href="https://tell.acas.org.uk"> https://tell.acas.org.uk</a>.
+              You can read the discovery report here  <a class="govuk-link" href="https://www.acas.org.uk/sites/default/files/2021-07/IDR%20Discovery%20-%20Final%20Report%202021_1.pdf" target="_blank"> https://www.acas.org.uk/sites/default/files/2021-07/IDR%20Discovery%20-%20Final%20Report%202021_1.pdf</a>
+              </li>
+              <li>
+              <strong>Users</strong> - Who the users are and what they need to do
+
+
+
+                <ol class="govuk-list govuk-list--number">
+                <li>  As a <strong>claimant</strong> I need to understand what information I need to provide so that a concialiator can effectively handle my case</li>
+                <li>  As a <strong>conciliator</strong>  I need parties to provide correct legal and representation details (e.g. legal identity of employer, own details, representation details), so that I can avoid jeopardising their case, progress the case swiftly and reduce the risk of running out of time </li>
+
+                </ol>
+
+              </li>
+              <li>
+                <a class="govuk-link" href="#">User needs and User stories</a>
+              </li>
+              <li>
+                <a class="govuk-link" href="#"> Personas for their user types, highlighting: roles, pain points and digital proficiency</a>
+              </li>
+              <li>
+                <a class="govuk-link" href="#">Accessibility needs</a>,
+                <a class="govuk-link" href="#">audit</a> and
+                <a class="govuk-link" href="#"> plans for Beta</a>
+              </li>
+              <li>
+                <a class="govuk-link" href="#">Assissted digital </a>
+
+
+              </li>
+              <li>
+                <a class="govuk-link" href="#">AS-IS and TO-BE Service Blue prints</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="govuk-accordion__section ">
+          <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading">
+              <span class="govuk-accordion__section-button" id="accordion-with-summary-sections-heading-4">
+                2. Solve a whole problem for users
+              </span>
+            </h2>
+            <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-4">
+              How the service intends to solve one whole problem for users, collaborating across organisational boundaries where necessary.
+            </div>
+          </div>
+          <div id="accordion-with-summary-sections-content-4" class="govuk-accordion__section-content" aria-labelledby="accordion-with-summary-sections-heading-4">
+            <ul class="govuk-list">
+              <li>
+
+<h3>Problem to be solved </h3>
+
+<p>
+    Offer our users the simplest and most accessible journey to help them resolve their employment dispute at the earliest point possible, and ensure that they experience a high-quality, value-added service that leads to an appropriate outcome for their case.</p>
+
+  <p>Explore targeted microguidance and other notification form interventions that will help users notify successfully, reduce invalid or out of time cases and improve the quality of the information provided to conciliators to help them resolve cases faster and more often. </p>
+              </li>
+              <li>
+                <a class="govuk-link" href="#">Clear and actionable pain points </a>
+              </li>
+
+              <li>
+                <a class="govuk-link" href="#">How we are collaborating across organisational boundaries?</a>
+              </li>
+              <li>
+                <a class="govuk-link" href="#">Plans for Beta</a>
+              </li>
+              <li>
+                <a class="govuk-link" href="#">Retiring your service</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+
+<!-- start accordion  -->
+
+  <div class="govuk-accordion__section ">
+   <div class="govuk-accordion__section-header">
+     <h2 class="govuk-accordion__section-heading">
+       <span class="govuk-accordion__section-button" id="accordion-with-summary-sections-heading-3">
+         3. Provide a joined-up experience across all channels
+       </span>
+     </h2>
+     <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-3">
+       How we intend to meet users’ needs across all channels, including online, phone, paper and face to face.
+     </div>
+   </div>
+   <div id="accordion-with-summary-sections-content-3" class="govuk-accordion__section-content" aria-labelledby="accordion-with-summary-sections-heading-3">
+     <ul class="govuk-list">
+       <li>
+         <a class="govuk-link" href="#">Assissted digital </a>
+       </li>
+       <li>
+         <a class="govuk-link" href="#">Plans for Beta </a>
+       </li>
+
+     </ul>
+   </div>
+ </div>
+
+ <!-- close accordion  -->
+
+ <!-- start accordion  -->
+
+   <div class="govuk-accordion__section ">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-with-summary-sections-heading-3">
+          4. Make the service simple to use
+        </span>
+      </h2>
+      <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-3">
+        How we are building a service that’s simple, intuitive and comprehensible. And test it with users to make sure it works for them.
+      </div>
+    </div>
+    <div id="accordion-with-summary-sections-content-3" class="govuk-accordion__section-content" aria-labelledby="accordion-with-summary-sections-heading-3">
+      <ul class="govuk-list">
+        <li>
+          <a class="govuk-link" href="#">How are we going to make the service simple to use</a>
+        </li>
+        <li>
+          <a class="govuk-link" href="#">Plans for Beta </a>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+
+  <!-- close accordion  -->
+
+  <!-- start accordion  -->
+
+    <div class="govuk-accordion__section ">
+     <div class="govuk-accordion__section-header">
+       <h2 class="govuk-accordion__section-heading">
+         <span class="govuk-accordion__section-button" id="accordion-with-summary-sections-heading-3">
+        5. Make sure everyone can use the service
+         </span>
+       </h2>
+       <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-3">
+         How we will meet accessibility standards, not exclude any users and plans for Assissted digtal
+       </div>
+     </div>
+     <div id="accordion-with-summary-sections-content-3" class="govuk-accordion__section-content" aria-labelledby="accordion-with-summary-sections-heading-3">
+       <ul class="govuk-list">
+         <li>
+           <a class="govuk-link" href="#">How are we going to make the service simple to use</a>
+         </li>
+         <li>
+           <a class="govuk-link" href="#">Plans for Beta </a>
+         </li>
+
+       </ul>
+     </div>
+   </div>
+
+   <!-- close accordion  -->
+
+   <!-- start accordion  -->
+
+     <div class="govuk-accordion__section ">
+      <div class="govuk-accordion__section-header">
+        <h2 class="govuk-accordion__section-heading">
+          <span class="govuk-accordion__section-button" id="accordion-with-summary-sections-heading-3">
+
+  6. Have a multidisciplinary team
+          </span>
+        </h2>
+        <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-3">
+        Below is our  multidisciplinary team that will create and operate the service in a sustainable way
+        </div>
+      </div>
+      <div id="accordion-with-summary-sections-content-3" class="govuk-accordion__section-content" aria-labelledby="accordion-with-summary-sections-heading-3">
+        <ul class="govuk-list govuk-list--bullet">
+          <li>
+            Service owner - Kate McCaul
+          </li>
+          <li>
+            Product manager - Samantha Clark and/or Stewart Gee
+          </li>
+
+          <li>
+            Delivery manager - Luke Harrop
+          </li>
+
+          <li>
+            Lead user researcher - Oyindamola Asekun
+          </li>
+
+          <li>
+            User researcher - Nick Underwood
+          </li>
+          <li>
+            User researcher - Lydia Chu
+          </li>
+          <li>
+          Content designer -
+          </li>
+          <li>
+            Service designer - Mark Harrop
+          </li>
+          <li>
+          Interaction designer - Sunil Kathare
+          </li>
+
+          <li>
+          Interaction designer - Jon
+          </li>
+
+          <li>
+            Accessibility Lead -
+          </li>
+
+          <li>
+          Assissted digtal Lead -
+          </li>
+          <li>
+            Front-end developer - Ben Evans
+          </li>
+          <li>
+            Back-end developer - Szilvia Beky
+          </li>
+          <li>
+            Solutions Architect - Ed Brown
+          </li>
+          <li>
+            Tech Lead and Agile (scrum) specialist - Laurent Hautefeuille
+          </li>
+          <li>
+            DevOps Specialist -  Robert Bolfa
+          </li>
+
+          <li>
+            <a class="govuk-link" href="#">Plans for Beta </a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+
+    <!-- close accordion  -->
+
+
+    <!-- start accordion  -->
+
+      <div class="govuk-accordion__section ">
+       <div class="govuk-accordion__section-header">
+         <h2 class="govuk-accordion__section-heading">
+           <span class="govuk-accordion__section-button" id="accordion-with-summary-sections-heading-3">
+      7.  Use agile ways of working
+           </span>
+         </h2>
+         <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-3">
+           Create the service using agile, iterative user-centred methods.
+         </div>
+       </div>
+       <div id="accordion-with-summary-sections-content-3" class="govuk-accordion__section-content" aria-labelledby="accordion-with-summary-sections-heading-3">
+         <ul class="govuk-list  govuk-list--bullet"">
+           <li>
+             use agile ways of working - inspecting, learning and adapting as they go
+           </li>
+
+           <li>
+             <a class="govuk-link" href="#">Our process  </a>
+           </li>
+           <li>
+             <a class="govuk-link" href="#">Plans for Beta </a>
+           </li>
+
+         </ul>
+       </div>
+     </div>
+
+     <!-- close accordion  -->
+     <!-- start accordion  -->
+
+       <div class="govuk-accordion__section ">
+        <div class="govuk-accordion__section-header">
+          <h2 class="govuk-accordion__section-heading">
+            <span class="govuk-accordion__section-button" id="accordion-with-summary-sections-heading-3">
+    8. Iterate and improve frequently
+            </span>
+          </h2>
+          <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-3">
+            How we are working with our organisation to make sure that we’re able to focus on improvements that have the most value.
+          </div>
+        </div>
+        <div id="accordion-with-summary-sections-content-3" class="govuk-accordion__section-content" aria-labelledby="accordion-with-summary-sections-heading-3">
+          <ul class="govuk-list  govuk-list--bullet"">
+            <li>
+            How we are making continuous improvement to respond to changes in user needs, technology or government policy throughout the lifetime of the service.
+            </li>
+
+            <li>
+              <a class="govuk-link" href="#">Our process  </a>
+            </li>
+            <li>
+              <a class="govuk-link" href="#">Plans for Beta </a>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+
+      <!-- close accordion  -->
+
+      <!-- start accordion  -->
+
+        <div class="govuk-accordion__section ">
+         <div class="govuk-accordion__section-header">
+           <h2 class="govuk-accordion__section-heading">
+             <span class="govuk-accordion__section-button" id="accordion-with-summary-sections-heading-3">
+     9. Create a secure service which protects users’ privacy
+             </span>
+           </h2>
+           <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-3">
+             How we intend to evaluate data the service will be collecting, storing and providing.
+         </div>
+         <div id="accordion-with-summary-sections-content-3" class="govuk-accordion__section-content" aria-labelledby="accordion-with-summary-sections-heading-3">
+           <ul class="govuk-list  govuk-list--bullet"">
+             <li>
+            actively identify security and privacy threats to the service, and have a robust, proportionate approach to securing information and managing fraud risks.
+             </li>
+
+             <li>
+               <a class="govuk-link" href="#">have a plan and budget that lets them manage security during the life of the service (for example by responding to new threats, putting controls in place and applying security patches to software) </a>
+             </li>
+             <li>
+               <a class="govuk-link" href="#">Plans for Beta </a>
+             </li>
+
+           </ul>
+         </div>
+       </div>
+
+       <!-- close accordion  -->
+
+       <!-- start accordion  -->
+
+         <div class="govuk-accordion__section ">
+          <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading">
+              <span class="govuk-accordion__section-button" id="accordion-with-summary-sections-heading-3">
+    10. Define what success looks like and publish performance data
+              </span>
+            </h2>
+            <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-3">
+              What success looks like for our service and metrics which will tell what’s working and what can be improved, combined with user research.
+          </div>
+          <div id="accordion-with-summary-sections-content-3" class="govuk-accordion__section-content" aria-labelledby="accordion-with-summary-sections-heading-3">
+            <ul class="govuk-list  govuk-list--bullet"">
+              <li>
+            identify metrics which will indicate how well the service is solving the problem it’s meant to solve, and track performance against them
+              </li>
+
+              <li>
+                use performance data to make decisions about how to fix problems and improve the service
+              </li>
+              <li>
+                <a class="govuk-link" href="#">Plans for Beta </a>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+
+        <!-- close accordion  -->
+
+
+        <!-- start accordion  -->
+
+          <div class="govuk-accordion__section ">
+           <div class="govuk-accordion__section-header">
+             <h2 class="govuk-accordion__section-heading">
+               <span class="govuk-accordion__section-button" id="accordion-with-summary-sections-heading-3">
+      11. Choose the right tools and technology
+               </span>
+             </h2>
+             <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-3">
+               Tools and technology that we are using tocreate a high quality service in a cost effective way
+           </div>
+           <div id="accordion-with-summary-sections-content-3" class="govuk-accordion__section-content" aria-labelledby="accordion-with-summary-sections-heading-3">
+             <ul class="govuk-list  govuk-list--bullet"">
+               <li>
+            list tools and technologies to create and operate a good service in a cost effective way - for example, by automating things where possible
+               </li>
+
+               <li>
+                 effective approach to managing any legacy technology the service integrates with or depends on
+               </li>
+               <li>
+                 <a class="govuk-link" href="#">Plans for Beta </a>
+               </li>
+
+             </ul>
+           </div>
+         </div>
+
+         <!-- close accordion  -->
+
+         <!-- start accordion  -->
+
+           <div class="govuk-accordion__section ">
+            <div class="govuk-accordion__section-header">
+              <h2 class="govuk-accordion__section-heading">
+                <span class="govuk-accordion__section-button" id="accordion-with-summary-sections-heading-3">
+      12. Make new source code open
+                </span>
+              </h2>
+              <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-3">
+              How we will make all new source code open and reusable, and publish it under appropriate licences
+            </div>
+            <div id="accordion-with-summary-sections-content-3" class="govuk-accordion__section-content" aria-labelledby="accordion-with-summary-sections-heading-3">
+              <ul class="govuk-list  govuk-list--bullet"">
+                <li>
+             write code in the open from the start, and publish it in an open repository - minus any sensitive information, like secret keys and credentials
+                </li>
+
+                <li>
+                  keep ownership of the intellectual property of new source code that’s created as part of the service, and make it available for reuse under an open licence
+                </li>
+                <li>
+                  <a class="govuk-link" href="#">Plans for Beta </a>
+                </li>
+
+              </ul>
+            </div>
+          </div>
+
+          <!-- close accordion  -->
+
+          <!-- start accordion  -->
+
+            <div class="govuk-accordion__section ">
+             <div class="govuk-accordion__section-header">
+               <h2 class="govuk-accordion__section-heading">
+                 <span class="govuk-accordion__section-button" id="accordion-with-summary-sections-heading-3">
+       13. Use and contribute to open standards, common components and patterns
+                 </span>
+               </h2>
+               <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-3">
+               How we will build on open standards and common components and patterns from inside and outside government
+             </div>
+             <div id="accordion-with-summary-sections-content-3" class="govuk-accordion__section-content" aria-labelledby="accordion-with-summary-sections-heading-3">
+               <ul class="govuk-list  govuk-list--bullet"">
+                 <li>
+              use open standards, and propose a new open standard if there is not one that already meets their needs
+                 </li>
+
+                 <li>
+                use standard government technology components where possible
+                 </li>
+                 <li>
+                   <a class="govuk-link" href="#">Plans for Beta </a>
+                 </li>
+
+               </ul>
+             </div>
+           </div>
+
+           <!-- close accordion  -->
+
+           <!-- start accordion  -->
+
+             <div class="govuk-accordion__section ">
+              <div class="govuk-accordion__section-header">
+                <h2 class="govuk-accordion__section-heading">
+                  <span class="govuk-accordion__section-button" id="accordion-with-summary-sections-heading-3">
+        14. Operate a reliable service
+                  </span>
+                </h2>
+                <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-3">
+                How we intend to minimise service downtime and our plan to deal with it when it does happen.
+              </div>
+              <div id="accordion-with-summary-sections-content-3" class="govuk-accordion__section-content" aria-labelledby="accordion-with-summary-sections-heading-3">
+                <ul class="govuk-list  govuk-list--bullet"">
+                  <li>
+            <a class="govuk-link" href="#">  Things we do to maximise uptime and speed of response for the online part of the service</a>
+                  </li>
+
+                  <li>
+                 How we will carry out quality assurance testing regularly
+                  </li>
+                  <li>
+                    <a class="govuk-link" href="#">Plans for Beta </a>
+                  </li>
+
+                </ul>
+              </div>
+            </div>
+
+            <!-- close accordion  -->
+
+
+
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+
+{% endblock %}

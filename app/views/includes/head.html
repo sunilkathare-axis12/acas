@@ -1,0 +1,13 @@
+<!--[if lte IE 8]><link href="/public/stylesheets/application-ie8.css" rel="stylesheet" type="text/css" /><![endif]-->
+<!--[if gt IE 8]><!--><link href="/public/stylesheets/application.css" media="all" rel="stylesheet" type="text/css" /><!--<![endif]-->
+
+<link href="/public/stylesheets/main.css" media="all" rel="stylesheet" type="text/css" />
+
+<style media="screen">
+.acas-branding{background: #007C85; border: 1px solid #007C85;}
+.acas-branding:hover{background: #fff; color:#007C85; border: 1px solid #007C85;}
+</style>
+
+{% for stylesheetUrl in extensionConfig.stylesheets %}
+  <link href="{{ stylesheetUrl }}" rel="stylesheet" type="text/css" />
+{% endfor %}
