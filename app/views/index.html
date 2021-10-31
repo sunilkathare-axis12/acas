@@ -1,5 +1,5 @@
 
-{% extends "layout.html" %}
+{% extends "layout_unbranded.html" %}
 
 {% block pageTitle %}
   GOV.UK Prototype Kit
@@ -7,9 +7,20 @@
 
 {% block content %}
 
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+<br> <br>
   <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
-      <h1 class="page-header" style="font-size: 2.42em;  font-family: Arial; font-weight:bold;">
+    <div class="govuk-grid-column-full">
+      <h1 class="govuk-heading-l" >
         Find a solution to your employment dispute
         <!-- <span class="govuk-caption-xl">{{releaseVersion}}</span> -->
       </h1>
@@ -20,16 +31,16 @@
 
       <p>Use this service to start the legal process in which you tell Acas that:</p>
 
-      <ul class="govuk-list- govuk-list--bullet-">
+      <ul class="govuk-list govuk-list--bullet">
       <li>you have a dispute with your employer </li>
       <li>you intend to make a claim to an employment tribunal </li>
 
       </ul>
 
 
-      <div role="note" aria-label="Information" class="guidance-text">
+      <!-- <div role="note" aria-label="Information" class="guidance-text">
       <p>If you are unable to use this online service, please call us on 0300 123 1122.</p>
-      </div>
+      </div> -->
 
 
 
@@ -38,7 +49,7 @@
 
 
 
-        <a class="gem-c-button govuk-button govuk-button--start acas-branding" role="button" rel="external" data-module="cross-domain-tracking" data-tracking-code="UA-43414424-1" data-tracking-name="transactionTracker" href="page-one">  Start now
+        <a class="gem-c-button govuk-button govuk-button--start acas-branding" role="button" rel="external" data-module="cross-domain-tracking" data-tracking-code="UA-43414424-1" data-tracking-name="transactionTracker" href="01_alpha_assessment">  Star now
         <svg class="govuk-button__start-icon govuk-!-display-none-print" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewbox="0 0 33 40" role="presentation" focusable="false">
           <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z"></path>
         </svg>
@@ -49,69 +60,31 @@
           </p>
 
 
+<h2 class="govuk-heading-m">Information and documents to support Alpha assessment by criteria</h2>
+
+<p> Here is the documentations which will be using to support Alpha assessment</p>
+
+
+          <p id="get-started" class="get-started group">
+
+
+
+            <a class="gem-c-button govuk-button govuk-button--start acas-branding" role="button" rel="external" data-module="cross-domain-tracking" data-tracking-code="UA-43414424-1" data-tracking-name="transactionTracker" href="01_alpha_assessment">  Documentations to support  Alpha assessment
+            <svg class="govuk-button__start-icon govuk-!-display-none-print" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewbox="0 0 33 40" role="presentation" focusable="false">
+              <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z"></path>
+            </svg>
+          </a>
+
+
+
+              </p>
+
           <!-- <div role="note" aria-label="Information" class="callout">
           <p>This guide is also available <a href="/">in Welsh (Cymraeg)</a>.</p>
           </div> -->
 
 
-          <section class="more">
-            <div id="before-you-start">
-        <h2 class="govuk-heading-m">Before you start</h2>
 
-
-    <div class="gem-c-govspeak govuk-govspeak" data-module="govspeak">
-
-          <p>To use this service, you’ll need:</p>
-
-    <ul class="govuk-list- govuk-list--bullet-">
-      <li> correct legal identity of your employer like comapny name and address </li>
-      <li> your representation details like name and address
-    </li>
-    </ul>
-
-    <p>You also need to prove your identity. You can use any 1 of the following:</p>
-
-    <ul class="govuk-list- govuk-list--bullet-">
-      <li>your passport details</li>
-      <li>your driving licence</li>
-    </ul>
-
-    <!-- <p>Signing in will also activate your personal tax account - you can use this to check and manage your <abbr title="HM Revenue and Customs">HMRC</abbr> records.</p> -->
-
-    <!-- <h2 id="renewing-your-tax-credits" class="govuk-heading-m">Renewing your tax credits</h2>
-
-    <p>You can no longer renew your tax credits online for the 2020 to 2021 tax year.</p>
-
-    <p><a href="/government/organisations/hm-revenue-customs/contact/tax-credits-enquiries">Contact <abbr title="HM Revenue and Customs">HMRC</abbr></a> by phone or post if:</p>
-
-    <ul class="govuk-list govuk-list--bullet">
-      <li>you’ve missed the deadline for renewing your tax credits</li>
-      <li>you’ve renewed your tax credits and there’s a mistake on your award notice</li>
-    </ul>
-
-    <p>You’ll need:</p>
-
-    <u class="govuk-list govuk-list--bullet">
-      <li>your renewal pack (if you have one)</li>
-      <li>your National Insurance number</li>
-      <li>details about any <a href="/changes-affect-tax-credits">changes to your circumstances</a>
-    </li>
-      <li>
-    <a href="/claim-tax-credits/what-counts-as-income">you and your partner’s total income</a> for the last tax year (6 April 2020 to 5 April 2021)</li>
-    </ul> -->
-
-    <!-- <div role="note" aria-label="Information" class="application-notice info-notice">
-    <p>You cannot claim tax credits and Universal Credit at the same time. Your tax credits will stop if you or your partner apply for Universal Credit. <a href="/how-tax-credits-affect-other-benefits">Check how tax credits and Universal Credit affect each other</a>.</p>
-    </div> -->
-
-
-
-    </div>
-      </div>
-
-
-
-      </section>
     </div>
   </div>
 
