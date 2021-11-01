@@ -1,0 +1,43 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<a href="page-one" class="govuk-back-link">Back</a>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="page-header" style="font-size: 2.42em;  font-family: Arial; font-weight:bold;">
+      Provide your personal email address
+        <!-- <span class="govuk-caption-xl">{{releaseVersion}}</span> -->
+      </h1>
+      <div role="note" aria-label="Information" class="guidance-text">
+      <p>Be aware that if you give a work email address, your employer may be able to read your emails.</p>
+      </div>
+
+  <form action="page-three">
+
+
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="email">
+        Email address
+      </label>
+      <div id="email-hint" class="govuk-hint">
+        We'll only email you about your claim
+      </div>
+      <input class="govuk-input" id="email" name="email" type="email" spellcheck="false" aria-describedby="email-hint" autocomplete="email">
+    </div>
+
+
+            <button class="govuk-button" data-module="govuk-button">
+              Save and continue
+            </button>
+
+            </form>
+    </div>
+  </div>
+
+{% endblock %}
