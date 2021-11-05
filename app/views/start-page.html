@@ -1,0 +1,412 @@
+{% extends "layout.html" %}
+
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+
+
+ {% block header %}
+
+ <header id="header-main">
+ <div class="region region-top-bar">
+
+<section id="block-betabannerblock" class="block block-general block-beta-banner clearfix">
+<div class="container">
+ <div class="row">
+   <div class="col-xs-12">
+
+
+
+
+               <span class="govuk-tag govuk-phase-banner__content__tag beta-icon">Alpha</span> This is a new service - your <a href="" target="_blank"> feedback </a>will help us to improve it.
+           </div>
+ </div>
+</div>
+</section>
+
+</div>
+
+
+                                                   <div class="region region-branding-bar">
+ <div class="container">
+   <div class="row">
+     <div class="block--bare">
+<div class="col-xs-8 col-sm-6">
+<section  id="block-sitebranding" class="block block-system block-system-branding-block clearfix">
+   <a class="logo navbar-btn pull-left" href="https://www.acas.org.uk/" title="Home" rel="home">
+   <img src="/public/images/acas.png" alt="Home"/  style="width:250px; height:70px; margin-left:-10px">
+
+
+ </a>
+       </section>
+</div>
+</div>
+   </div>
+ </div>
+</div>
+</header>
+
+
+ {% endblock %} {% block pageScripts %}
+<script src="/public/javascripts/step-by-step-nav.js"></script>
+<script type="text/javascript">
+  var $element = $('#step-by-step-navigation')
+  var stepByStepNavigation = new GOVUK.Modules.AppStepNav()
+  stepByStepNavigation.start($element)
+</script>
+{% endblock %} {% block beforeContent %}
+
+
+{% endblock %} {% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="page-header" style="font-size: 2.42em;  font-family: Arial; font-weight:bold;">
+      Find a solution to your employment dispute
+      <!-- <span class="govuk-caption-xl">{{releaseVersion}}</span> -->
+    </h1>
+
+
+          <p>Use this service to start the legal process in which you tell Acas that:</p>
+
+          <ul class="govuk-list- govuk-list--bullet-">
+          <li>you have a dispute with your employer </li>
+          <li>you intend to make a claim to an employment tribunal </li>
+
+          </ul>
+
+
+          <div role="note" aria-label="Information" class="guidance-text">
+          <p>If you are unable to use this online service, please call us on 0300 123 1122.</p>
+          </div>
+
+
+
+
+          <p id="get-started" class="get-started group">
+
+
+
+            <a class="gem-c-button govuk-button govuk-button--start acas-branding" role="button" rel="external" data-module="cross-domain-tracking" data-tracking-code="UA-43414424-1" data-tracking-name="transactionTracker" href="page-one">  Start now
+            <svg class="govuk-button__start-icon govuk-!-display-none-print" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewbox="0 0 33 40" role="presentation" focusable="false">
+              <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z"></path>
+            </svg>
+          </a>
+
+
+
+              </p>
+
+
+              <!-- <div role="note" aria-label="Information" class="callout">
+              <p>This guide is also available <a href="/">in Welsh (Cymraeg)</a>.</p>
+              </div> -->
+
+
+              <section class="more">
+                <div id="before-you-start">
+            <h2 class="govuk-heading-m">Before you start</h2>
+
+
+        <div class="gem-c-govspeak govuk-govspeak" data-module="govspeak">
+
+              <p>To use this service, you’ll need:</p>
+
+        <ul class="govuk-list- govuk-list--bullet-">
+          <li> correct legal identity of your employer like comapny name and address </li>
+          <li> your representation details like name and address
+        </li>
+        </ul>
+
+        <!-- <p>You also need to prove your identity. You can use any 1 of the following:</p>
+
+        <ul class="govuk-list- govuk-list--bullet-">
+          <li>your passport details</li>
+          <li>your driving licence</li>
+        </ul> -->
+        </div>
+        </section>
+
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+
+    <!-- <div class="app-step-nav-related app-step-nav-related--singular">
+      <h2 class="app-step-nav-related__heading">
+        <span class="app-step-nav-related__pretitle">Part of</span>
+        <a href="#">
+          Learn to drive a car: step by step
+        </a>
+      </h2>
+    </div> -->
+
+    <div id="step-by-step-navigation" data-module="gemstepnav" class="app-step-nav js-hidden " data-id="e01e924b-9c7c-4c71-8241-66a575c2f61f" data-show-text="show" data-hide-text="hide" data-show-all-text="Show all" data-hide-all-text="Hide all">
+      <ol class="app-step-nav__steps">
+        <li class="app-step-nav__step js-step app-step-nav__step--active" aria-current="step" data-show id="check-youre-allowed-to-drive" >
+          <div class="app-step-nav__header js-toggle-panel" data-position="1">
+            <h3 class="app-step-nav__title">
+              <span class="app-step-nav__circle app-step-nav__circle--number">
+                <span class="app-step-nav__circle-inner">
+                  <span class="app-step-nav__circle-background">
+                    <span class="app-step-nav__circle-step-label govuk-visually-hidden">Step</span> 1
+                    <span class="app-step-nav__circle-step-colon govuk-visually-hidden" aria-hidden="true">:</span>
+                  </span>
+                </span>
+              </span>
+
+              <span class="js-step-title">
+                Notify us about your dispute
+              </span>
+            </h3>
+          </div>
+
+          <div class="app-step-nav__panel js-panel" id="step-panel-check-youre-allowed-to-drive-1">
+            <p class="app-step-nav__paragraph">Provide names and addresses of the people or organisations involved.</p>
+
+            <ol class="app-step-nav__list " data-length="4">
+              <li class="app-step-nav__list-item js-list-item app-step-nav__list-item--active-">
+                <a data-position="1.1" class="app-step-nav__link js-link" href="#content">
+                  <span class="app-step-nav__link-active-context govuk-visually-hidden">Your legal Name  </span>Your legal name </a>
+              </li>
+              <li class="app-step-nav__list-item js-list-item ">
+                <a data-position="1.2" class="app-step-nav__link js-link" href="#">Your address </a>
+              </li>
+              <li class="app-step-nav__list-item js-list-item ">
+                <a data-position="1.2" class="app-step-nav__link js-link" href="#">Employer's legal name </a>
+              </li>
+              <li class="app-step-nav__list-item js-list-item ">
+                <a data-position="1.3" class="app-step-nav__link js-link" href="#">Employer's address </a>
+              </li>
+            </ol>
+
+          </div>
+
+        </li>
+        <li class="app-step-nav__step js-step" id="get-a-provisional-licence" >
+          <div class="app-step-nav__header js-toggle-panel" data-position="2">
+            <h3 class="app-step-nav__title">
+              <span class="app-step-nav__circle app-step-nav__circle--number">
+                <span class="app-step-nav__circle-inner">
+                  <span class="app-step-nav__circle-background">
+                    <span class="app-step-nav__circle-step-label govuk-visually-hidden">Step</span> 2
+                    <span class="app-step-nav__circle-step-colon govuk-visually-hidden" aria-hidden="true">:</span>
+                  </span>
+                </span>
+              </span>
+
+              <span class="js-step-title">
+                Give details about your dispute
+              </span>
+            </h3>
+          </div>
+
+          <div class="app-step-nav__panel js-panel" id="step-panel-get-a-provisional-licence-2">
+            <ol class="app-step-nav__list " data-length="1">
+              <li class="app-step-nav__list-item js-list-item ">
+                <a data-position="2.1" class="app-step-nav__link js-link" href="#">Tell us briefly about your dispute, so that we can have an informed first conversation with you.</span>
+                </a>
+              </li>
+            </ol>
+
+          </div>
+
+        </li>
+        <li class="app-step-nav__step js-step" id="driving-lessons-and-practice" >
+          <div class="app-step-nav__header js-toggle-panel" data-position="3">
+            <h3 class="app-step-nav__title">
+              <span class="app-step-nav__circle app-step-nav__circle--number">
+                <span class="app-step-nav__circle-inner">
+                  <span class="app-step-nav__circle-background">
+                    <span class="app-step-nav__circle-step-label govuk-visually-hidden">Step</span> 3
+                    <span class="app-step-nav__circle-step-colon govuk-visually-hidden" aria-hidden="true">:</span>
+                  </span>
+                </span>
+              </span>
+
+              <span class="js-step-title">
+              Acas will contact you with next steps
+              </span>
+            </h3>
+          </div>
+
+          <div class="app-step-nav__panel js-panel" id="step-panel-driving-lessons-and-practice-3">
+            <p class="app-step-nav__paragraph">We will email you or send you a letter explaining what happens next.</p>
+
+            <!-- <ol class="app-step-nav__list " data-length="4">
+              <li class="app-step-nav__list-item js-list-item ">
+                <a data-position="3.1" class="app-step-nav__link js-link" href="#">The Highway Code </a>
+              </li>
+              <li class="app-step-nav__list-item js-list-item ">
+                <a data-position="3.2" class="app-step-nav__link js-link" href="#">Taking driving lessons </a>
+              </li>
+              <li class="app-step-nav__list-item js-list-item ">
+                <a data-position="3.3" class="app-step-nav__link js-link" href="#">Find driving schools, lessons and instructors </a>
+              </li>
+              <li class="app-step-nav__list-item js-list-item ">
+                <a data-position="3.4" class="app-step-nav__link js-link" href="#">Practise vehicle safety questions </a>
+              </li>
+            </ol> -->
+
+          </div>
+
+        </li>
+        <li class="app-step-nav__step js-step" id="prepare-for-your-theory-test" >
+          <div class="app-step-nav__header js-toggle-panel" data-position="4">
+            <h3 class="app-step-nav__title">
+              <span class="app-step-nav__circle app-step-nav__circle--logic">
+                <span class="app-step-nav__circle-inner">
+                  <span class="app-step-nav__circle-background">
+                    and
+                  </span>
+                </span>
+              </span>
+
+              <span class="js-step-title">
+                Prepare your case
+              </span>
+            </h3>
+          </div>
+
+          <div class="app-step-nav__panel js-panel" id="step-panel-prepare-for-your-theory-test-4">
+            <ol class="app-step-nav__list " data-length="3">
+              <li class="app-step-nav__list-item js-list-item ">
+                <a data-position="4.1" class="app-step-nav__link js-link" href="#">Case worker assigned</a>
+              </li>
+              <li class="app-step-nav__list-item js-list-item ">
+                <a data-position="4.2" class="app-step-nav__link js-link" href="#">documents evidence collected </a>
+              </li>
+              <li class="app-step-nav__list-item js-list-item ">
+                <a rel="external" data-position="4.3" class="app-step-nav__link js-link" href="https://www.safedrivingforlife.info/shop/product/official-dvsa-theory-test-kit-app-app">Theory and hazard perception test app </a>
+              </li>
+            </ol>
+
+          </div>
+
+        </li>
+        <!-- <li class="app-step-nav__step js-step" id="book-and-manage-your-theory-test" >
+          <div class="app-step-nav__header js-toggle-panel" data-position="5">
+            <h3 class="app-step-nav__title">
+              <span class="app-step-nav__circle app-step-nav__circle--number">
+                <span class="app-step-nav__circle-inner">
+                  <span class="app-step-nav__circle-background">
+                    <span class="app-step-nav__circle-step-label govuk-visually-hidden">Step</span> 4
+                    <span class="app-step-nav__circle-step-colon govuk-visually-hidden" aria-hidden="true">:</span>
+                  </span>
+                </span>
+              </span>
+
+              <span class="js-step-title">
+                Lorem ipsum consectetur
+              </span>
+            </h3>
+          </div>
+
+          <div class="app-step-nav__panel js-panel" id="step-panel-book-and-manage-your-theory-test-5">
+            <p class="app-step-nav__paragraph">raesent arcu augue, consectetur vel risus ut, venenatis consequat magna</p>
+
+            <ol class="app-step-nav__list " data-length="5">
+              <li class="app-step-nav__list-item js-list-item ">
+                <a data-position="5.1" class="app-step-nav__link js-link" href="#">Pellentesque et velit <span class="app-step-nav__context">£23</span></a>
+              </li>
+              <li class="app-step-nav__list-item js-list-item ">
+                <a data-position="5.2" class="app-step-nav__link js-link" href="#">Dapibus felis mattis fringilla </a>
+              </li>
+              <li class="app-step-nav__list-item js-list-item ">
+                <a data-position="5.3" class="app-step-nav__link js-link" href="#"> Donec a mauris erat </a>
+              </li>
+
+            </ol>
+
+          </div>
+
+        </li> -->
+        <!-- <li class="app-step-nav__step js-step" id="book-and-manage-your-driving-test" >
+          <div class="app-step-nav__header js-toggle-panel" data-position="6">
+            <h3 class="app-step-nav__title">
+              <span class="app-step-nav__circle app-step-nav__circle--number">
+                <span class="app-step-nav__circle-inner">
+                  <span class="app-step-nav__circle-background">
+                    <span class="app-step-nav__circle-step-label govuk-visually-hidden">Step</span> 5
+                    <span class="app-step-nav__circle-step-colon govuk-visually-hidden" aria-hidden="true">:</span>
+                  </span>
+                </span>
+              </span>
+
+              <span class="js-step-title">
+              Suspendisse vestibulum hendrerit.
+              </span>
+            </h3>
+          </div>
+
+          <div class="app-step-nav__panel js-panel" id="step-panel-book-and-manage-your-driving-test-6">
+            <p class="app-step-nav__paragraph">Praesent convallis mi a maximus fringilla.</p>
+
+            <ol class="app-step-nav__list " data-length="5">
+              <li class="app-step-nav__list-item js-list-item ">
+                <a data-position="6.1" class="app-step-nav__link js-link" href="#">Sed ut egestas massa    <span class="app-step-nav__context">£62 to £75</span></a>
+              </li>
+              <li class="app-step-nav__list-item js-list-item ">
+                <a data-position="6.2" class="app-step-nav__link js-link" href="#">Nulla eget ex nec purus </a>
+              </li>
+              <li class="app-step-nav__list-item js-list-item ">
+                <a data-position="6.3" class="app-step-nav__link js-link" href="#">Quisque rutrum odio porta, feugiat </a>
+              </li>
+              <li class="app-step-nav__list-item js-list-item ">
+                <a data-position="6.4" class="app-step-nav__link js-link" href="#">Rhoncus dapibus laoreet eget massa </a>
+              </li>
+              <li class="app-step-nav__list-item js-list-item ">
+                <a data-position="6.5" class="app-step-nav__link js-link" href="#"> Elementum laoreet ut vitae orci. </a>
+              </li>
+            </ol>
+
+          </div>
+
+        </li> -->
+        <li class="app-step-nav__step js-step" id="when-you-pass" >
+          <div class="app-step-nav__header js-toggle-panel" data-position="7">
+            <h3 class="app-step-nav__title">
+              <span class="app-step-nav__circle app-step-nav__circle--number">
+                <span class="app-step-nav__circle-inner">
+                  <span class="app-step-nav__circle-background">
+                    <span class="app-step-nav__circle-step-label govuk-visually-hidden">Step</span> 4
+                    <span class="app-step-nav__circle-step-colon govuk-visually-hidden" aria-hidden="true">:</span>
+                  </span>
+                </span>
+              </span>
+
+              <span class="js-step-title">
+                Dispute settlement
+              </span>
+            </h3>
+          </div>
+
+          <div class="app-step-nav__panel js-panel" id="step-panel-when-you-pass-7">
+            <p class="app-step-nav__paragraph">As part of the conciliation process we will issue a certificate</p>
+
+            <p class="app-step-nav__paragraph">We will speak to the organisation or person you are claiming against we will also send this certificate to them.</p>
+
+            <ol class="app-step-nav__list " data-length="1">
+              <li class="app-step-nav__list-item js-list-item ">
+                <a data-position="7.1" class="app-step-nav__link js-link" href="#">Find out best solution to the Dispute  </a>
+              </li>
+            </ol>
+
+          </div>
+
+        </li>
+      </ol>
+    </div>
+
+
+  </div>
+
+</div>
+
+
+</div>
+</div>
+{% endblock %}
