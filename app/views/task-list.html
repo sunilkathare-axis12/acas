@@ -14,8 +14,8 @@
     Find a solution to your employment dispute and start early conciliation
       </h1>
 
-      <!-- <h2 class="govuk-heading-s govuk-!-margin-bottom-2">Application incomplete</h2>
-      <p class="govuk-body govuk-!-margin-bottom-7">You have completed 2 of 5 sections.</p> -->
+       <h2 class="govuk-heading-s govuk-!-margin-bottom-2">Incomplete</h2>
+      <p class="govuk-body govuk-!-margin-bottom-7">You have completed 2 of 6 sections.</p><!-- -->
 
       <ol class="app-task-list">
         <li>
@@ -25,11 +25,17 @@
           <ul class="app-task-list__items">
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
-                <a href="#" aria-describedby="eligibility-status">
+                <a href="a-full-name.html?change=false" aria-describedby="eligibility-status">
                   Your legal name
                 </a>
               </span>
-              <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+
+              {% if  data['full-name'] %}
+                <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+              {% else %}
+              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
+              {% endif %}
+
             </li>
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
@@ -58,7 +64,7 @@
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
                 <a href="#" aria-describedby="contact-details-status">
-                  Employers' address
+                  Employers' contact details
                 </a>
               </span>
               <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="contact-details-status">In progress</strong>
@@ -132,14 +138,14 @@
 
         <li>
           <h2 class="app-task-list__section">
-            <span class="app-task-list__section-number">4. </span> Check your answer and apply
+            <span class="app-task-list__section-number">4. </span> Check your answer and send to ACAS
           </h2>
           <ul class="app-task-list__items">
 
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
-                <a href="#" aria-describedby="contact-details-status">
-                  Check your answers and apply
+                <a href="check-your-answers" aria-describedby="contact-details-status">
+                  Check your answers and send
                 </a>
               </span>
             <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>

@@ -12,12 +12,19 @@
     <div class="govuk-grid-column-two-thirds">
 
       <h1 class="page-header" style="font-size: 2.5em;  font-family: Arial; font-weight:bold;">
-      Enter the 6 digit code that was sent to you
+      Enter code to confirm your email address
       </h1>
 
       <div id="email-hint" class="govuk-hint">
-      <p>    To confirm it is your email address we have sent you a code.  </p>
-        <p> To resend the code please click <a href="#">here</a>
+      <p>    We have sent a code to: <<strong>sunilkathare9@gmail.com</strong>  </p>
+      <p> The code will expire in 30 minutes.</p>
+      <div class="govuk-warning-text">
+<span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+<strong class="govuk-warning-text__text">
+  <span class="govuk-warning-text__assistive">Warning</span>
+If you use a browser to access your email, you may need to open a new window or tab to see the code.
+</strong>
+</div>
           </p>
       </div>
 
@@ -26,15 +33,29 @@
 
     <div class="govuk-form-group">
       <label class="govuk-label" for="email">
-        6 digit code to confirm
+        Confirmation code
       </label>
+      <div id="email-hint" class="govuk-hint">
+        For example, DNCLRK
+        </div>
 
       <input class="govuk-input" id="email" name="email" type="email" spellcheck="false" aria-describedby="email-hint" autocomplete="email">
     </div>
 
 
 
-
+    <details class="govuk-details" data-module="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+        I have not received the email
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+      <p>  The email may take a few minutes to arrive. Its subject line is: ‘Confirm your email address - Government Gateway’.</p>
+      <p>   Check your spam or junk folder – if it still has not arrived, you can
+      <a href="" >request a new code</a> or <a href="" >provide another email address</a> . </p>
+      </div>
+    </details>
 
 
             <button class="govuk-button btn-primary" data-module="govuk-button">

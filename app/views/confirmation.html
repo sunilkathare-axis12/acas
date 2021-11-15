@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Confirmation page example
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <div class="govuk-panel govuk-panel--confirmation" style="background:#0064C8 !important">
+        <h1 class="govuk-panel__title" style="color:#fff !important; border:0px!important ">You have notified Acas</h1>
+
+        <!-- You haveApplication complete -->
+        <div class="govuk-panel__body">
+          Your reference number<br><strong>HDJ2123F</strong>
+        </div>
+      </div>
+
+      <p>
+        You will need this reference number when you speak with us.
+        We have sent you a confirmation email.
+      </p>
+
+
+      <p class="govuk-body-">You have added the following people or organisations to this claim:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>TechSmart Ltd (MU123456/21)</li>
+        <li>James Smithy (MU123457/21)</li>
+        <li>Sarah Jones (MU123458/21)</li>
+      </ul>
+
+
+
+
+
+      <h2 class="govuk-heading-m">What happens next</h2>
+      <p>You’ll receive an email with your reference number and details of what to do next – please check your spam folder for this.</p>
+      <p>They will contact you either to let you know of the next steps, or to ask for more information.</p>
+      <p><a href="https://www.gov.uk/service-manual/user-centred-design/resources/patterns/feedback-pages.html">What did you think of this service?</a> (takes 30 seconds)</p>
+
+
+    </div>
+  </div>
+
+{% endblock %}
