@@ -1,0 +1,48 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<a href="page-one" class="govuk-back-link">Back</a>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="page-header" style="font-size: 2.5em;  font-family: Arial; font-weight:bold;">
+      Enter your email address
+      </h1>
+
+      <div id="email-hint" class="govuk-hint">
+      <p>    This will only be used to send you security updates or if you need to recover your sign in details  </p>
+        <p> To confirm it is your email address we will send you a code.
+          </p>
+      </div>
+
+  <form action="start-task-list">
+
+
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="email">
+        Email address
+      </label>
+
+      <input class="govuk-input" id="email" name="email" type="email" spellcheck="false" aria-describedby="email-hint" autocomplete="email">
+    </div>
+
+
+
+
+
+
+            <button class="govuk-button btn-primary" data-module="govuk-button">
+              Save and continue
+            </button>
+
+            </form>
+    </div>
+  </div>
+
+{% endblock %}
