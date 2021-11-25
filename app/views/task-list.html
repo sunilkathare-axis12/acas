@@ -39,11 +39,16 @@
             </li>
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
-                <a href="#" aria-describedby="read-declaration-status">
+                <a href="a-address.html?change=false" aria-describedby="read-declaration-status">
                 Your address name
                 </a>
               </span>
-              <strong class="govuk-tag app-task-list__tag" id="read-declaration-status">Completed</strong>
+              {% if  data['address_line_1'] %}
+                <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+              {% else %}
+              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
+              {% endif %}
+              <!-- <strong class="govuk-tag app-task-list__tag" id="read-declaration-status">Completed</strong> -->
             </li>
           </ul>
         </li>

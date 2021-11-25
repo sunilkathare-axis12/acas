@@ -38,12 +38,16 @@
             Address
           </dt>
           <dd class="govuk-summary-list__value">
-            72 Guild Street
+
+                 {{ data['address_line_1'] }} <br>{{ data['address_line_2'] }}
+                <br>      {{ data['posttown'] }}
+                  <br>      {{ data['postcode'] }}
+            <!-- 72 Guild Street
             <br>London
-            <br>SE23 6FH
+            <br>SE23 6FH -->
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="#">
+            <a href="a-address.html?change=true">
               Change
               <span class="govuk-visually-hidden"> Address</span>
             </a>
