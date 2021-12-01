@@ -1,0 +1,189 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Check your answers
+{% endblock %}
+
+{% block beforeContent %}
+  <!-- <a class="govuk-back-link" href="javascript:window.history.back()">Back</a> -->
+  <a class="govuk-back-link" href="task-list-no-ec-rep">Back</a>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+
+      <h1 class="page-header" style="font-size: 2m;  font-family: Arial; font-weight:bold;">Check your answers before sending to ACAS</h1>
+
+      <h2 class="govuk-heading-m">Claimant details</h2>
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Your legal name
+          </dt>
+          <dd class="govuk-summary-list__value">
+           {{ data['full-name'] }}
+             <!-- Sarah Philips -->
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="a-full-name.html?change=true">
+              Change
+              <span class="govuk-visually-hidden"> name</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Address
+          </dt>
+          <dd class="govuk-summary-list__value">
+
+                 {{ data['address_line_1'] }} <br>{{ data['address_line_2'] }}
+                <br>      {{ data['posttown'] }}
+                  <br>      {{ data['postcode'] }}
+            <!-- 72 Guild Street
+            <br>London
+            <br>SE23 6FH -->
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="a-address-no-ec-rep.html?change=true">
+              Change
+              <span class="govuk-visually-hidden"> Address</span>
+            </a>
+          </dd>
+        </div>
+
+
+      </dl>
+
+            <h2 class="govuk-heading-m">Represetative details</h2>
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Represetative name
+          </dt>
+          <dd class="govuk-summary-list__value">
+           {{ data['rep-full-name'] }}
+             <!-- Sarah Philips -->
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="a-full-name-no-ec-rep.html?change=true">
+              Change
+              <span class="govuk-visually-hidden"> name</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+             Represetative Address
+          </dt>
+          <dd class="govuk-summary-list__value">
+
+                 {{ data['rep_address_line_1'] }} <br>{{ data['rep_address_line_2'] }}
+                <br>      {{ data['rep_posttown'] }}
+                  <br>      {{ data['rep_postcode'] }}
+            <!-- 72 Guild Street
+            <br>London
+            <br>SE23 6FH -->
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="a-address-no-ec-rep.html?change=true">
+              Change
+              <span class="govuk-visually-hidden"> Address</span>
+            </a>
+          </dd>
+        </div>
+
+
+      </dl>
+
+      <h2 class="govuk-heading-m"> Orgainsations or persons the claim is against</h2>
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+          Company name
+          </dt>
+          <dd class="govuk-summary-list__value">
+          {{ data['company-1-legal-name'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="a-employer?change=true">
+              Change
+              <span class="govuk-visually-hidden"> name</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Address
+          </dt>
+          <dd class="govuk-summary-list__value">
+            171 Victoria Street
+            <br>London
+            <br>SW1E 5NN
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#">
+              Change
+              <span class="govuk-visually-hidden"> Address</span>
+            </a>
+          </dd>
+        </div>
+
+
+      </dl>
+
+      <!-- <h2 class="govuk-heading-m">Case details</h2>
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Reason for dispute
+          </dt>
+          <dd class="govuk-summary-list__value">
+          Holiday pay incorrect.  <br> Even two months, after I left the company, I have been paid for unused holidays.
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#">
+              Change
+              <span class="govuk-visually-hidden"> Reason for dispute</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            How much do you want claim?
+          </dt>
+          <dd class="govuk-summary-list__value">
+          £1,800
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#">
+              Change
+              <span class="govuk-visually-hidden"> How much do you want claim?</span>
+            </a>
+          </dd>
+        </div>
+
+      </dl> -->
+
+      <h2 class="govuk-heading-m">Now send your application</h2>
+
+      <p>By submitting this you are confirming that, to the best of your knowledge, the details you are providing are correct.</p>
+
+      <form action="/confirmation-no-ec-rep" method="post" novalidate>
+
+        <input type="hidden" name="answers-checked" value="true">
+
+        <button type="submit" class="govuk-button" data-module="govuk-button">
+          Accept and send
+        </button>
+
+      </form>
+
+    </div>
+  </div>
+{% endblock %}

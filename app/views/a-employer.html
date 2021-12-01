@@ -1,0 +1,150 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<a href="task-list-no-ec-rep" class="govuk-back-link">Back</a>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+
+
+      <!-- <h1 class="page-header" style="font-size: 2.42em;  font-family: Arial; font-weight:bold;">
+      Provide correct legal name address of
+       <span class="govuk-caption-xl">{{releaseVersion}}</span>
+      </h1> -->
+
+
+      {% if data['change'] == "true" %}
+        <form action="check-your-answers-no-ec-rep#name">
+
+      {% else %}
+
+        <form action="task-list-no-ec-rep">
+      {% endif %}
+
+
+
+      <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+          <h1 class="govuk-fieldset__heading" style="font-size: .9em;  font-family: Arial; font-weight:bold;">
+            Is the claim against an organisation or a person?
+          </h1>
+        </legend>
+        <div id="contact-hint" class="govuk-hint">
+       For example, if the dispute is about a holiday pay, the claim should be made against the organisation named in the contract or letter of employement not the HR or the line manager.
+        </div>
+        <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="contact" name="employer-type" type="radio" value="organisation" data-aria-controls="conditional-contact" {{ checked('employer-type','organisation') }}>
+            <label class="govuk-label govuk-radios__label" for="contact">
+              Organisation
+            </label>
+          </div>
+          <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact">
+            <div class="govuk-form-group">
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="full-name">
+                  Legal name
+                </label>
+                <div id="more-detail-hint" class="govuk-hint">
+
+              To avoid jeopardising your case we will need the legal name of the organistaion. For exmaple, PRET A MANGER LIMITED.
+            Please copy the name from your P45, P60, payslip, contract or letter of employment. If you can find the orgainsation on GOV.UK companies house register, you can copy and paste the name from <a href="https://find-and-update.company-information.service.gov.uk" target="_blank">here</a>
+                </div>
+                <input class="govuk-input" id="company-1-legal-name" name="company-1-legal-name" type="text" spellcheck="false" autocomplete="name" value="{{ data['company-1-legal-name'] }}"></div>
+
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="full-name">
+                  Legal address
+                  </label>
+                <div id="more-detail-hint" class="govuk-hint">
+                To avoid jeopardising your case we will need their legal address. This
+              may be the head office or registered office address and not your workplace. Please copy the address from your P45, P60, payslip, contract or letter of employment. If you can find the orgainsation on GOV.UK companies house register, you can copy and paste the registered address from <a href="https://find-and-update.company-information.service.gov.uk" target="_blank">here</a>
+
+                <!-- You have to give us their formal, legal address if you want to use this service. This
+              may be the head office or registered office address and not your workplace. Look
+              on your payslip, contract, or other documents from your employer. You can also
+              search online. -->
+
+                </div>
+
+                  <textarea class="govuk-textarea" id="more-detail" name="company-1-address" rows="5">{{ data['company-1-address'] }}</textarea>
+                </div>
+
+          </div>
+
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="contact-2" name="employer-type" type="radio" value="person" data-aria-controls="conditional-contact-2" {{ checked('employer-type','person') }}>
+            <label class="govuk-label govuk-radios__label" for="contact-2">
+              Person
+            </label>
+          </div>
+          <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-2">
+
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="full-name">
+                Full legal name
+              </label>
+              <div id="more-detail-hint" class="govuk-hint">
+
+            To avoid jeopardising your case we will need the full legal name of the person. For exmaple, Joe Bloggs.
+
+              </div>
+              <input class="govuk-input" id="person-1-legal-name" name="person-1-legal-name" type="text" spellcheck="false" autocomplete="name" value="{{ data['person-1-legal-name'] }}"></div>
+
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="full-name">
+                Legal address
+                </label>
+              <div id="more-detail-hint" class="govuk-hint">
+              To avoid jeopardising your case we will need their legal address. If you work or worked with this person, you may want to give the organisation's
+address. This may be the head office or registered office address and not your workplace. Please copy the address from your P45, P60, payslip, contract or letter of employment. If you can find the orgainsation on GOV.UK companies house register, you can copy and paste the registered address from <a href="https://find-and-update.company-information.service.gov.uk" target="_blank">here</a>
+              <!-- You have to give us their formal, legal address if you want to use this service. This
+            may be the head office or registered office address and not your workplace. Look
+            on your payslip, contract, or other documents from your employer. You can also
+            search online. -->
+
+              </div>
+
+                <textarea class="govuk-textarea" id="more-detail" name="person-1-address" rows="5">{{ data['person-1-address'] }}</textarea>
+              </div>
+
+          </div>
+          <!-- <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="contact-3" name="contact" type="radio" value="text" data-aria-controls="conditional-contact-3">
+            <label class="govuk-label govuk-radios__label" for="contact-3">
+              Not sure
+            </label>
+          </div>
+          <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-3">
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="contact-by-text">
+                Please specify what you know
+              </label>
+              <input class="govuk-input govuk-!-width-one-third" id="contact-by-text" name="contact-by-text" type="tel" autocomplete="tel"></div>
+
+          </div> -->
+        </div>
+
+      </fieldset>
+    </div>
+
+
+
+            <button class="govuk-button btn-primary" data-module="govuk-button">
+              Save and continue
+            </button>
+
+            </form>
+    </div>
+  </div>
+
+{% endblock %}

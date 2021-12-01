@@ -19,7 +19,7 @@ time, mark, audio, video {
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 100%;
+  font-size: 90%;
   font: inherit;
   vertical-align: baseline;
 }
@@ -2035,7 +2035,7 @@ h1, .block-in-this-section-block, div.field--name-field-promoted-links, #block-h
   border: 1px solid #007C85;
   color: #fff;
   display: inline-block;
-  font-size: 1em;
+  font-size: .8em;
   padding: .75em;
   min-width: 7em;
   text-align: center;
@@ -3633,7 +3633,7 @@ noscript {
   border: 1px solid #007C85;
   color: #fff;
   display: inline-block;
-  font-size: 1em;
+  font-size: .8em;
   padding: .75em;
   min-width: 7em;
   text-align: center;

@@ -1,0 +1,67 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<a href="a-02-represent-myself" class="govuk-back-link">Back</a>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+
+    <form class="form" action="/page-one-email-no-ec" method="post">
+
+
+
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+          <h1 class="page-header" style="font-size: 1em;  font-family: Arial; font-weight:bold;">
+            How would you prefer to be contacted?
+
+          </h1>
+        </legend>
+        <div id="changed-name-hint" class="govuk-hint">
+          This will only be used to send you updates on the case or ask for more information needed for your case.
+        </div>
+        <div class="govuk-radios govuk-radios--inline">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="contacted-email" name="contacted" type="radio" value="email">
+            <label class="govuk-label govuk-radios__label" for="changed-name">
+              Email and Phone
+            </label>
+          </div>
+          <div class="govuk-radios govuk-radios--inline">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="contacted-email" name="contacted" type="radio" value="email">
+              <label class="govuk-label govuk-radios__label" for="changed-name">
+                Email only
+              </label>
+            </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="contacted-post" name="contacted" type="radio" value="post">
+            <label class="govuk-label govuk-radios__label" for="changed-name-2">
+            Post only
+            </label>
+          </div>
+        </div>
+
+      </fieldset>
+    </div>
+
+
+
+
+            <button class="govuk-button btn-primary" data-module="govuk-button">
+              Save and continue
+            </button>
+
+            </form>
+    </div>
+  </div>
+
+{% endblock %}
