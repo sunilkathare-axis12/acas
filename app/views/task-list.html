@@ -55,26 +55,117 @@
 
         <li>
           <h2 class="app-task-list__section">
-            <span class="app-task-list__section-number">2. </span> Enter employers' details
+            <span class="app-task-list__section-number">2. </span> Enter details of who your claim is against
           </h2>
           <ul class="app-task-list__items">
-            <li class="app-task-list__item">
+            <!-- <li class="app-task-list__item">
               <span class="app-task-list__task-name">
                 <a href="#" aria-describedby="company-information-status">
                 Employers' name
                 </a>
               </span>
                 <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
-            </li>
+            </li> -->
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
-                <a href="#" aria-describedby="contact-details-status">
-                  Employers' contact details
+                <a href="a-employer" aria-describedby="contact-details-status">
+                Organisation or person
                 </a>
               </span>
-              <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="contact-details-status">In progress</strong>
-            </li>
-            <!-- <li class="app-task-list__item">
+              {% if  data['company-1-legal-name'] %}
+                <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+              {% else %}
+              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
+              {% endif %}
+
+          </li>
+  <!-- <li class="app-task-list__item-">
+    <span class="app-task-list__task-name-"> -->
+          <script>
+
+
+          var counter = 1;
+
+          var limit = 5;
+
+          function addInput(divName){
+
+               if (counter == 2)  {
+                    // alert("You have reached the limit of adding " + counter + " inputs");
+                    var newdiv = document.createElement('div');
+
+                    newdiv.innerHTML =  "<li class='app-task-list__item'> <span class='app-task-list__task-name'><a href='a-employer' aria-describedby='contact-details-status'>  Thrid organisation or person </a></span><strong class='govuk-tag- govuk-tag--grey- app-task-list__tag- ' style='float:right;  color:#fff; padding:5px; background-color: #d4351c; box-shadow: 0 2px 0 #55150b;font-size:.8em'  > Remove </strong></li>   ";
+
+                    document.getElementById(divName).appendChild(newdiv);
+
+
+
+
+                    counter++;
+               }
+              else if (counter == 3)  {
+                    // alert("You have reached the limit of adding " + counter + " inputs");
+                    var newdiv = document.createElement('div');
+
+                    newdiv.innerHTML =  "<li class='app-task-list__item'> <span class='app-task-list__task-name'><a href='a-employer' aria-describedby='contact-details-status'>  Fourth organisation or person </a></span><strong class='govuk-tag- govuk-tag--grey- app-task-list__tag- ' style='float:right;  color:#fff; padding:5px; background-color: #d4351c; box-shadow: 0 2px 0 #55150b;font-size:.8em'  > Remove </strong></li>   ";
+
+                    document.getElementById(divName).appendChild(newdiv);
+
+
+
+
+                    counter++;
+               }
+
+               else if (counter == 4)  {
+                     // alert("You have reached the limit of adding " + counter + " inputs");
+                     var newdiv = document.createElement('div');
+
+                     newdiv.innerHTML =  "<li class='app-task-list__item'> <span class='app-task-list__task-name'><a href='a-employer' aria-describedby='contact-details-status'>  Fifth organisation or person </a></span><strong class='govuk-tag- govuk-tag--grey- app-task-list__tag- ' style='float:right;  color:#fff; padding:5px; background-color: #d4351c; box-shadow: 0 2px 0 #55150b;font-size:.8em'  > Remove </strong></li>   ";
+
+                     document.getElementById(divName).appendChild(newdiv);
+
+
+
+
+                     counter++;
+                }
+               else {
+
+                    var newdiv = document.createElement('div');
+
+                    newdiv.innerHTML =  "<li class='app-task-list__item'> <span class='app-task-list__task-name'><a href='a-employer' aria-describedby='contact-details-status'>  Second organisation or person </a></span><strong class='govuk-tag- govuk-tag--grey- app-task-list__tag- ' style='float:right;  color:#fff; padding:5px; background-color: #d4351c; box-shadow: 0 2px 0 #55150b; font-size:.8em'  >  Remove </strong></li>   ";
+
+                    document.getElementById(divName).appendChild(newdiv);
+
+
+
+
+                    counter++;
+
+               }
+
+          }
+
+
+          </script>
+
+
+          <!--<form method="POST">-->
+               <div id="dynamicInput">
+                   <!-- Entry 1<br><input type="text" name="myInputs[]">-->
+
+               </div>
+               <input type="button" class="govuk-button btn-primary" value="Add more" onClick="addInput('dynamicInput');">
+
+
+               <!-- </span>
+
+               </li> -->
+
+
+
+          <!-- <li class="app-task-list__item">
               <span class="app-task-list__task-name">
                 <a href="#" aria-describedby="list-convictions-status">
                   List convictions
