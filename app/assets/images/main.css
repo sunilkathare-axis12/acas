@@ -1862,7 +1862,7 @@ article.landing-page.full p {
 
 h1, .block-in-this-section-block, div.field--name-field-promoted-links, #block-homepageblock,
 #block-block-landingpagesblock {
-  margin-bottom: 50px;
+  margin-bottom: 10px;
 }
 
 .js-pager__items, .page-node-type-page h2,
