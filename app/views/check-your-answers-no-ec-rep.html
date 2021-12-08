@@ -121,12 +121,15 @@
             Address
           </dt>
           <dd class="govuk-summary-list__value">
-            171 Victoria Street
+
+            {{ data['company-1-address'] }}
+            {{ data['person-1-address'] }}
+            <!-- 171 Victoria Street
             <br>London
-            <br>SW1E 5NN
+            <br>SW1E 5NN -->
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="#">
+            <a href="a-employer#?change=true">
               Change
               <span class="govuk-visually-hidden"> Address</span>
             </a>
