@@ -7,69 +7,89 @@
 
 {% block content %}
 
-<a href="start-page" class="govuk-back-link">Back</a>
+<a href="task-list" class="govuk-back-link">Back</a>
   <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-grid-column-full">
 
 
 
-    <form class="form" action="/representing" method="post">
 
+            {% if data['change'] == "true" %}
+              <form action="check-your-answers#dispute">
+
+            {% else %}
+
+              <form action="task-list">
+            {% endif %}
 
       <div class="govuk-form-group">
-        <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+        <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-            <h1 class="govuk-fieldset__heading" style="font-size: .9em;  font-family: Arial; font-weight:bold;">
-              Who are you representing?
+            <h1 class="govuk-fieldset__heading" style="font-size: .9em; font-family: Arial; font-weight:bold;">
+              What is the reason for your dispute?
             </h1>
           </legend>
-          <div id="contact-hint" class="govuk-hint">
-          Select one option.
+          <div id="sign-in-hint" class="govuk-hint">
+          Please get legal advice to understand what you can make a claim against
+<!--
+          Your conversation with Acas is not part of the employment tribunal process. We will only use the information you give to discuss your options with you, and we can only involve your employer in discussions if you give your permission. -->
           </div>
-          <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="contact" name="representing" type="radio" value="myself" data-aria-controls="conditional-contact-">
-              <label class="govuk-label govuk-radios__label" for="contact">
-                my self
-              </label>
-            </div>
-            <!-- <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact">
-              <div class="govuk-form-group">
-                <label class="govuk-label" for="contact-by-email">
-                  Email address
-                </label>
-                <input class="govuk-input govuk-!-width-one-third" id="contact-by-email" name="contact-by-email" type="email" spellcheck="false" autocomplete="email"></div>
+          <div class="govuk-radios">
 
-            </div> -->
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="contact-2" name="representing" type="radio" value="other" data-aria-controls="conditional-contact-2">
-              <label class="govuk-label govuk-radios__label" for="contact-2">
-                one other person
+              <input class="govuk-radios__input" id="sign-in" name="sign-in" type="radio" value="government-gateway" aria-describedby="sign-in-item-hint">
+              <label class="govuk-label govuk-radios__label" for="sign-in">
+              Wages owed or holiday pay
               </label>
-            </div>
-            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-2">
-              <div class="govuk-form-group">
-                <label class="govuk-label" for="contact-by-phone">
-                  Specify relationship. For example, Lawyer
-                </label>
-                <input class="govuk-input govuk-!-width-one-third" id="contact-by-phone" name="contact-by-phone" type="tel" autocomplete="tel"></div>
-
+              <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
+              You could be owed money instead of holiday, or your employer hasn’t paid you, or has taken money from your wages without good reason.
+              </div>
             </div>
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="contact-3" name="representing" type="radio" value="others" data-aria-controls="conditional-contact-3">
-              <label class="govuk-label govuk-radios__label" for="contact-3">
-                a group
+              <input class="govuk-radios__input" id="sign-in-2" name="sign-in" type="radio" value="govuk-verify" aria-describedby="sign-in-2-item-hint">
+              <label class="govuk-label govuk-radios__label" for="sign-in-2">
+                Wrongful dismissal
               </label>
-            </div>
-            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-3">
-              <div class="govuk-form-group">
-                <label class="govuk-label" for="contact-by-text">
-                  Specify relationship. For example, Lawyer
-                </label>
-                <input class="govuk-input govuk-!-width-one-third" id="contact-by-text" name="contact-by-text" type="tel" autocomplete="tel"></div>
-
+              <div id="sign-in-2-item-hint" class="govuk-hint govuk-radios__hint">
+              Wrongful dismissal is a claim for a breach of the employment contract. The most common breach is where the employer dismissed the employee without notice or with less than the minimum notice period
+              </div>
             </div>
           </div>
+          <div class="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="sign-in" name="sign-in" type="radio" value="government-gateway" aria-describedby="sign-in-item-hint">
+              <label class="govuk-label govuk-radios__label" for="sign-in">
+            Unfair dismissal
+              </label>
+              <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
+            If you think your dismissal was unfair you might be able to challenge it. You must have 2 years service to make this cliam. Read more about <a href="https://www.acas.org.uk/dismissals/unfair-dismissal" target="_blank"> Unfair dismissal here</a>.
+              </div>
+            </div>
+
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="sign-in" name="sign-in" type="radio" value="government-gateway" aria-describedby="sign-in-item-hint">
+              <label class="govuk-label govuk-radios__label" for="sign-in">
+            Constructive dismissal
+              </label>
+              <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
+            If you think your dismissal was unfair you might be able to challenge it. You must have 2 years service to make this cliam. Read more about <a href="https://www.acas.org.uk/dismissals/constructive-dismissal" target="_blank"> Constructive dismissal here</a>.
+              </div>
+            </div>
+
+
+
+
+
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="sign-in" name="sign-in" type="radio" value="government-gateway" aria-describedby="sign-in-item-hint">
+              <label class="govuk-label govuk-radios__label" for="sign-in">
+              I'm not sure
+              </label>
+              <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
+              If you are not sure, please get legal advice to understand what you can make a claim against.
+              </div>
+            </div>
+
 
         </fieldset>
       </div>
