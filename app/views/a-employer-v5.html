@@ -21,11 +21,11 @@
 
 
       {% if data['change'] == "true" %}
-        <form action="check-your-answers-no-ec-rep#e-address">
+        <form action="check-your-answers#name">
 
       {% else %}
 
-        <form action="task-list-no-ec-rep">
+        <form action="task-list">
       {% endif %}
 
 
@@ -42,7 +42,7 @@
         </div>
         <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
           <div class="govuk-radios__item">
-            <input class="govuk-radios__input" id="contact" name="employer-type" type="radio" value="organisation" data-aria-controls="conditional-contact" {{ checked('employer-type','organisation') }}>
+            <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email" data-aria-controls="conditional-contact">
             <label class="govuk-label govuk-radios__label" for="contact">
               Organisation
             </label>
@@ -56,7 +56,7 @@
                 <div id="more-detail-hint" class="govuk-hint">
 
               To avoid jeopardising your case we will need the legal name of the organisation. For exmaple, PRET A MANGER LIMITED.
-            Please copy the name from your P45, P60, payslip, contract or letter of employment. If you can find the orgainsation on GOV.UK companies house register, you can copy and paste the name from <a href="https://find-and-update.company-information.service.gov.uk" target="_blank">here</a>
+            Please copy the name from your P45, P60, payslip, contract or letter of employment.
                 </div>
                 <input class="govuk-input" id="company-1-legal-name" name="company-1-legal-name" type="text" spellcheck="false" autocomplete="name" value="{{ data['company-1-legal-name'] }}"></div>
 
@@ -66,7 +66,7 @@
                   </label>
                 <div id="more-detail-hint" class="govuk-hint">
                 To avoid jeopardising your case we will need their legal address. This
-              may be the head office or registered office address and not your workplace. Please copy the address from your P45, P60, payslip, contract or letter of employment. If you can find the orgainsation on GOV.UK companies house register, you can copy and paste the registered address from <a href="https://find-and-update.company-information.service.gov.uk" target="_blank">here</a>
+              may be the head office or registered office address and not your workplace. Please copy the address from your P45, P60, payslip, contract or letter of employment.
 
                 <!-- You have to give us their formal, legal address if you want to use this service. This
               may be the head office or registered office address and not your workplace. Look
@@ -75,27 +75,26 @@
 
                 </div>
 
-                  <textarea class="govuk-textarea" id="more-detail" name="company-1-address" rows="3">{{ data['company-1-address'] }}</textarea>
+                  <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="3"></textarea>
 
                   <div id="waste-hint" class="govuk-hint">
                        Please confirm if you have copied the address from P45, P60, payslip, contract or letter of employment.
                      </div>
                      <div class="govuk-checkboxes" data-module="govuk-checkboxes">
                        <div class="govuk-checkboxes__item">
-                         <input class="govuk-checkboxes__input" id="waste" name="copied" type="checkbox" value="Yes" {{ checked('copied','Yes') }}>
+                         <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
                          <label class="govuk-label govuk-checkboxes__label" for="waste">
-                        Yes, the address has been copied the name from P45, P60, payslip, contract or letter of employment.
+                        Yes, the address has been been copied the name from P45, P60, payslip, contract or letter of employment.
                          </label>
                        </div>
                   </div>
-
                 </div>
 
           </div>
 
           </div>
           <div class="govuk-radios__item">
-            <input class="govuk-radios__input" id="contact-2" name="employer-type" type="radio" value="person" data-aria-controls="conditional-contact-2" {{ checked('employer-type','person') }}>
+            <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="phone" data-aria-controls="conditional-contact-2">
             <label class="govuk-label govuk-radios__label" for="contact-2">
               Person
             </label>
@@ -108,7 +107,7 @@
               </label>
               <div id="more-detail-hint" class="govuk-hint">
 
-            To avoid jeopardising your case we will need the full legal name of the person. For exmaple, Joe Bloggs.
+            To avoid jeopardising your case we will need the correct full legal name of the person. For exmaple, Joe Bloggs.
 
               </div>
               <input class="govuk-input" id="person-1-legal-name" name="person-1-legal-name" type="text" spellcheck="false" autocomplete="name" value="{{ data['person-1-legal-name'] }}"></div>
@@ -118,7 +117,7 @@
                 Legal address
                 </label>
               <div id="more-detail-hint" class="govuk-hint">
-              To avoid jeopardising your case we will need their legal address. If you work or worked with this person, you may want to give the organisation's
+              To avoid jeopardising your case we will need to give us their legal address. If you work or worked with this person, you may want to give the organisation's
 address. This may be the head office or registered office address and not your workplace. Please copy the address from your P45, P60, payslip, contract or letter of employment. If you can find the orgainsation on GOV.UK companies house register, you can copy and paste the registered address from <a href="https://find-and-update.company-information.service.gov.uk" target="_blank">here</a>
               <!-- You have to give us their formal, legal address if you want to use this service. This
             may be the head office or registered office address and not your workplace. Look
@@ -127,20 +126,21 @@ address. This may be the head office or registered office address and not your w
 
               </div>
 
-                <textarea class="govuk-textarea" id="more-detail" name="person-1-address" rows="3">{{ data['person-1-address'] }}</textarea>
-
+                <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="3"></textarea>
 
                 <div id="waste-hint" class="govuk-hint">
                      Please confirm if you have copied the address from P45, P60, payslip, contract or letter of employment.
                    </div>
                    <div class="govuk-checkboxes" data-module="govuk-checkboxes">
                      <div class="govuk-checkboxes__item">
-                       <input class="govuk-checkboxes__input" id="waste" name="copied-p" type="checkbox" value="Yes" {{ checked('copied-p','Yes') }}>
+                       <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
                        <label class="govuk-label govuk-checkboxes__label" for="waste">
-                      Yes, the address has been copied the name from P45, P60, payslip, contract or letter of employment.
+                      Yes, the address has been been copied the name from P45, P60, payslip, contract or letter of employment.
                        </label>
                      </div>
                 </div>
+
+
 
               </div>
 

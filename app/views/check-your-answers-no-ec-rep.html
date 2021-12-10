@@ -108,6 +108,8 @@
           </dt>
           <dd class="govuk-summary-list__value">
           {{ data['company-1-legal-name'] }}
+  {{ data['person-1-legal-name'] }}
+
           </dd>
           <dd class="govuk-summary-list__actions">
             <a href="a-employer?change=true">
@@ -122,7 +124,11 @@
           </dt>
           <dd class="govuk-summary-list__value">
 
-            {{ data['company-1-address'] }}
+            {{ data['e_address_line_1'] }} <br>{{ data['e__address_line_2'] }}
+           <br>      {{ data['e_posttown'] }}
+             <br>      {{ data['e_postcode'] }}
+             <br>
+               {{ data['company-1-address'] }}
             {{ data['person-1-address'] }}
             <!-- 171 Victoria Street
             <br>London
@@ -132,6 +138,38 @@
             <a href="a-employer#?change=true">
               Change
               <span class="govuk-visually-hidden"> Address</span>
+            </a>
+          </dd>
+        </div>
+
+
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+          Name and address copied from P45, P60, payslip, contract or letter of employment
+          </dt>
+          <dd class="govuk-summary-list__value">
+
+
+            {% if  data['copied'] %}
+            {{ data['copied'] }}
+            {% else %}
+
+
+            {% if  data['copied-p'] %}
+            {{ data['copied-p'] }}
+            {% else %}
+            No
+            {% endif %}
+            {% endif %}
+
+
+          <!-- {{ data['copied-p'] }} -->
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="a-employer?change=true">
+              Change
+              <span class="govuk-visually-hidden"> name</span>
             </a>
           </dd>
         </div>

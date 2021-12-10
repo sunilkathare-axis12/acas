@@ -7,6 +7,10 @@
 
 {% block content %}
 
+
+
+
+
 <a href="task-list" class="govuk-back-link">Back</a>
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
@@ -30,7 +34,7 @@
             </h1>
           </legend>
           <div id="sign-in-hint" class="govuk-hint">
-          Please get legal advice to understand what you can make a claim against
+          <!-- Please get legal advice to understand what you can make a claim against -->
 <!--
           Your conversation with Acas is not part of the employment tribunal process. We will only use the information you give to discuss your options with you, and we can only involve your employer in discussions if you give your permission. -->
           </div>
@@ -40,6 +44,16 @@
               <input class="govuk-radios__input" id="sign-in" name="sign-in" type="radio" value="government-gateway" aria-describedby="sign-in-item-hint">
               <label class="govuk-label govuk-radios__label" for="sign-in">
               Wages owed or holiday pay
+              </label>
+              <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
+              You could be owed money instead of holiday, or your employer hasn’t paid you, or has taken money from your wages without good reason.
+              </div>
+            </div>
+
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="sign-in" name="sign-in" type="radio" value="government-gateway" aria-describedby="sign-in-item-hint">
+              <label class="govuk-label govuk-radios__label" for="sign-in">
+              Redundancy pay
               </label>
               <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
               You could be owed money instead of holiday, or your employer hasn’t paid you, or has taken money from your wages without good reason.
@@ -62,7 +76,7 @@
             Unfair dismissal
               </label>
               <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
-            If you think your dismissal was unfair you might be able to challenge it. You must have 2 years service to make this cliam. Read more about <a href="https://www.acas.org.uk/dismissals/unfair-dismissal" target="_blank"> Unfair dismissal here</a>.
+            If you think your dismissal was unfair you might be able to challenge it. You must have 2 years service to make this cliam. Read more about <a href="https://www.acas.org.uk/dismissals/unfair-dismissal" target="_blank"> unfair dismissal here</a>.
               </div>
             </div>
 
@@ -72,7 +86,7 @@
             Constructive dismissal
               </label>
               <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
-            If you think your dismissal was unfair you might be able to challenge it. You must have 2 years service to make this cliam. Read more about <a href="https://www.acas.org.uk/dismissals/constructive-dismissal" target="_blank"> Constructive dismissal here</a>.
+            If you think your dismissal was unfair you might be able to challenge it. You must have 2 years service to make this cliam. Read more about <a href="https://www.acas.org.uk/dismissals/constructive-dismissal" target="_blank"> constructive dismissal here</a>.
               </div>
             </div>
 
