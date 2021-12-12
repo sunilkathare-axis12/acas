@@ -9,7 +9,7 @@
 
 <a href="task-list-no-ec-rep" class="govuk-back-link">Back</a>
   <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-grid-column-full">
 
 
 
@@ -55,8 +55,12 @@
                 </label>
                 <div id="more-detail-hint" class="govuk-hint">
 
-              To avoid jeopardising your case we will need the legal name of the organisation. For exmaple, PRET A MANGER LIMITED.
-            Please copy the name from your P45, P60, payslip, contract or letter of employment. If you can find the orgainsation on GOV.UK companies house register, you can copy and paste the name from <a href="https://find-and-update.company-information.service.gov.uk" target="_blank">here</a>
+              To avoid jeopardising your case we will need the legal name of the organisation. For example, PRET A MANGER LIMITED.
+            Please get the name from a P45, P60, payslip, contract or letter of employment.
+
+If you do not have one of these documents, you can look to find the employers address on Companies House search on GOV.UK. Please follow this <a href="https://find-and-update.company-information.service.gov.uk" target="_blank">link</a>
+
+            <!-- If you can find the orgainsation on GOV.UK companies house register, you can copy and paste the name from here -->
                 </div>
                 <input class="govuk-input" id="company-1-legal-name" name="company-1-legal-name" type="text" spellcheck="false" autocomplete="name" value="{{ data['company-1-legal-name'] }}"></div>
 
@@ -65,8 +69,11 @@
                   Legal address
                   </label>
                 <div id="more-detail-hint" class="govuk-hint">
-                To avoid jeopardising your case we will need their legal address. This
-              may be the head office or registered office address and not your workplace. Please copy the address from your P45, P60, payslip, contract or letter of employment. If you can find the orgainsation on GOV.UK companies house register, you can copy and paste the registered address from <a href="https://find-and-update.company-information.service.gov.uk" target="_blank">here</a>
+                To avoid jeopardising your case we will need their legal address. Please get the address from your a P45, P60, payslip, contract or letter of employment.
+
+
+            If you do not have one of these documents, you can look to find the employers address on <a href="https://find-and-update.company-information.service.gov.uk" target="_blank" title="Click here search on Companies House "> Companies House search</a> on GOV.UK.
+
 
                 <!-- You have to give us their formal, legal address if you want to use this service. This
               may be the head office or registered office address and not your workplace. Look
@@ -77,14 +84,14 @@
 
                   <textarea class="govuk-textarea" id="more-detail" name="company-1-address" rows="3">{{ data['company-1-address'] }}</textarea>
 
-                  <div id="waste-hint" class="govuk-hint">
-                       Please confirm if you have copied the address from P45, P60, payslip, contract or letter of employment.
-                     </div>
+                  <!-- <div id="waste-hint" class="govuk-hint">
+                       Please confirm if you have copied the legal name and address from a P45, P60, payslip, contract or letter of employment.
+                     </div> -->
                      <div class="govuk-checkboxes" data-module="govuk-checkboxes">
                        <div class="govuk-checkboxes__item">
                          <input class="govuk-checkboxes__input" id="waste" name="copied" type="checkbox" value="Yes" {{ checked('copied','Yes') }}>
                          <label class="govuk-label govuk-checkboxes__label" for="waste">
-                        Yes, the address has been copied the name from P45, P60, payslip, contract or letter of employment.
+                         Confirm the name and address has been copied from a P45, P60, payslip, contract or letter of employment.
                          </label>
                        </div>
                   </div>
@@ -104,11 +111,11 @@
 
             <div class="govuk-form-group">
               <label class="govuk-label" for="full-name">
-                Full legal name
+                Full name
               </label>
               <div id="more-detail-hint" class="govuk-hint">
 
-            To avoid jeopardising your case we will need the full legal name of the person. For exmaple, Joe Bloggs.
+            <!-- To avoid jeopardising your case we will need the full legal name of the person. For exmaple, Joe Bloggs. -->
 
               </div>
               <input class="govuk-input" id="person-1-legal-name" name="person-1-legal-name" type="text" spellcheck="false" autocomplete="name" value="{{ data['person-1-legal-name'] }}"></div>
@@ -118,8 +125,12 @@
                 Legal address
                 </label>
               <div id="more-detail-hint" class="govuk-hint">
-              To avoid jeopardising your case we will need their legal address. If you work or worked with this person, you may want to give the organisation's
-address. This may be the head office or registered office address and not your workplace. Please copy the address from your P45, P60, payslip, contract or letter of employment. If you can find the orgainsation on GOV.UK companies house register, you can copy and paste the registered address from <a href="https://find-and-update.company-information.service.gov.uk" target="_blank">here</a>
+
+If you work or worked with this person, you may want to give the organisation's address.
+              <!-- Please get the address of the person from a P45, P60, payslip, contract or letter of employment. -->
+              For example, PRET A MANGER LIMITED.
+              Please get the name from a P45, P60, payslip, contract or letter of employment.
+  If you do not have one of these documents, you can look to find the employers address on <a href="https://find-and-update.company-information.service.gov.uk" target="_blank" title="Click here search on Companies House "> Companies House search</a> on GOV.UK.
               <!-- You have to give us their formal, legal address if you want to use this service. This
             may be the head office or registered office address and not your workplace. Look
             on your payslip, contract, or other documents from your employer. You can also
@@ -130,14 +141,14 @@ address. This may be the head office or registered office address and not your w
                 <textarea class="govuk-textarea" id="more-detail" name="person-1-address" rows="3">{{ data['person-1-address'] }}</textarea>
 
 
-                <div id="waste-hint" class="govuk-hint">
+                <!-- <div id="waste-hint" class="govuk-hint">
                      Please confirm if you have copied the address from P45, P60, payslip, contract or letter of employment.
-                   </div>
+                   </div> -->
                    <div class="govuk-checkboxes" data-module="govuk-checkboxes">
                      <div class="govuk-checkboxes__item">
                        <input class="govuk-checkboxes__input" id="waste" name="copied-p" type="checkbox" value="Yes" {{ checked('copied-p','Yes') }}>
                        <label class="govuk-label govuk-checkboxes__label" for="waste">
-                      Yes, the address has been copied the name from P45, P60, payslip, contract or letter of employment.
+                       Confirm the name and address has been copied from a P45, P60, payslip, contract or letter of employment.
                        </label>
                      </div>
                 </div>

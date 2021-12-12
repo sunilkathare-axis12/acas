@@ -68,7 +68,7 @@
             </li> -->
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
-                <a href="a-employer" aria-describedby="contact-details-status">
+                <a href="a-employer-ec" aria-describedby="contact-details-status">
                 Organisation or person
                 </a>
               </span>
@@ -192,6 +192,7 @@
           <h2 class="app-task-list__section">
             <span class="app-task-list__section-number">3. </span> Enter details about your dispute
           </h2>
+
           <ul class="app-task-list__items">
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
@@ -199,18 +200,50 @@
                 Reason for your dispute
                 </a>
               </span>
+
+              {% if  data['reason'] %}
+                <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+              {% else %}
                 <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="list-convictions-status">Optional</strong>
+              {% endif %}
+
+            </li>
+
+
+            {% if  data['reason'] %}
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="#" aria-describedby="contact-details-status">
+                  <!-- How much do you want to claim? -->
+
+                How much money do you think you are owed?
+                </a>
+              </span>
+            <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="list-convictions-status">Optional</strong>
             </li>
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
                 <a href="#" aria-describedby="contact-details-status">
                   <!-- How much do you want to claim? -->
 
-                  Do you think you are owed wages or holiday pay?
+                When did you have this problem with your pay?
                 </a>
               </span>
             <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="list-convictions-status">Optional</strong>
             </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="#" aria-describedby="contact-details-status">
+                  <!-- How much do you want to claim? -->
+
+              Why do you think you are owed this money?
+                </a>
+              </span>
+            <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="list-convictions-status">Optional</strong>
+            </li>
+            {% else %}
+
+            {% endif %}
 
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">

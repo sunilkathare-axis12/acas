@@ -57,12 +57,12 @@
 
       </dl>
 
-            <h2 class="govuk-heading-m">Represetative details</h2>
+            <h2 class="govuk-heading-m">Your details</h2>
 
       <dl class="govuk-summary-list govuk-!-margin-bottom-9">
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Represetative name
+            Your name
           </dt>
           <dd class="govuk-summary-list__value">
            {{ data['rep-full-name'] }}
@@ -77,9 +77,12 @@
         </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-             Represetative Address
+             Your address
           </dt>
           <dd class="govuk-summary-list__value">
+          72 Guild Street
+            <br>London
+            <br>SE23 6FH   <!-- -->
 
                  {{ data['rep_address_line_1'] }} <br>{{ data['rep_address_line_2'] }}
                 <br>      {{ data['rep_posttown'] }}
@@ -124,10 +127,10 @@
           </dt>
           <dd class="govuk-summary-list__value">
 
-            {{ data['e_address_line_1'] }} <br>{{ data['e__address_line_2'] }}
+            <!-- {{ data['e_address_line_1'] }} <br>{{ data['e__address_line_2'] }}
            <br>      {{ data['e_posttown'] }}
              <br>      {{ data['e_postcode'] }}
-             <br>
+             <br> -->
                {{ data['company-1-address'] }}
             {{ data['person-1-address'] }}
             <!-- 171 Victoria Street
@@ -146,7 +149,7 @@
 
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-          Name and address copied from P45, P60, payslip, contract or letter of employment
+          Name and address copied from a P45, P60, payslip, contract or letter of employment
           </dt>
           <dd class="govuk-summary-list__value">
 

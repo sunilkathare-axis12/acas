@@ -41,7 +41,7 @@
           <div class="govuk-radios">
 
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="sign-in" name="sign-in" type="radio" value="government-gateway" aria-describedby="sign-in-item-hint">
+              <input class="govuk-radios__input" id="sign-in" name="reason" type="radio" value="wages-holiday" aria-describedby="sign-in-item-hint" {{ checked('reason','wages-holiday') }}>
               <label class="govuk-label govuk-radios__label" for="sign-in">
               Wages owed or holiday pay
               </label>
@@ -51,16 +51,25 @@
             </div>
 
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="sign-in" name="sign-in" type="radio" value="government-gateway" aria-describedby="sign-in-item-hint">
+              <input class="govuk-radios__input" id="sign-in" name="reason" type="radio" value="redundancy" aria-describedby="sign-in-item-hint" {{ checked('reason','redundancy') }}>
               <label class="govuk-label govuk-radios__label" for="sign-in">
               Redundancy pay
               </label>
               <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
-              You could be owed money instead of holiday, or your employer hasn’t paid you, or has taken money from your wages without good reason.
+          You could be owed money if the employer didn't follpw the right process, including collective consultation and giving the right notice periods and pay.
               </div>
             </div>
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="sign-in-2" name="sign-in" type="radio" value="govuk-verify" aria-describedby="sign-in-2-item-hint">
+              <input class="govuk-radios__input" id="sign-in" name="reason" type="radio" value="discrimination" aria-describedby="sign-in-item-hint" {{ checked('reason','discrimination') }}>
+              <label class="govuk-label govuk-radios__label" for="sign-in">
+              Discrimination
+              </label>
+              <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
+              You could be make claim if there has been a case of discrimination based on disability, age, race, religion & belief, sex, marriage, gender reassignment, and or sexual orientation.
+              </div>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="sign-in-2" name="reason" type="radio" value="wrongful-dismissal" aria-describedby="wrongful-dismissal">
               <label class="govuk-label govuk-radios__label" for="sign-in-2">
                 Wrongful dismissal
               </label>
@@ -71,25 +80,48 @@
           </div>
           <div class="govuk-radios">
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="sign-in" name="sign-in" type="radio" value="government-gateway" aria-describedby="sign-in-item-hint">
+              <input class="govuk-radios__input" id="sign-in" name="reason" type="radio" value="government-gateway" aria-describedby="sign-in-item-hint">
               <label class="govuk-label govuk-radios__label" for="sign-in">
             Unfair dismissal
               </label>
               <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
-            If you think your dismissal was unfair you might be able to challenge it. You must have 2 years service to make this cliam. Read more about <a href="https://www.acas.org.uk/dismissals/unfair-dismissal" target="_blank"> unfair dismissal here</a>.
+            If you think your dismissal was unfair you might be able to challenge it. You must have 2 years service to make this cliam.
+            <!--  Read more about. <a href="https://www.acas.org.uk/dismissals/unfair-dismissal" target="_blank"> unfair dismissal here</a>. -->
               </div>
             </div>
 
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="sign-in" name="sign-in" type="radio" value="government-gateway" aria-describedby="sign-in-item-hint">
+              <input class="govuk-radios__input" id="sign-in" name="reason" type="radio" value="government-gateway" aria-describedby="sign-in-item-hint">
               <label class="govuk-label govuk-radios__label" for="sign-in">
             Constructive dismissal
               </label>
               <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
-            If you think your dismissal was unfair you might be able to challenge it. You must have 2 years service to make this cliam. Read more about <a href="https://www.acas.org.uk/dismissals/constructive-dismissal" target="_blank"> constructive dismissal here</a>.
+            If you think your dismissal was unfair you might be able to challenge it. You must have 2 years service to make this cliam.
+            <!-- Read more about <a href="https://www.acas.org.uk/dismissals/constructive-dismissal" target="_blank"> constructive dismissal here</a>. -->
               </div>
             </div>
 
+
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="sign-in" name="reason" type="radio" value="government-gateway" aria-describedby="sign-in-item-hint">
+              <label class="govuk-label govuk-radios__label" for="sign-in">
+            Equal pay
+              </label>
+              <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
+          You could be owed money if could you feel your employer has failed to provide equal pay.
+              </div>
+            </div>
+
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="sign-in" name="reason" type="radio" value="government-gateway" aria-describedby="sign-in-item-hint">
+              <label class="govuk-label govuk-radios__label" for="sign-in">
+          Whistle blowing
+              </label>
+              <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
+              Whistleblowing needs to relate to a Public Interest Disclosure (i.e. they raised a concern that was in the public interest)
+
+              </div>
+            </div>
 
 
 
