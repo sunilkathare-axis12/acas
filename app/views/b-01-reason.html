@@ -41,7 +41,7 @@
           <div class="govuk-radios">
 
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="sign-in" name="reason" type="radio" value="wages-holiday" aria-describedby="wages-holiday" {{ checked('reason','wages-holiday') }}>
+              <input class="govuk-radios__input" id="sign-in" name="reason" type="radio" value="Wages owed or holiday pay" aria-describedby="Wages owed or holiday pay" {{ checked('reason','Wages owed or holiday pay') }}>
               <label class="govuk-label govuk-radios__label" for="sign-in">
               Wages owed or holiday pay
               </label>
@@ -51,7 +51,7 @@
             </div>
 
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="sign-in" name="reason" type="radio" value="redundancy" aria-describedby="redundancy" {{ checked('reason','redundancy') }}>
+              <input class="govuk-radios__input" id="sign-in" name="reason" type="radio" value="Redundancy" aria-describedby="Redundancy" {{ checked('reason','Redundancy') }}>
               <label class="govuk-label govuk-radios__label" for="sign-in">
               Redundancy pay
               </label>
@@ -60,7 +60,7 @@
               </div>
             </div>
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="sign-in" name="reason" type="radio" value="discrimination" aria-describedby="discrimination" {{ checked('reason','discrimination') }}>
+              <input class="govuk-radios__input" id="sign-in" name="reason" type="radio" value="Discrimination" aria-describedby="Discrimination" {{ checked('reason','Discrimination') }}>
               <label class="govuk-label govuk-radios__label" for="sign-in">
               Discrimination
               </label>
@@ -69,7 +69,7 @@
               </div>
             </div>
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="sign-in-2" name="reason" type="radio" value="wrongful-dismissal" aria-describedby="wrongful-dismissal" {{ checked('reason','wrongful-dismissal') }}>
+              <input class="govuk-radios__input" id="sign-in-2" name="reason" type="radio" value="Wrongful dismissal" aria-describedby="Wrongful dismissal" {{ checked('reason','Wrongful dismissal') }}>
               <label class="govuk-label govuk-radios__label" for="sign-in-2">
                 Wrongful dismissal
               </label>
@@ -80,7 +80,7 @@
           </div>
           <div class="govuk-radios">
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="sign-in" name="reason" type="radio" value="unfair-dismissal" aria-describedby="unfair-dismissal" {{ checked('reason','unfair-dismissal') }}>
+              <input class="govuk-radios__input" id="sign-in" name="reason" type="radio" value="Unfair dismissal" aria-describedby="Unfair dismissal" {{ checked('reason','Unfair dismissal') }}>
               <label class="govuk-label govuk-radios__label" for="sign-in">
             Unfair dismissal
               </label>
@@ -91,7 +91,7 @@
             </div>
 
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="sign-in" name="reason" type="radio" value="constructive-dismissal" aria-describedby="constructive-dismissal" {{ checked('reason','constructive-dismissal') }}>
+              <input class="govuk-radios__input" id="sign-in" name="reason" type="radio" value="Constructive dismissal" aria-describedby="Constructive dismissal" {{ checked('reason','Constructive dismissal') }}>
               <label class="govuk-label govuk-radios__label" for="sign-in">
             Constructive dismissal
               </label>
@@ -104,7 +104,7 @@
 
 
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="sign-in" name="reason" type="radio" value="equal-pay" aria-describedby="equal-pay" {{ checked('reason','equal-pay') }}>
+              <input class="govuk-radios__input" id="sign-in" name="reason" type="radio" value="Equal pay" aria-describedby="equal-pay" {{ checked('reason','Equal pay') }}>
               <label class="govuk-label govuk-radios__label" for="sign-in">
             Equal pay
               </label>
@@ -114,7 +114,7 @@
             </div>
 
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="sign-in" name="reason" type="radio" value="whistle-blowing" aria-describedby="whistle-blowing" {{ checked('reason','whistle-blowing') }}>
+              <input class="govuk-radios__input" id="sign-in" name="reason" type="radio" value="Whistle blowing" aria-describedby="Whistle blowing" {{ checked('reason','Whistle blowing') }}>
               <label class="govuk-label govuk-radios__label" for="sign-in">
           Whistle blowing
               </label>
@@ -124,16 +124,33 @@
               </div>
             </div>
 
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="contact-2" name="reason" type="radio" value="Others" data-aria-controls="conditional-contact-2" {{ checked('reason','Others') }}>
+              <label class="govuk-label govuk-radios__label" for="contact-2">
+                Others
+              </label>
+              <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
+            
 
+              </div>
+            </div>
+            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-2">
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="contact-by-phone">
+                  Specify reason
+                </label>
+                <input class="govuk-input govuk-!-width-one-third" id="contact-by-phone" name="contact-by-phone" type="tel" autocomplete="tel"></div>
+
+            </div>
 
 
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="sign-in" name="reason" type="radio" value="not-sure" aria-describedby="not-sure" {{ checked('reason','whistle-blowing') }}>
+              <input class="govuk-radios__input" id="sign-in" name="reason" type="radio" value="Not sure" aria-describedby="Not sure" {{ checked('reason','Not sure') }}>
               <label class="govuk-label govuk-radios__label" for="sign-in">
               I'm not sure
               </label>
               <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
-              If you are not sure, please get legal advice to understand what you can make a claim against. You can give details when have a call with ACAS officer
+              If you are not sure, please get legal advice to understand what you can make a claim against. You can give details when have a call with ACAS officer.
               </div>
             </div>
 

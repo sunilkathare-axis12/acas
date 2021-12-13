@@ -11,9 +11,11 @@
 
 {% block content %}
 <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds-from-desktop">
+    <div class="govuk-grid-column-full-from-desktop">
 
-      <h1 class="page-header" style="font-size: 2m;  font-family: Arial; font-weight:bold;">Check your answers before sending to ACAS</h1>
+      <h1 class="page-header" style="font-size: 2m;  font-family: Arial; font-weight:bold;">Check your answers</h1>
+
+       <!-- before sending to ACAS -->
 
       <h2 class="govuk-heading-m">Claimant details</h2>
 
@@ -80,9 +82,9 @@
              Your address
           </dt>
           <dd class="govuk-summary-list__value">
-          72 Guild Street
+        <!--  72 Guild Street
             <br>London
-            <br>SE23 6FH   <!-- -->
+            <br>SE23 6FH    -->
 
                  {{ data['rep_address_line_1'] }} <br>{{ data['rep_address_line_2'] }}
                 <br>      {{ data['rep_posttown'] }}
@@ -92,7 +94,7 @@
             <br>SE23 6FH -->
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="a-address-no-ec-rep.html?change=true">
+            <a href="a-rep-address-no-ec-rep.html?change=true">
               Change
               <span class="govuk-visually-hidden"> Address</span>
             </a>

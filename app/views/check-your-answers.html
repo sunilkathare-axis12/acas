@@ -11,9 +11,11 @@
 
 {% block content %}
 <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds-from-desktop">
+    <div class="govuk-grid-column-full-from-desktop">
 
-      <h1 class="page-header" style="font-size: 2m;  font-family: Arial; font-weight:bold;">Check your answers before sending to ACAS</h1>
+      <h1 class="page-header" style="font-size: 2m;  font-family: Arial; font-weight:bold;">Check your answers </h1>
+
+      <!-- before sending to ACAS -->
 
       <h2 class="govuk-heading-m">Your personal details</h2>
 
@@ -65,7 +67,10 @@
           Company name
           </dt>
           <dd class="govuk-summary-list__value">
-            John Lewis
+            <!-- John Lewis -->
+
+            {{ data['company-1-legal-name'] }}
+    {{ data['person-1-legal-name'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
             <a href="#">
@@ -104,10 +109,13 @@
             Reason for dispute
           </dt>
           <dd class="govuk-summary-list__value">
-          Holiday pay incorrect.  <br> Even two months, after I left the company, I have been paid for unused holidays.
+
+
+              {{ data['reason'] }}
+          <!-- Holiday pay incorrect.  <br> Even two months, after I left the company, I have been paid for unused holidays. -->
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="#">
+            <a href="b-01-reason?change=true">
               Change
               <span class="govuk-visually-hidden"> Reason for dispute</span>
             </a>
