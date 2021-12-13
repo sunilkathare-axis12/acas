@@ -210,7 +210,9 @@
             </li>
 
 
-            {% if  data['reason'] %}
+
+
+            {% if  data['reason'] == "Wages owed or holiday pay" %}
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
                 <a href="#" aria-describedby="contact-details-status">
@@ -241,9 +243,26 @@
               </span>
             <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="list-convictions-status">Optional</strong>
             </li>
-            {% else %}
 
+    {% else %}
             {% endif %}
+
+
+              {% if  data['reason'] == "Redundancy" %}
+
+              <li class="app-task-list__item">
+                <span class="app-task-list__task-name">
+                  <a href="#" aria-describedby="contact-details-status">
+                    <!-- How much do you want to claim? -->
+
+                Why do you think you are owed Redundancy Pay ?
+                  </a>
+                </span>
+              <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="list-convictions-status">Optional</strong>
+              </li>
+
+              {% else %}
+                      {% endif %}
 
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
