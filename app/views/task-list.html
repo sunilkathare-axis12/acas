@@ -198,7 +198,7 @@
               <span class="app-task-list__task-name">
                 <a href="b-01-reason?change=false" aria-describedby="reason for dispute">
                 Reason for your dispute
-                </a>
+                </a>&nbsp<strong> {{ data['reason'] }}</strong>
               </span>
 
               {% if  data['reason'] %}
@@ -244,6 +244,16 @@
             <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="list-convictions-status">Optional</strong>
             </li>
 
+
+                        <li class="app-task-list__item">
+                          <span class="app-task-list__task-name">
+                            <a href="#" aria-describedby="company-information-status">
+                          Is your employer still in business?
+                            </a>
+                          </span>
+                            <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="list-convictions-status">Optional</strong>
+                        </li>
+
     {% else %}
             {% endif %}
 
@@ -261,17 +271,126 @@
               <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="list-convictions-status">Optional</strong>
               </li>
 
+              <li class="app-task-list__item">
+                <span class="app-task-list__task-name">
+                  <a href="#" aria-describedby="contact-details-status">
+                    <!-- How much do you want to claim? -->
+            What was your effective date of termination (EDT)?
+
+                  </a>
+                </span>
+              <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="list-convictions-status">Optional</strong>
+              </li>
+
+              <li class="app-task-list__item">
+                <span class="app-task-list__task-name">
+                  <a href="#" aria-describedby="contact-details-status">
+                    <!-- How much do you want to claim? -->
+            What date should you have received your payment?
+
+                  </a>
+                </span>
+              <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="list-convictions-status">Optional</strong>
+              </li>
+
+              <li class="app-task-list__item">
+                <span class="app-task-list__task-name">
+                  <a href="#" aria-describedby="contact-details-status">
+                    <!-- How much do you want to claim? -->
+          How much do you think you are owed?
+
+                  </a>
+                </span>
+              <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="list-convictions-status">Optional</strong>
+              </li>
+
+              <li class="app-task-list__item">
+                <span class="app-task-list__task-name">
+                  <a href="#" aria-describedby="contact-details-status">
+                    <!-- How much do you want to claim? -->
+        Did you work a notice period?
+
+                  </a>
+                </span>
+              <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="list-convictions-status">Optional</strong>
+              </li>
+
+              <li class="app-task-list__item">
+                <span class="app-task-list__task-name">
+                  <a href="#" aria-describedby="contact-details-status">
+                    <!-- How much do you want to claim? -->
+        Have you gone through any internal procedures to try to resolve this? 
+
+                  </a>
+                </span>
+              <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="list-convictions-status">Optional</strong>
+              </li>
+
+
+
               {% else %}
                       {% endif %}
 
-            <li class="app-task-list__item">
-              <span class="app-task-list__task-name">
-                <a href="#" aria-describedby="company-information-status">
-              Is your employer still in business?
-                </a>
-              </span>
-                <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="list-convictions-status">Optional</strong>
-            </li>
+
+                      {% if  data['reason'] == "Discrimination" %}
+
+                      <li class="app-task-list__item">
+                        <span class="app-task-list__task-name">
+                          <a href="#" aria-describedby="contact-details-status">
+                            <!-- How much do you want to claim? -->
+
+                        Why do you believe you have been discriminated against at work?
+                          </a>
+                        </span>
+                      <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="list-convictions-status">Optional</strong>
+                      </li>
+
+                      <li class="app-task-list__item">
+                        <span class="app-task-list__task-name">
+                          <a href="#" aria-describedby="contact-details-status">
+                            <!-- How much do you want to claim? -->
+
+                      When was the most recent incident (date)?
+                          </a>
+                        </span>
+                      <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="list-convictions-status">Optional</strong>
+                      </li>
+
+                      <li class="app-task-list__item">
+                        <span class="app-task-list__task-name">
+                          <a href="#" aria-describedby="contact-details-status">
+                            <!-- How much do you want to claim? -->
+
+                      Is this a one off incident or have there been other incidents?
+                          </a>
+                        </span>
+                      <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="list-convictions-status">Optional</strong>
+                      </li>
+
+                      <li class="app-task-list__item">
+                        <span class="app-task-list__task-name">
+                          <a href="#" aria-describedby="contact-details-status">
+                            <!-- How much do you want to claim? -->
+
+                      What have you done to address this with the company?
+                          </a>
+                        </span>
+                      <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="list-convictions-status">Optional</strong>
+                      </li>
+                      <li class="app-task-list__item">
+                        <span class="app-task-list__task-name">
+                          <a href="#" aria-describedby="contact-details-status">
+                            <!-- How much do you want to claim? -->
+
+                      Have you raised a grievance? If so what was the outcome?
+                          </a>
+                        </span>
+                      <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="list-convictions-status">Optional</strong>
+                      </li>
+
+                      {% else %}
+                              {% endif %}
+
 
 
             <!-- <li class="app-task-list__item">
