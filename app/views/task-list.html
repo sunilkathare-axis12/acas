@@ -313,7 +313,12 @@
               Why do you think you are owed this money?
                 </a>
               </span>
-            <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="list-convictions-status">Optional</strong>
+
+              {% if  data['w-why'] %}
+                <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+              {% else %}
+                <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="list-convictions-status">Optional</strong>
+              {% endif %}
             </li>
 
 <!--

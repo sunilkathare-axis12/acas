@@ -44,10 +44,7 @@
                  {{ data['address_line_1'] }} <br>{{ data['address_line_2'] }}
                 <br>      {{ data['posttown'] }}
                   <br>      {{ data['postcode'] }}
-            <!-- 72 Guild Street
-            <br>London
-            <br>SE23 6FH -->
-          </dd>
+
           <dd class="govuk-summary-list__actions">
             <a href="a-address.html?change=true">
               Change
@@ -95,7 +92,7 @@
             </a>
           </dd>
         </div>
-        <div class="govuk-summary-list__row">
+        <!-- <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
           Address
           </dt>
@@ -104,9 +101,7 @@
                  {{ data['address_line_1_ec_rep'] }} <br>{{ data['address_line_2_ec_rep'] }}
                 <br>      {{ data['posttown_ec_rep'] }}
                   <br>      {{ data['postcode_ec_rep'] }}
-            <!-- 72 Guild Street
-            <br>London
-            <br>SE23 6FH -->
+
           </dd>
           <dd class="govuk-summary-list__actions">
             <a href="a-address-rep-ec.html?change=true">
@@ -114,7 +109,7 @@
               <span class="govuk-visually-hidden"> Address</span>
             </a>
           </dd>
-        </div>
+        </div> -->
 
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
@@ -232,24 +227,11 @@
           </dd>
         </div>
 
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-          How much money do you think you are owed?
-          </dt>
-          <dd class="govuk-summary-list__value">
-        £ {{ data['w-how-much'] }}
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="w-how-much?change=true">
-              Change
-              <span class="govuk-visually-hidden"> How much money do you think you are owed?</span>
-            </a>
-          </dd>
-        </div>
+
 
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-          How much money do you think you are owed?
+        When did you have this problem with your pay?
           </dt>
           <dd class="govuk-summary-list__value">
        {{ data['w-day'] }} &nbsp;   {{ data['w-month'] }} &nbsp; {{ data['w-year'] }}
@@ -262,7 +244,20 @@
           </dd>
         </div>
 
-
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+          Why do you think you are owed this money?
+          </dt>
+          <dd class="govuk-summary-list__value">
+        {{ data['w-why'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="w-why?change=true">
+              Change
+              <span class="govuk-visually-hidden"> How much money do you think you are owed?</span>
+            </a>
+          </dd>
+        </div>
 
       </dl>
 
