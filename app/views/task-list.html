@@ -201,7 +201,15 @@
               <span class="app-task-list__task-name">
                 <a href="b-01-reason?change=false" aria-describedby="reason for dispute">
                 Reason for your dispute
-                </a>&nbsp<strong> {{ data['reason'] }}</strong>
+                </a>&nbsp<strong> {{ data['reason'] }} </strong>
+                {% if  data['reason-others'] %}
+                  <strong class="" id="">- {{ data['reason-others'] }} </strong>
+                {% else %}
+
+                {% endif %}
+
+
+
               </span>
 
               {% if  data['reason'] %}
@@ -266,13 +274,20 @@
 
               <li class="app-task-list__item">
                 <span class="app-task-list__task-name">
-                  <a href="#" aria-describedby="contact-details-status">
+                  <a href="d-r-two-years" aria-describedby="two-years">
 
             Have you worked for this organisation for more than 2 years?
 
                   </a>
                 </span>
-              <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="list-convictions-status">Optional</strong>
+                {% if  data['years-worked-r'] %}
+                  <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+                {% else %}
+                  <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="list-convictions-status">Optional</strong>
+                {% endif %}
+
+
+            
               </li>
 
               <li class="app-task-list__item">
