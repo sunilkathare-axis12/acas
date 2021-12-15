@@ -9,7 +9,7 @@
 
 <a href="task-list-no-ec-rep" class="govuk-back-link">Back</a>
   <div class="govuk-grid-row">
-    <div class="govuk-grid-column-full">
+    <div class="govuk-grid-column-two-thirds">
 
 
 
@@ -38,7 +38,7 @@
           </h1>
         </legend>
         <div id="contact-hint" class="govuk-hint">
-       For example, if the dispute is about a holiday pay, the claim should be made against the organisation named in the contract or letter of employement not the HR or the line manager.
+       In most cases the claim should be made against the organisation named in the payslip not the HR or the line manager.
         </div>
         <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
           <div class="govuk-radios__item">
@@ -55,8 +55,9 @@
                 </label>
                 <div id="more-detail-hint" class="govuk-hint">
 
-              To avoid jeopardising your case we will need the legal name of the organisation. For exmaple, PRET A MANGER LIMITED.
-            Please copy the name from your P45, P60, payslip, contract or letter of employment. If you can find the orgainsation on GOV.UK companies house register, you can copy and paste the name from <a href="https://find-and-update.company-information.service.gov.uk" target="_blank">here</a>
+              <!-- To avoid jeopardising your case we will need the legal name of the organisation.  -->
+
+            Get the name from your P45, P60 or recent payslip. <br> For example, BLUE BOX LIMITED.
                 </div>
                 <input class="govuk-input" id="company-1-legal-name" name="company-1-legal-name" type="text" spellcheck="false" autocomplete="name" value="{{ data['company-1-legal-name'] }}"></div>
 
@@ -65,8 +66,11 @@
                   Legal address
                   </label>
                 <div id="more-detail-hint" class="govuk-hint">
-                To avoid jeopardising your case we will need their legal address. This
-              may be the head office or registered office address and not your workplace. Please copy the address from your P45, P60, payslip, contract or letter of employment. If you can find the orgainsation on GOV.UK companies house register, you can copy and paste the registered address from <a href="https://find-and-update.company-information.service.gov.uk" target="_blank">here</a>
+                 This
+              may be the head office or registered office address and not your workplace.
+  Get the address from your P45, P60 or recent payslip.
+
+              <!-- Please copy the address from your P45, P60, payslip, contract or letter of employment. If you can find the orgainsation on GOV.UK companies house register, you can copy and paste the registered address from <a href="https://find-and-update.company-information.service.gov.uk" target="_blank">here</a> -->
 
                 <!-- You have to give us their formal, legal address if you want to use this service. This
               may be the head office or registered office address and not your workplace. Look
@@ -77,7 +81,7 @@
 
                   <textarea class="govuk-textarea" id="more-detail" name="company-1-address" rows="3">{{ data['company-1-address'] }}</textarea>
 
-                  <div id="waste-hint" class="govuk-hint">
+                  <!-- <div id="waste-hint" class="govuk-hint">
                        Please confirm if you have copied the address from P45, P60, payslip, contract or letter of employment.
                      </div>
                      <div class="govuk-checkboxes" data-module="govuk-checkboxes">
@@ -87,7 +91,7 @@
                         Yes, the address has been copied the name from P45, P60, payslip, contract or letter of employment.
                          </label>
                        </div>
-                  </div>
+                  </div> -->
 
 
 
@@ -123,7 +127,7 @@
                                         <input class="govuk-input" id="full-name" name="email-employer-c" type="text" spellcheck="false"  value="{{ data['email-name-employer-c'] }}"></div>
                                         <div class="govuk-form-group">
                                           <label class="govuk-label" for="full-name">
-                                            Phone number (inclcude extension)
+                                            Phone number
                                           </label>
                                           <!-- <div id="more-detail-hint" class="govuk-hint">
                                         To avoid jeopardising your case we need your correct legal name
@@ -161,11 +165,11 @@
 
             <div class="govuk-form-group">
               <label class="govuk-label" for="full-name">
-                Full legal name
+                Full name
               </label>
               <div id="more-detail-hint" class="govuk-hint">
 
-            To avoid jeopardising your case we will need the full legal name of the person. For exmaple, Joe Bloggs.
+           For exmaple, Joe Bloggs.
 
               </div>
               <input class="govuk-input" id="person-1-legal-name" name="person-1-legal-name" type="text" spellcheck="false" autocomplete="name" value="{{ data['person-1-legal-name'] }}"></div>
@@ -175,8 +179,10 @@
                 Legal address
                 </label>
               <div id="more-detail-hint" class="govuk-hint">
-              To avoid jeopardising your case we will need their legal address. If you work or worked with this person, you may want to give the organisation's
-address. This may be the head office or registered office address and not your workplace. Please copy the address from your P45, P60, payslip, contract or letter of employment. If you can find the orgainsation on GOV.UK companies house register, you can copy and paste the registered address from <a href="https://find-and-update.company-information.service.gov.uk" target="_blank">here</a>
+               If you work or worked with this person, you may want to give the organisation's
+address. This may be the head office or registered office address and not your workplace.
+
+Get the address from your P45, P60 or recent payslip.
               <!-- You have to give us their formal, legal address if you want to use this service. This
             may be the head office or registered office address and not your workplace. Look
             on your payslip, contract, or other documents from your employer. You can also
@@ -187,7 +193,7 @@ address. This may be the head office or registered office address and not your w
                 <textarea class="govuk-textarea" id="more-detail" name="person-1-address" rows="3">{{ data['person-1-address'] }}</textarea>
 
 
-                <div id="waste-hint" class="govuk-hint">
+                <!-- <div id="waste-hint" class="govuk-hint">
                      Please confirm if you have copied the address from P45, P60, payslip, contract or letter of employment.
                    </div>
                    <div class="govuk-checkboxes" data-module="govuk-checkboxes">
@@ -197,7 +203,7 @@ address. This may be the head office or registered office address and not your w
                       Yes, the address has been copied the name from P45, P60, payslip, contract or letter of employment.
                        </label>
                      </div>
-                </div>
+                </div> -->
 
 
 
@@ -289,7 +295,25 @@ address. This may be the head office or registered office address and not your w
             </button>
 
             </form>
+
+
+
+
     </div>
+    <div class="govuk-grid-column-one-third">
+      <h3 class="govuk-heading-s"> Useful links</h3>
+
+  <p>
+
+    Look up <a href="https://find-and-update.company-information.service.gov.uk" target="_blank">Companies House search</a> or <a href="https://get-information-schools.service.gov.uk" target="_blank">Information about schools search</a> on GOV.UK to double check the legal name and address are correct.
+      <!-- You cIf you can find the orgainsation on GOV.UK companies house register, you can copy and paste the name from here -->
+  </p>
+
+
+
+
+
+      </div>
   </div>
 
 {% endblock %}
