@@ -1,0 +1,88 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+<script>
+  // ChildNode.remove() polyfill for IE
+  (function(arr) {
+    arr.forEach(function(item) {
+      if (item.hasOwnProperty("remove")) {
+        return;
+      }
+      Object.defineProperty(item, "remove", {
+        configurable: true,
+        enumerable: true,
+        writable: true,
+        value: function remove() {
+          if (this.parentNode === null) {
+            return;
+          }
+          this.parentNode.removeChild(this);
+        },
+      });
+    });
+  })([Element.prototype, CharacterData.prototype, DocumentType.prototype]);
+</script>
+
+
+<a href="task-list" class="govuk-back-link">Back</a>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <h1 class="page-header" style="font-size: 2em;  font-family: Arial; font-weight:bold;">
+      Your representative’s contact details
+
+        <!-- <span class="govuk-caption-xl">{{releaseVersion}}</span> -->
+      </h1>
+
+<div class="govuk-hint">
+
+  You’ll get a quicker response about your dispute if you provide your representative’s contact details.
+
+
+
+</div >
+
+
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="full-name" class="page-header" style="font-size: 1.5em;  font-family: Arial; font-weight:bold;">
+          Email address
+        </label>
+        <!-- <div id="more-detail-hint" class="govuk-hint">
+      To avoid jeopardising your case we need your correct legal name
+    </div> -->
+        <input class="govuk-input" id="full-name" name="email-rep-ec" type="text" spellcheck="false"  value="{{ data['email-rep-ec'] }}"></div>
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="full-name">
+            Phone number
+          </label>
+          <!-- <div id="more-detail-hint" class="govuk-hint">
+        To avoid jeopardising your case we need your correct legal name
+      </div> -->
+          <input class="govuk-input" id="full-name" name="phone-rep-ec" type="text" spellcheck="false"  value="{{ data['phone-rep-ec'] }}"></div>
+
+
+
+
+
+            <button class="govuk-button btn-primary" data-module="govuk-button">
+              Save and continue
+            </button>
+
+            </form>
+    </div>
+  </div>
+
+{% endblock %}

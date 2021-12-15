@@ -55,9 +55,105 @@
             </a>
           </dd>
         </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Phone number
+          </dt>
+          <dd class="govuk-summary-list__value">
+           {{ data['phone-number'] }}
+             <!-- Sarah Philips -->
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="a-phone-number.html?change=true">
+              Change
+              <span class="govuk-visually-hidden"> name</span>
+            </a>
+          </dd>
+        </div>
 
 
       </dl>
+      {% if  data['rep-full-name-ec'] %}
+
+
+
+      <h2 class="govuk-heading-m">Representaive details</h2>
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Representaive name
+          </dt>
+          <dd class="govuk-summary-list__value">
+           {{ data['rep-full-name-ec'] }}
+             <!-- Sarah Philips -->
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="a-rep-full-name-ec-rep.html?change=true">
+              Change
+              <span class="govuk-visually-hidden"> name</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+          Address
+          </dt>
+          <dd class="govuk-summary-list__value">
+
+                 {{ data['address_line_1_ec_rep'] }} <br>{{ data['address_line_2_ec_rep'] }}
+                <br>      {{ data['posttown_ec_rep'] }}
+                  <br>      {{ data['postcode_ec_rep'] }}
+            <!-- 72 Guild Street
+            <br>London
+            <br>SE23 6FH -->
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="a-address-rep-ec.html?change=true">
+              Change
+              <span class="govuk-visually-hidden"> Address</span>
+            </a>
+          </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+          Email
+          </dt>
+          <dd class="govuk-summary-list__value">
+
+                 {{ data['email-rep-ec'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="a-address-rep-ec.html?change=true">
+              Change
+              <span class="govuk-visually-hidden"> Email</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+          Phone
+          </dt>
+          <dd class="govuk-summary-list__value">
+
+                 {{ data['phone-rep-ec'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="a-address-rep-ec.html?change=true">
+              Change
+              <span class="govuk-visually-hidden"> Email</span>
+            </a>
+          </dd>
+        </div>
+
+
+      </dl>
+
+
+      {% else %}
+
+      {% endif %}
 
       <h2 class="govuk-heading-m">Orgainsations or persons the claim is against</h2>
 
@@ -123,18 +219,50 @@
         </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            How much do you want claim?
+          How much money do you think you are owed?
           </dt>
           <dd class="govuk-summary-list__value">
-          £1,800
+        £ {{ data['w-how-much'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="#">
+            <a href="w-how-much?change=true">
               Change
-              <span class="govuk-visually-hidden"> How much do you want claim?</span>
+              <span class="govuk-visually-hidden"> How much money do you think you are owed?</span>
             </a>
           </dd>
         </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+          How much money do you think you are owed?
+          </dt>
+          <dd class="govuk-summary-list__value">
+        £ {{ data['w-how-much'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="w-how-much?change=true">
+              Change
+              <span class="govuk-visually-hidden"> How much money do you think you are owed?</span>
+            </a>
+          </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+          How much money do you think you are owed?
+          </dt>
+          <dd class="govuk-summary-list__value">
+       {{ data['w-day'] }} &nbsp;   {{ data['w-month'] }} &nbsp; {{ data['w-year'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="w-q2?change=true">
+              Change
+              <span class="govuk-visually-hidden"> How much money do you think you are owed?</span>
+            </a>
+          </dd>
+        </div>
+
+
 
       </dl>
 
