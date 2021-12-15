@@ -1,0 +1,57 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<a href="javascript:window.history.back()" class="govuk-back-link">Back</a>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+      <h1 class="page-header" style="font-size: 2em;  font-family: Arial; font-weight:bold;">
+      Thank you for confirming your email
+      </h1>
+
+      <div id="email-hint" class="govuk-hint">
+
+      <div class="govuk-warning-text">
+
+      </div>
+
+  <form action="task-list">
+
+
+    <div class="govuk-notification-banner govuk-notification-banner--success" role="alert" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+      <div class="govuk-notification-banner__header">
+        <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+          You have successfully confimed your email as
+        </h2>
+      </div>
+      <div class="govuk-notification-banner__content">
+        <h3 class="govuk-notification-banner__heading">
+           {{ data['claimant-email'] }}
+        </h3>
+        <p class="govuk-body">
+Information you enter will be saved as and when you click on the save and continue button. A link to return to the form has been sent to the above email. You can return to the form at any time by clicking on the link sent to your email.
+        </p>
+      </div>
+    </div>
+
+    <!-- <p> A link to return to form has been sent to email <strong style="font-weight:bold">  {{ data['claimant-email'] }}</strong>  </p>-->
+    <p> If you want use another email <a href="page-one-email"> you can provide another email address</a>.</p>
+
+
+
+
+            <button class="govuk-button btn-primary" data-module="govuk-button">
+              Provide information to start early conciliation
+            </button>
+
+            </form>
+    </div>
+  </div>
+
+{% endblock %}
