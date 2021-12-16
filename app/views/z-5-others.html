@@ -1,0 +1,64 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<a href="task-list" class="govuk-back-link">Back</a>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+
+
+      {% if data['change'] == "true" %}
+        <form action="check-your-answers#reason">
+
+      {% else %}
+
+        <form action="task-list#reason">
+      {% endif %}
+
+
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="page-header" style="font-size: .9em; font-family: Arial; font-weight:bold;">
+              Are there any other people in your situation who have also made a claim?
+            </h1>
+          </legend>
+          <!-- <div id="changed-name-hint" class="govuk-hint">
+            To calculate your time in service, look for the start date on your contract or letter of employment and look for leaving date on your P45. You'll need over 2 years of service to make this claim.
+          </div> -->
+          <div class="govuk-radios govuk-radios--inline">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="changed-name" name="z-5-others" type="radio" value="Yes" {{ checked('z-5-others','Yes') }}>
+              <label class="govuk-label govuk-radios__label" for="changed-name">
+                Yes
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="changed-name-2" name="z-5-others" type="radio" value="No" {{ checked('z-5-others','No') }}>
+              <label class="govuk-label govuk-radios__label" for="changed-name-2">
+                No
+              </label>
+            </div>
+          </div>
+
+        </fieldset>
+      </div>
+
+
+
+            <button class="govuk-button btn-primary" data-module="govuk-button">
+              Save and continue
+            </button>
+
+            </form>
+    </div>
+  </div>
+
+{% endblock %}

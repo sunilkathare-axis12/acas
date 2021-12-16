@@ -804,6 +804,82 @@ Did you raise a grievance regarding the situation?
 
     {% endif %}
 
+    {% if  data['reason'] == "Equal pay" %}
+
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+Why do you feel your employer has failed to provide equal pay?
+
+      </dt>
+      <dd class="govuk-summary-list__value">
+    {{ data['z-5-why'] }}
+      </dd>
+      <dd class="govuk-summary-list__actions">
+        <a href="z-5-why?change=true">
+          Change
+          <span class="govuk-visually-hidden"> Why do you feel your employer has failed to provide equal pay?
+    </span>
+        </a>
+      </dd>
+    </div>
+
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+Is the comparator of the opposite sex?
+
+      </dt>
+      <dd class="govuk-summary-list__value">
+    {{ data['z-5-comp'] }}
+      </dd>
+      <dd class="govuk-summary-list__actions">
+        <a href="z-5-comp?change=true">
+          Change
+          <span class="govuk-visually-hidden"> Is the comparator of the opposite sex?
+    </span>
+        </a>
+      </dd>
+    </div>
+
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+Are there any other people in your situation who have also made a claim?
+
+      </dt>
+      <dd class="govuk-summary-list__value">
+    {{ data['z-5-others'] }}
+      </dd>
+      <dd class="govuk-summary-list__actions">
+        <a href="z-5-others?change=true">
+          Change
+          <span class="govuk-visually-hidden"> Are there any other people in your situation who have also made a claim?
+    </span>
+        </a>
+      </dd>
+    </div>
+
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+Have you been through any internal procedures or raised a grievance?
+
+      </dt>
+      <dd class="govuk-summary-list__value">
+    {{ data['z-5-internal'] }}
+      </dd>
+      <dd class="govuk-summary-list__actions">
+        <a href="z-5-internal?change=true">
+          Change
+          <span class="govuk-visually-hidden"> Have you been through any internal procedures or raised a grievance?
+    </span>
+        </a>
+      </dd>
+    </div>
+
+
+
+    {% else %}
+
+    {% endif %}
+
 
 
       </dl>
