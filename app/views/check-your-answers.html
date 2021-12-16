@@ -547,6 +547,265 @@ Have you gone through any internal procedures to try to resolve this?
 
         {% endif %}
 
+
+          {% if  data['reason'] == "Wrongful dismissal" %}
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+            Why do you feel you have been wrongfully dismissed?
+
+            </dt>
+            <dd class="govuk-summary-list__value">
+          {{ data['z-2-w-why'] }}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a href="z-2-w-why?change=true">
+                Change
+                <span class="govuk-visually-hidden"> Why do you feel you have been wrongfully dismissed?
+        </span>
+              </a>
+            </dd>
+          </div>
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+          Do you have a contract?
+
+            </dt>
+            <dd class="govuk-summary-list__value">
+          {{ data['z-2-w-contract'] }}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a href="z-2-w-contract?change=true">
+                Change
+                <span class="govuk-visually-hidden"> Why do you feel you have been wrongfully dismissed?
+        </span>
+              </a>
+            </dd>
+          </div>
+
+
+
+
+<div class="govuk-summary-list__row">
+  <dt class="govuk-summary-list__key">
+What clause in your contract was breached?
+
+  </dt>
+  <dd class="govuk-summary-list__value">
+{{ data['z-2-w-clause'] }}
+  </dd>
+  <dd class="govuk-summary-list__actions">
+    <a href="z-2-w-clause?change=true">
+      Change
+      <span class="govuk-visually-hidden"> What clause in your contract was breached?
+</span>
+    </a>
+  </dd>
+</div>
+
+<div class="govuk-summary-list__row">
+  <dt class="govuk-summary-list__key">
+Tried internal procedures to try to resolve this
+
+  </dt>
+  <dd class="govuk-summary-list__value">
+{{ data['z-2-w-try'] }}
+  </dd>
+  <dd class="govuk-summary-list__actions">
+    <a href="z-2-w-try?change=true">
+      Change
+      <span class="govuk-visually-hidden"> Tried internal procedures to try to resolve this
+</span>
+    </a>
+  </dd>
+</div>
+
+
+
+
+          {% else %}
+
+          {% endif %}
+
+
+
+            {% if  data['reason'] == "Unfair dismissal" %}
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+            More than 2 years of service
+
+              </dt>
+              <dd class="govuk-summary-list__value">
+            {{ data['z-3-years'] }}
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a href="z-3-years?change=true">
+                  Change
+                  <span class="govuk-visually-hidden"> More than 2 years of service
+            </span>
+                </a>
+              </dd>
+            </div>
+
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+             Date of termination
+
+              </dt>
+              <dd class="govuk-summary-list__value">
+            {{ data['z-3-end-day'] }} {{ data['z-3-end-month'] }} {{ data['z-3-end-year'] }}
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a href="z-3-end-date?change=true">
+                  Change
+                  <span class="govuk-visually-hidden">  Date of termination
+            </span>
+                </a>
+              </dd>
+            </div>
+
+
+
+
+
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+             Reason given for your dismissal
+
+              </dt>
+              <dd class="govuk-summary-list__value">
+            {{ data['z-3-reason'] }}
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a href="z-3-reason?change=true">
+                  Change
+                  <span class="govuk-visually-hidden"> Reason given
+            </span>
+                </a>
+              </dd>
+            </div>
+
+
+
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+             Why do you feel this was unfair?
+
+              </dt>
+              <dd class="govuk-summary-list__value">
+            {{ data['z-3-feel'] }}
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a href="z-3-feel?change=true">
+                  Change
+                  <span class="govuk-visually-hidden"> Why do you feel this was unfair?
+            </span>
+                </a>
+              </dd>
+            </div>
+
+
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+            Have you appealed against the dismissal?
+
+              </dt>
+              <dd class="govuk-summary-list__value">
+            {{ data['z-3-appeal'] }}
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a href="z-3-appeal?change=true">
+                  Change
+                  <span class="govuk-visually-hidden"> Why do you feel this was unfair?
+            </span>
+                </a>
+              </dd>
+            </div>
+
+            {% else %}
+
+            {% endif %}
+
+    {% if  data['reason'] == "Constructive dismissal" %}
+
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+    More than 2 years of service
+
+      </dt>
+      <dd class="govuk-summary-list__value">
+    {{ data['z-4-years'] }}
+      </dd>
+      <dd class="govuk-summary-list__actions">
+        <a href="z-4-years?change=true">
+          Change
+          <span class="govuk-visually-hidden">   More than 2 years of service
+    </span>
+        </a>
+      </dd>
+    </div>
+
+
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+  When did you resign?
+
+      </dt>
+      <dd class="govuk-summary-list__value">
+    {{ data['z-4-end-day'] }}  {{ data['z-4-end-month'] }}   {{ data['z-4-end-year'] }}
+      </dd>
+      <dd class="govuk-summary-list__actions">
+        <a href="z-4-end-date?change=true">
+          Change
+          <span class="govuk-visually-hidden">   More than 2 years of service
+    </span>
+        </a>
+      </dd>
+    </div>
+
+
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+Why did you feel you had no option but to resign?
+
+      </dt>
+      <dd class="govuk-summary-list__value">
+    {{ data['z-4-why'] }}
+      </dd>
+      <dd class="govuk-summary-list__actions">
+        <a href="z-4-why?change=true">
+          Change
+          <span class="govuk-visually-hidden">   Why did you feel you had no option but to resign?
+    </span>
+        </a>
+      </dd>
+    </div>
+
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+Did you raise a grievance regarding the situation?
+
+      </dt>
+      <dd class="govuk-summary-list__value">
+    {{ data['z-4-appeal'] }}
+      </dd>
+      <dd class="govuk-summary-list__actions">
+        <a href="z-4-appeal?change=true">
+          Change
+          <span class="govuk-visually-hidden">  Did you raise a grievance regarding the situation?
+    </span>
+        </a>
+      </dd>
+    </div>
+
+
+
+    {% else %}
+
+    {% endif %}
+
+
+
       </dl>
 
       <h2 class="govuk-heading-m">Now send your application</h2>

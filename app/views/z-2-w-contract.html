@@ -18,7 +18,7 @@
 
       {% else %}
 
-        <form action="task-list#reason">
+        <form action="task-list">
       {% endif %}
 
 
@@ -27,7 +27,7 @@
         <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
             <h1 class="page-header" style="font-size: .9em; font-family: Arial; font-weight:bold;">
-              Did you work a notice period?
+              Do you have a contract?
             </h1>
           </legend>
           <!-- <div id="changed-name-hint" class="govuk-hint">
@@ -35,13 +35,13 @@
           </div> -->
           <div class="govuk-radios govuk-radios--inline">
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="changed-name" name="y-r-notice" type="radio" value="Yes" {{ checked('y-r-notice','Yes') }}>
+              <input class="govuk-radios__input" id="changed-name" name="z-2-w-contract" type="radio" value="Yes" {{ checked('z-2-w-contract','Yes') }}>
               <label class="govuk-label govuk-radios__label" for="changed-name">
                 Yes
               </label>
             </div>
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="changed-name-2" name="y-r-notice" type="radio" value="No" {{ checked('y-r-notice','No') }}>
+              <input class="govuk-radios__input" id="changed-name-2" name="z-2-w-contract" type="radio" value="No" {{ checked('z-2-w-contract','No') }}>
               <label class="govuk-label govuk-radios__label" for="changed-name-2">
                 No
               </label>

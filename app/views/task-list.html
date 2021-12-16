@@ -250,7 +250,9 @@
                 <a href="b-01-reason?change=false" aria-describedby="reason for dispute">
                 Reason for your dispute
                 </a>&nbsp<strong> {{ data['reason'] }} </strong>
-                {% if  data['reason-others'] %}
+
+
+                {% if  data['reason'] == "Others" %}
                   <strong class="" id="">- {{ data['reason-others'] }} </strong>
                 {% else %}
 
@@ -550,105 +552,166 @@
 
                                 <li class="app-task-list__item">
                                   <span class="app-task-list__task-name">
-                                    <a href="#" aria-describedby="contact-details-status">
+                                    <a href="z-2-w-why?change=false" aria-describedby="contact-details-status">
 
                             Why do you feel you have been wrongfully dismissed?
                                     </a>
                                   </span>
-                                <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="list-convictions-status">Optional</strong>
+                                  {% if  data['z-2-w-why'] %}
+                                    <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+                                  {% else %}
+                                    <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="list-convictions-status">Optional</strong>
+                                  {% endif %}
                                 </li>
 
                                 <li class="app-task-list__item">
                                   <span class="app-task-list__task-name">
-                                    <a href="#" aria-describedby="contact-details-status">
+                                    <a href="z-2-w-contract?change=false" aria-describedby="contact-details-status">
 
 
                           Do you have a contract?
                                     </a>
                                   </span>
-                                <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="list-convictions-status">Optional</strong>
+
+                                  {% if  data['z-2-w-contract'] %}
+                                    <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+                                  {% else %}
+                                    <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="list-convictions-status">Optional</strong>
+                                  {% endif %}
+
                                 </li>
 
                                 <li class="app-task-list__item">
                                   <span class="app-task-list__task-name">
-                                    <a href="#" aria-describedby="contact-details-status">
+                                    <a href="z-2-w-clause?change=false" aria-describedby="contact-details-status">
 
 
                         What clause in your contract was breached?
                                     </a>
                                   </span>
-                                <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="list-convictions-status">Optional</strong>
+
+                                  {% if  data['z-2-w-clause'] %}
+                                    <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+                                  {% else %}
+                                    <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="list-convictions-status">Optional</strong>
+                                  {% endif %}
+
+
                                 </li>
 
 
                                 <li class="app-task-list__item">
                                   <span class="app-task-list__task-name">
-                                    <a href="#" aria-describedby="contact-details-status">
+                                    <a href="z-2-w-try?change=false" aria-describedby="contact-details-status">
 
 
-                    Have you gone through any internal procedures to try to resolve this
+                    Have you gone through any internal procedures to try to resolve this?
                                     </a>
                                   </span>
-                                <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="list-convictions-status">Optional</strong>
+
+                                  {% if  data['z-2-w-try'] %}
+                                    <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+                                  {% else %}
+                                    <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="list-convictions-status">Optional</strong>
+                                  {% endif %}
+
+
+
                                 </li>
+
                                 {% else %}
                                         {% endif %}
 
                                           {% if  data['reason'] == "Unfair dismissal" %}
                                           <li class="app-task-list__item">
                                             <span class="app-task-list__task-name">
-                                              <a href="#" aria-describedby="contact-details-status">
+                                              <a href="z-3-years?change=false" aria-describedby="contact-details-status">
 
 
                                       Have you worked for this organisation for more than 2 years?
                                               </a>
                                             </span>
-                                          <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="list-convictions-status">Optional</strong>
+                                            {% if  data['z-3-years'] %}
+                                              <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+                                            {% else %}
+                                              <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="list-convictions-status">Optional</strong>
+                                            {% endif %}
+
+
+
                                           </li>
 
 
 
                                           <li class="app-task-list__item">
                                             <span class="app-task-list__task-name">
-                                              <a href="#" aria-describedby="contact-details-status">
+                                              <a href="z-3-end-date?change=false" aria-describedby="contact-details-status">
 
 
-                                        Could you confirm what date you were dismissed?
+                                                What was your effective date of termination?
+
                                               </a>
                                             </span>
-                                          <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="list-convictions-status">Optional</strong>
+
+                                            {% if  data['z-3-end-day'] %}
+                                              <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+                                            {% else %}
+                                              <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="list-convictions-status">Optional</strong>
+                                            {% endif %}
+
                                           </li>
 
                                           <li class="app-task-list__item">
                                             <span class="app-task-list__task-name">
-                                              <a href="#" aria-describedby="contact-details-status">
+                                              <a href="z-3-reason?change=false" aria-describedby="contact-details-status">
 
 
                                   What reason was given for your dismissal?
                                               </a>
                                             </span>
-                                          <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="list-convictions-status">Optional</strong>
+
+                                            {% if  data['z-3-reason'] %}
+                                              <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+                                            {% else %}
+                                              <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="list-convictions-status">Optional</strong>
+                                            {% endif %}
+
+
                                           </li>
 
                                           <li class="app-task-list__item">
                                             <span class="app-task-list__task-name">
-                                              <a href="#" aria-describedby="contact-details-status">
+                                              <a href="z-3-feel?change=false" aria-describedby="contact-details-status">
 
 
                               Why do you feel this was unfair?
                                               </a>
                                             </span>
-                                          <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="list-convictions-status">Optional</strong>
+
+                                            {% if  data['z-3-feel'] %}
+                                              <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+                                            {% else %}
+                                              <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="list-convictions-status">Optional</strong>
+                                            {% endif %}
+
+
+
                                           </li>
                                           <li class="app-task-list__item">
                                             <span class="app-task-list__task-name">
-                                              <a href="#" aria-describedby="contact-details-status">
+                                              <a href="z-3-appeal?change=false" aria-describedby="contact-details-status">
 
 
                                       Have you appealed against the dismissal?
                                               </a>
                                             </span>
-                                          <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="list-convictions-status">Optional</strong>
+
+                                            {% if  data['z-3-appeal'] %}
+                                              <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+                                            {% else %}
+                                              <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="list-convictions-status">Optional</strong>
+                                            {% endif %}
+
                                           </li>
 
 
@@ -661,13 +724,19 @@
 
                                                     <li class="app-task-list__item">
                                                       <span class="app-task-list__task-name">
-                                                        <a href="#" aria-describedby="contact-details-status">
+                                                        <a href="z-4-years?change=false" aria-describedby="contact-details-status">
 
 
                                                 Have you worked for this organisation for more than 2 years?
                                                         </a>
                                                       </span>
-                                                    <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="list-convictions-status">Optional</strong>
+
+                                                      {% if  data['z-4-years'] %}
+                                                        <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+                                                      {% else %}
+                                                        <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="list-convictions-status">Optional</strong>
+                                                      {% endif %}
+
                                                     </li>
 
 
@@ -675,35 +744,53 @@
 
                                                     <li class="app-task-list__item">
                                                       <span class="app-task-list__task-name">
-                                                        <a href="#" aria-describedby="contact-details-status">
+                                                        <a href="z-4-end-date?change=false" aria-describedby="contact-details-status">
 
 
-                                              When did  you resign?
+                                              When did you resign?
                                                         </a>
                                                       </span>
-                                                    <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="list-convictions-status">Optional</strong>
+
+                                                      {% if  data['z-4-end-day'] %}
+                                                        <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+                                                      {% else %}
+                                                        <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="list-convictions-status">Optional</strong>
+                                                      {% endif %}
+
+
                                                     </li>
 
                                                     <li class="app-task-list__item">
                                                       <span class="app-task-list__task-name">
-                                                        <a href="#" aria-describedby="contact-details-status">
+                                                        <a href="z-4-why?change=false" aria-describedby="contact-details-status">
 
 
                                                 Why did you feel you had no option but to resign?
                                                         </a>
                                                       </span>
-                                                    <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="list-convictions-status">Optional</strong>
+                                                      {% if  data['z-4-why'] %}
+                                                        <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+                                                      {% else %}
+                                                        <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="list-convictions-status">Optional</strong>
+                                                      {% endif %}
+
                                                     </li>
 
                                                     <li class="app-task-list__item">
                                                       <span class="app-task-list__task-name">
-                                                        <a href="#" aria-describedby="contact-details-status">
+                                                        <a href="z-4-appeal?change=false" aria-describedby="contact-details-status">
 
 
                                             Did you raise a grievance regarding the situation?
                                                         </a>
                                                       </span>
-                                                    <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="list-convictions-status">Optional</strong>
+
+                                                      {% if  data['z-4-appeal'] %}
+                                                        <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+                                                      {% else %}
+                                                        <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="list-convictions-status">Optional</strong>
+                                                      {% endif %}
+                                                  
                                                     </li>
 
 

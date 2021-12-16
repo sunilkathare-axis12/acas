@@ -1,0 +1,46 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<a href="task-list" class="govuk-back-link">Back</a>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <h1 class="page-header" style="font-size: 2em; font-family: Arial; font-weight:bold;">
+    What clause in your contract was breached?
+      </h1>
+
+
+      {% if data['change'] == "true" %}
+        <form action="check-your-answers#name">
+
+      {% else %}
+
+        <form action="task-list">
+      {% endif %}
+
+
+
+    <div class="govuk-form-group">
+
+      <!-- <div id="more-detail-hint" class="govuk-hint">
+  For example, you might tell us what happened, when it happened, who was involved and whether it was a series of events or a single event.
+  </div> -->
+      <!-- <input class="govuk-input" id="full-name" name="w-how-much" type="text" spellcheck="false" autocomplete="name" value="{{ data['w-how-much'] }}"></div> -->
+<br>
+        <textarea class="govuk-textarea" id="more-detail" name="z-2-w-clause" rows="3">{{ data['z-2-w-clause'] }}</textarea>
+
+<br>
+            <button class="govuk-button btn-primary" data-module="govuk-button">
+              Save and continue
+            </button>
+
+            </form>
+    </div>
+  </div>
+
+{% endblock %}
