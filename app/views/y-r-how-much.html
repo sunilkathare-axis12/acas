@@ -1,0 +1,52 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<a href="task-list" class="govuk-back-link">Back</a>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <h1 class="page-header" style="font-size: 2em; font-family: Arial; font-weight:bold;">
+      How much money do you think you are owed?
+        <!-- <span class="govuk-caption-xl">{{releaseVersion}}</span> -->
+      </h1>
+
+
+      {% if data['change'] == "true" %}
+        <form action="check-your-answers#name">
+
+      {% else %}
+
+        <form action="task-list">
+      {% endif %}
+
+
+
+    <div class="govuk-form-group">
+      <!-- <label class="govuk-label" for="full-name">
+        Full name
+      </label>
+      <div id="more-detail-hint" class="govuk-hint">
+  Enter full legal name as it appears on your passport, birth certificate or driving licence.
+  </div> -->
+      <!-- <input class="govuk-input" id="full-name" name="w-how-much" type="text" spellcheck="false" autocomplete="name" value="{{ data['w-how-much'] }}"></div> -->
+<br>
+      <div class="govuk-input__wrapper">
+         <div class="govuk-input__prefix" aria-hidden="true">£</div>
+         <input class="govuk-input govuk-input--width-5" id="cost" name="y-r-how-much" type="text" spellcheck="false" value="{{ data['y-r-how-much'] }}">
+       </div>
+
+<br>
+            <button class="govuk-button btn-primary" data-module="govuk-button">
+              Save and continue
+            </button>
+
+            </form>
+    </div>
+  </div>
+
+{% endblock %}

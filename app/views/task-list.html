@@ -206,7 +206,7 @@
                    <!-- Entry 1<br><input type="text" name="myInputs[]">-->
 
                </div>
-               <input type="button" class="govuk-button govuk-button--secondary" data-module="govuk-button" value="Add another" value="Add more" onClick="addInput('dynamicInput');">
+               <input type="button" class="govuk-button govuk-button--secondary" data-module="govuk-button" value="Add another orgainsation or person" value="Add more" onClick="addInput('dynamicInput');">
   <!-- <li class="app-task-list__item-">
     <span class="app-task-list__task-name-"> -->
 
@@ -240,7 +240,7 @@
         </li>
 
         <li>
-          <h2 class="app-task-list__section">
+          <h2 class="app-task-list__section" id="reason">
             <span class="app-task-list__section-number">4. </span> Enter details about your dispute
           </h2>
   <!-- <span class="govuk-hint">Once you select the reason you will be asked relavent question. Accurate information will help move early concilation quicker  </span> -->
@@ -274,7 +274,7 @@
             {% if  data['reason'] == "Wages owed or holiday pay" %}
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
-                <a href="w-how-much" aria-describedby="contact-details-status">
+                <a href="w-how-much?change=false" aria-describedby="contact-details-status">
                   <!-- How much do you want to claim? -->
 
                 How much money do you think you are owed?
@@ -290,7 +290,7 @@
             </li>
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
-                <a href="w-q2" aria-describedby="contact-details-status">
+                <a href="w-q2?change=false" aria-describedby="contact-details-status">
                   <!-- How much do you want to claim? -->
 
                 When did you have this problem with your pay?
@@ -307,7 +307,7 @@
             </li>
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
-                <a href="w-why" aria-describedby="contact-details-status">
+                <a href="w-why?change=false" aria-describedby="contact-details-status">
                   <!-- How much do you want to claim? -->
 
               Why do you think you are owed this money?
@@ -335,12 +335,12 @@
             {% endif %}
 
 
-              {% if  data['reason'] == "Redundancy" %}
+              {% if  data['reason'] == "Redundancy Pay" %}
 
 
               <li class="app-task-list__item">
                 <span class="app-task-list__task-name">
-                  <a href="d-r-two-years" aria-describedby="two-years">
+                  <a href="d-r-two-years?change=false" aria-describedby="two-years">
 
             Have you worked for this organisation for more than 2 years?
 
@@ -356,72 +356,102 @@
 
               </li>
 
-              <li class="app-task-list__item">
+              <!-- <li class="app-task-list__item">
                 <span class="app-task-list__task-name">
                   <a href="#" aria-describedby="contact-details-status">
-                    <!-- How much do you want to claim? -->
+                    
 
                 Why do you think you are owed Redundancy Pay ?
                   </a>
                 </span>
               <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="list-convictions-status">Optional</strong>
-              </li>
+              </li> -->
 
               <li class="app-task-list__item">
                 <span class="app-task-list__task-name">
-                  <a href="#" aria-describedby="contact-details-status">
+                  <a href="y-r-end-date?change=false" aria-describedby="contact-details-status">
                     <!-- How much do you want to claim? -->
             What was your effective date of termination?
 
                   </a>
                 </span>
-              <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="list-convictions-status">Optional</strong>
+                {% if  data['y-r-end-day'] %}
+                  <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+                {% else %}
+                  <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="list-convictions-status">Optional</strong>
+                {% endif %}
+
+
+
               </li>
 
 
 
               <li class="app-task-list__item">
                 <span class="app-task-list__task-name">
-                  <a href="#" aria-describedby="contact-details-status">
+                  <a href="y-r-pay-date?change=false" aria-describedby="contact-details-status">
 
             What date should you have received your payment?
 
                   </a>
                 </span>
-              <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="list-convictions-status">Optional</strong>
+                {% if  data['y-r-pay-day'] %}
+                  <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+                {% else %}
+                  <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="list-convictions-status">Optional</strong>
+                {% endif %}
               </li>
 
               <li class="app-task-list__item">
                 <span class="app-task-list__task-name">
-                  <a href="#" aria-describedby="contact-details-status">
+                  <a href="y-r-how-much?change=false" aria-describedby="contact-details-status">
 
           How much do you think you are owed?
 
                   </a>
                 </span>
-              <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="list-convictions-status">Optional</strong>
+
+
+                {% if  data['y-r-how-much'] %}
+                  <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+                {% else %}
+                  <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="list-convictions-status">Optional</strong>
+                {% endif %}
               </li>
 
               <li class="app-task-list__item">
                 <span class="app-task-list__task-name">
-                  <a href="#" aria-describedby="contact-details-status">
+                  <a href="y-r-notice?change=false" aria-describedby="contact-details-status">
 
         Did you work a notice period?
 
                   </a>
                 </span>
-              <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="list-convictions-status">Optional</strong>
+
+
+
+                {% if  data['y-r-notice'] %}
+                  <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+                {% else %}
+                  <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="list-convictions-status">Optional</strong>
+                {% endif %}
+              </li>
               </li>
 
               <li class="app-task-list__item">
                 <span class="app-task-list__task-name">
-                  <a href="#" aria-describedby="contact-details-status">
+                  <a href="y-r-internal?change=false" aria-describedby="contact-details-status">
 
         Have you gone through any internal procedures to try to resolve this?
 
                   </a>
                 </span>
-              <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="list-convictions-status">Optional</strong>
+
+                {% if  data['y-r-internal'] %}
+                  <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+                {% else %}
+                  <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="list-convictions-status">Optional</strong>
+                {% endif %}
               </li>
 
 
@@ -752,7 +782,7 @@
                      <!-- Entry 1<br><input type="text" name="myInputs[]">-->
 
                  </div>
-                 <input type="button" class="govuk-button govuk-button--secondary" data-module="govuk-button" value="Add another" value="Add more" onClick="addReason('dynamicInputR');">
+                 <input type="button" class="govuk-button govuk-button--secondary" data-module="govuk-button" value="Add another reason" value="Add more" onClick="addReason('dynamicInputR');">
     <!-- <li class="app-task-list__item-">
       <span class="app-task-list__task-name-"> -->
 

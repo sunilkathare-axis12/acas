@@ -291,7 +291,7 @@
 
       </dl>
 
-      <h2 class="govuk-heading-m">Case details</h2>
+      <h2 class="govuk-heading-m" id="reason">Case details</h2>
 
       <dl class="govuk-summary-list govuk-!-margin-bottom-9">
         <div class="govuk-summary-list__row">
@@ -311,6 +311,9 @@
             </a>
           </dd>
         </div>
+
+  {% if  data['reason'] == "Wages owed or holiday pay" %}
+
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
           How much money do you think you are owed?
@@ -353,10 +356,121 @@
           <dd class="govuk-summary-list__actions">
             <a href="w-why?change=true">
               Change
-              <span class="govuk-visually-hidden"> How much money do you think you are owed?</span>
+              <span class="govuk-visually-hidden">   Why do you think you are owed this money?</span>
             </a>
           </dd>
         </div>
+
+
+
+
+
+        {% else %}
+
+        {% endif %}
+
+{% if  data['reason'] == "Redundancy Pay" %}
+
+<div class="govuk-summary-list__row">
+  <dt class="govuk-summary-list__key">
+  2 years of service
+  </dt>
+  <dd class="govuk-summary-list__value">
+{{ data['years-worked-r'] }}
+  </dd>
+  <dd class="govuk-summary-list__actions">
+    <a href="d-r-two-years?change=true">
+      Change
+      <span class="govuk-visually-hidden">2 years of service</span>
+    </a>
+  </dd>
+</div>
+
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+          Effective date of termination
+          </dt>
+          <dd class="govuk-summary-list__value">
+       {{ data['y-r-end-day'] }} &nbsp;   {{ data['y-r-end-month'] }} &nbsp; {{ data['y-r-end-year'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="y-r-end-date?change=true">
+              Change
+              <span class="govuk-visually-hidden"> Effective date of termination</span>
+            </a>
+          </dd>
+        </div>
+
+
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+          Date should you have received your payment?
+          </dt>
+          <dd class="govuk-summary-list__value">
+       {{ data['y-r-pay-day'] }} &nbsp;   {{ data['y-r-pay-month'] }} &nbsp; {{ data['y-r-pay-year'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="y-r-pay-date?change=true">
+              Change
+              <span class="govuk-visually-hidden"> Date should you have received your payment</span>
+            </a>
+          </dd>
+        </div>
+
+
+
+<div class="govuk-summary-list__row">
+  <dt class="govuk-summary-list__key">
+How much do you think you are owed?
+  </dt>
+  <dd class="govuk-summary-list__value">
+{{ data['y-r-how-much'] }}
+  </dd>
+  <dd class="govuk-summary-list__actions">
+    <a href="y-r-how-much?change=true">
+      Change
+      <span class="govuk-visually-hidden"> How much money do you think you are owed?</span>
+    </a>
+  </dd>
+</div>
+
+<div class="govuk-summary-list__row">
+  <dt class="govuk-summary-list__key">
+  Did you work a notice period?
+  </dt>
+  <dd class="govuk-summary-list__value">
+{{ data['y-r-notice'] }}
+  </dd>
+  <dd class="govuk-summary-list__actions">
+    <a href="y-r-notice?change=true">
+      Change
+      <span class="govuk-visually-hidden"> Did you work a notice period? </span>
+    </a>
+  </dd>
+</div>
+
+<div class="govuk-summary-list__row">
+  <dt class="govuk-summary-list__key">
+Have you gone through any internal procedures to try to resolve this?
+  </dt>
+  <dd class="govuk-summary-list__value">
+{{ data['y-r-internal'] }}
+  </dd>
+  <dd class="govuk-summary-list__actions">
+    <a href="y-r-internal?change=true">
+      Change
+      <span class="govuk-visually-hidden"> Have you gone through any internal procedures to try to resolve this? </span>
+    </a>
+  </dd>
+</div>
+
+
+
+        {% else %}
+
+        {% endif %}
 
       </dl>
 
