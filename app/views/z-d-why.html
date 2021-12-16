@@ -1,0 +1,118 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<a href="task-list" class="govuk-back-link">Back</a>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+
+
+      {% if data['change'] == "true" %}
+        <form action="check-your-answers#reason">
+
+      {% else %}
+
+        <form action="task-list">
+      {% endif %}
+
+
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="page-header" style="font-size: .9em; font-family: Arial; font-weight:bold;">
+              Why do you believe you have been discriminated against at work?
+            </h1>
+          </legend>
+          <div id="changed-name-hint" class="govuk-hint">
+            Please tick all the categories that apply. This will help us give your case to the right person. You can only claim discrimination for these reasons.
+          </div>
+          <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="countries" name="z-d-why" type="checkbox" value="Age" {{ checked('z-d-why','Age') }}>
+            <label class="govuk-label govuk-checkboxes__label" for="countries">
+              Age
+            </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="countries-2" name="z-d-why" type="checkbox" value="portugal" {{ checked('z-d-why','Disability') }}>
+            <label class="govuk-label govuk-checkboxes__label" for="countries-2">
+            Disability
+            </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="countries-3" name="z-d-why" type="checkbox" value="Gender reassignment" {{ checked('z-d-why','Gender reassignment') }}>
+            <label class="govuk-label govuk-checkboxes__label" for="countries-3">
+              Gender reassignment
+            </label>
+          </div>
+
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="countries-3" name="z-d-why" type="checkbox" value="Marriage or civil partnership" {{ checked('z-d-why','Marriage or civil partnership') }}>
+            <label class="govuk-label govuk-checkboxes__label" for="countries-3">
+              Marriage or civil partnership
+            </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="countries-3" name="z-d-why" type="checkbox" value="Pregnancy or maternity" {{ checked('z-d-why','Pregnancy or maternity') }}>
+            <label class="govuk-label govuk-checkboxes__label" for="countries-3">
+              Pregnancy or maternity
+            </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="countries-3" name="z-d-why" type="checkbox" value="Religion or belief" {{ checked('z-d-why','Religion or belief') }}>
+            <label class="govuk-label govuk-checkboxes__label" for="countries-3">
+            Religion or belief
+            </label>
+          </div>
+
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="countries-3" name="z-d-why" type="checkbox" value="Race" {{ checked('z-d-why','Race') }}>
+            <label class="govuk-label govuk-checkboxes__label" for="countries-3">
+              Race
+            </label>
+          </div>
+
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="countries-3" name="z-d-why" type="checkbox" value="Sex - including equal pay" {{ checked('z-d-why','Sex - including equal pay') }}>
+            <label class="govuk-label govuk-checkboxes__label" for="countries-3">
+          Sex (including equal pay)
+            </label>
+          </div>
+
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="countries-3" name="z-d-why" type="checkbox" value="Sexual orientation" {{ checked('z-d-why','Sexual orientation') }}>
+            <label class="govuk-label govuk-checkboxes__label" for="countries-3">
+          Sexual orientation
+            </label>
+          </div>
+
+          <div class="govuk-checkboxes__divider">or</div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="countries-5" name="z-d-why" type="checkbox" value="Discrimination claim" data-behaviour="exclusive" {{ checked('z-d-why','Discrimination claim') }}>
+            <label class="govuk-label govuk-checkboxes__label" for="countries-5">
+            Discrimination claim or support of someone else’s discrimination claim
+            </label>
+          </div>
+        </div>
+
+        </fieldset>
+      </div>
+
+
+
+            <button class="govuk-button btn-primary" data-module="govuk-button">
+              Save and continue
+            </button>
+
+            </form>
+    </div>
+  </div>
+
+{% endblock %}

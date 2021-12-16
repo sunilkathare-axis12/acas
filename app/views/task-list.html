@@ -359,7 +359,7 @@
               <!-- <li class="app-task-list__item">
                 <span class="app-task-list__task-name">
                   <a href="#" aria-describedby="contact-details-status">
-                    
+
 
                 Why do you think you are owed Redundancy Pay ?
                   </a>
@@ -464,57 +464,83 @@
 
                       <li class="app-task-list__item">
                         <span class="app-task-list__task-name">
-                          <a href="#" aria-describedby="contact-details-status">
+                          <a href="z-d-why?change=false" aria-describedby="Discrimination">
                             <!-- How much do you want to claim? -->
 
                         Why do you believe you have been discriminated against at work?
                           </a>
                         </span>
-                      <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="list-convictions-status">Optional</strong>
+                        {% if  data['z-d-why'] %}
+                          <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+                        {% else %}
+                          <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="list-convictions-status">Optional</strong>
+                        {% endif %}
                       </li>
+
+
 
                       <li class="app-task-list__item">
                         <span class="app-task-list__task-name">
-                          <a href="#" aria-describedby="contact-details-status">
-                            <!-- How much do you want to claim? -->
+                          <a href="z-d-date?change=false" aria-describedby="contact-details-status">
 
-                      When was the most recent incident (date)?
+
+                      When was the most recent incident ?
                           </a>
                         </span>
-                      <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="list-convictions-status">Optional</strong>
+
+                        {% if  data['z-d-day'] %}
+                          <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+                        {% else %}
+                          <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="list-convictions-status">Optional</strong>
+                        {% endif %}
+                      </li>
                       </li>
 
                       <li class="app-task-list__item">
                         <span class="app-task-list__task-name">
-                          <a href="#" aria-describedby="contact-details-status">
+                          <a href="z-d-one?change=false" aria-describedby="contact-details-status">
                             <!-- How much do you want to claim? -->
 
                       Is this a one off incident or have there been other incidents?
                           </a>
                         </span>
-                      <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="list-convictions-status">Optional</strong>
+                        {% if  data['z-d-one'] %}
+                          <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+                        {% else %}
+                          <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="list-convictions-status">Optional</strong>
+                        {% endif %}
+
                       </li>
 
                       <li class="app-task-list__item">
                         <span class="app-task-list__task-name">
-                          <a href="#" aria-describedby="contact-details-status">
+                          <a href="z-d-details?change=false" aria-describedby="contact-details-status">
                             <!-- How much do you want to claim? -->
 
-                      What have you done to address this with the company?
+                      Specify details on why to think you have been discriminated against
                           </a>
                         </span>
-                      <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="list-convictions-status">Optional</strong>
+                        {% if  data['z-d-details'] %}
+                          <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+                        {% else %}
+                          <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="list-convictions-status">Optional</strong>
+                        {% endif %}
+
                       </li>
-                      <li class="app-task-list__item">
+                      <!-- <li class="app-task-list__item">
                         <span class="app-task-list__task-name">
                           <a href="#" aria-describedby="contact-details-status">
-                            <!-- How much do you want to claim? -->
+
 
                       Have you raised a grievance? If so what was the outcome?
                           </a>
                         </span>
-                      <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="list-convictions-status">Optional</strong>
-                      </li>
+                        {% if  data['z-d-why'] %}
+                          <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+                        {% else %}
+                          <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="list-convictions-status">Optional</strong>
+                        {% endif %}
+                      </li> -->
 
                       {% else %}
                               {% endif %}

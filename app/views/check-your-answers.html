@@ -472,6 +472,81 @@ Have you gone through any internal procedures to try to resolve this?
 
         {% endif %}
 
+
+        {% if  data['reason'] == "Discrimination" %}
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+         Discriminated because of
+          </dt>
+          <dd class="govuk-summary-list__value">
+        {{ data['z-d-why'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="z-d-why?change=true">
+              Change
+              <span class="govuk-visually-hidden"> Discriminated because of </span>
+            </a>
+          </dd>
+        </div>
+
+
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+         When was the most recent incident ?
+          </dt>
+          <dd class="govuk-summary-list__value">
+        {{ data['z-d-day'] }} {{ data['z-d-month'] }} {{ data['z-d-year'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="z-d-date?change=true">
+              Change
+              <span class="govuk-visually-hidden"> When was the most recent incident ? </span>
+            </a>
+          </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Is this a one off incident?
+
+          </dt>
+          <dd class="govuk-summary-list__value">
+        {{ data['z-d-one'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="z-d-one?change=true">
+              Change
+              <span class="govuk-visually-hidden"> Is this a one off incident?
+ </span>
+            </a>
+          </dd>
+        </div>
+
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+          Details of why you think you have discriminated against
+
+          </dt>
+          <dd class="govuk-summary-list__value">
+        {{ data['z-d-details'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="z-d-details?change=true">
+              Change
+              <span class="govuk-visually-hidden"> Details of why you think you have discriminated against
+      </span>
+            </a>
+          </dd>
+        </div>
+
+
+        {% else %}
+
+        {% endif %}
+
       </dl>
 
       <h2 class="govuk-heading-m">Now send your application</h2>
