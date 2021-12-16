@@ -130,8 +130,7 @@
               {% endif %}
 
           </li>
-  <!-- <li class="app-task-list__item-">
-    <span class="app-task-list__task-name-"> -->
+
           <script>
 
 
@@ -145,7 +144,7 @@
                     // alert("You have reached the limit of adding " + counter + " inputs");
                     var newdiv = document.createElement('div');
 
-                    newdiv.innerHTML =  "<li class='app-task-list__item'> <span class='app-task-list__task-name'><a href='a-employer' aria-describedby='contact-details-status'>  Thrid organisation or person </a></span><strong class='govuk-tag- govuk-tag--grey- app-task-list__tag- ' style='float:right;  color:#fff; padding:5px; background-color: #d4351c; box-shadow: 0 2px 0 #55150b;font-size:.8em'  > Remove </strong></li>   ";
+                    newdiv.innerHTML =  "<li class='app-task-list__item'> <span class='app-task-list__task-name'><a href='a-employer' aria-describedby='contact-details-status'>  Thrid organisation or person </a></span><strong class='govuk-tag- govuk-tag--grey- app-task-list__tag- ' style='float:right;'    > <a href='#ep' style='color:#fff; padding:5px; background-color: #d4351c; box-shadow: 0 2px 0 #55150b; font-size:.8em; text-decoration:none' onClick='this.parentNode.parentNode.remove();'> Remove </a></strong></li>   ";
 
                     document.getElementById(divName).appendChild(newdiv);
 
@@ -158,7 +157,7 @@
                     // alert("You have reached the limit of adding " + counter + " inputs");
                     var newdiv = document.createElement('div');
 
-                    newdiv.innerHTML =  "<li class='app-task-list__item'> <span class='app-task-list__task-name'><a href='a-employer' aria-describedby='contact-details-status'>  Fourth organisation or person </a></span><strong class='govuk-tag- govuk-tag--grey- app-task-list__tag- ' style='float:right;  color:#fff; padding:5px; background-color: #d4351c; box-shadow: 0 2px 0 #55150b;font-size:.8em'  > Remove </strong></li>   ";
+                    newdiv.innerHTML =  "<li class='app-task-list__item'> <span class='app-task-list__task-name'><a href='a-employer' aria-describedby='contact-details-status'>  Fourth organisation or person </a></span><strong class='govuk-tag- govuk-tag--grey- app-task-list__tag- ' style='float:right;'    > <a href='#ep' style='color:#fff; padding:5px; background-color: #d4351c; box-shadow: 0 2px 0 #55150b; font-size:.8em; text-decoration:none' onClick='this.parentNode.parentNode.remove();'> Remove </a></strong></li>   ";
 
                     document.getElementById(divName).appendChild(newdiv);
 
@@ -172,7 +171,7 @@
                      // alert("You have reached the limit of adding " + counter + " inputs");
                      var newdiv = document.createElement('div');
 
-                     newdiv.innerHTML =  "<li class='app-task-list__item'> <span class='app-task-list__task-name'><a href='a-employer' aria-describedby='contact-details-status'>  Fifth organisation or person </a></span><strong class='govuk-tag- govuk-tag--grey- app-task-list__tag- ' style='float:right;  color:#fff; padding:5px; background-color: #d4351c; box-shadow: 0 2px 0 #55150b;font-size:.8em'  > Remove </strong></li>   ";
+                     newdiv.innerHTML =  "<li class='app-task-list__item'> <span class='app-task-list__task-name'><a href='a-employer' aria-describedby='contact-details-status'>  Fifth organisation or person </a></span><strong class='govuk-tag- govuk-tag--grey- app-task-list__tag- ' style='float:right;'    > <a href='#ep' style='color:#fff; padding:5px; background-color: #d4351c; box-shadow: 0 2px 0 #55150b; font-size:.8em; text-decoration:none' onClick='this.parentNode.parentNode.remove();'> Remove </a></strong></li>   ";
 
                      document.getElementById(divName).appendChild(newdiv);
 
@@ -185,7 +184,7 @@
 
                     var newdiv = document.createElement('div');
 
-                    newdiv.innerHTML =  "<li class='app-task-list__item'> <span class='app-task-list__task-name'><a href='a-employer' aria-describedby='contact-details-status'>  Second organisation or person </a></span><strong class='govuk-tag- govuk-tag--grey- app-task-list__tag- ' style='float:right;  color:#fff; padding:5px; background-color: #d4351c; box-shadow: 0 2px 0 #55150b; font-size:.8em'  >  Remove </strong></li>   ";
+                    newdiv.innerHTML =  "<li class='app-task-list__item'> <span class='app-task-list__task-name'><a href='a-employer' aria-describedby='contact-details-status' >  Second organisation or person </a></span><strong class='govuk-tag- govuk-tag--grey- app-task-list__tag- ' style='float:right;'    > <a href='#ep' style='color:#fff; padding:5px; background-color: #d4351c; box-shadow: 0 2px 0 #55150b; font-size:.8em; text-decoration:none' onClick='this.parentNode.parentNode.remove();'> Remove </a></strong></li> ";
 
                     document.getElementById(divName).appendChild(newdiv);
 
@@ -207,8 +206,9 @@
                    <!-- Entry 1<br><input type="text" name="myInputs[]">-->
 
                </div>
-               <input type="button" class="govuk-button govuk-button--secondary" data-module="govuk-button" value="Add another" onClick="addInput('dynamicInput');">
-
+               <input type="button" class="govuk-button govuk-button--secondary" data-module="govuk-button" value="Add another" value="Add more" onClick="addInput('dynamicInput');">
+  <!-- <li class="app-task-list__item-">
+    <span class="app-task-list__task-name-"> -->
 
                <!-- </span>
 
@@ -675,6 +675,90 @@
               </span>
               <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="medical-information-status">Cannot start yet</strong>
             </li> -->
+
+
+            <script>
+
+
+            var counter = 1;
+
+            var limit = 5;
+
+            function addReason(divName){
+
+                 if (counter == 2)  {
+                      // alert("You have reached the limit of adding " + counter + " inputs");
+                      var newdiv = document.createElement('div');
+
+                      newdiv.innerHTML =  "<li class='app-task-list__item'> <span class='app-task-list__task-name'><a href='b-01-reason-another' aria-describedby='contact-details-status'>  Another reason for dispute </a></span><strong class='govuk-tag- govuk-tag--grey- app-task-list__tag- ' style='float:right;'    > <a href='#ep' style='color:#fff; padding:5px; background-color: #d4351c; box-shadow: 0 2px 0 #55150b; font-size:.8em; text-decoration:none' onClick='this.parentNode.parentNode.remove();'> Remove </a></strong></li>   ";
+
+                      document.getElementById(divName).appendChild(newdiv);
+
+
+
+
+                      counter++;
+                 }
+                else if (counter == 3)  {
+                      // alert("You have reached the limit of adding " + counter + " inputs");
+                      var newdiv = document.createElement('div');
+
+                      newdiv.innerHTML =  "<li class='app-task-list__item'> <span class='app-task-list__task-name'><a href='b-01-reason-another' aria-describedby='contact-details-status'>   Another reason for dispute </a></span><strong class='govuk-tag- govuk-tag--grey- app-task-list__tag- ' style='float:right;'    > <a href='#ep' style='color:#fff; padding:5px; background-color: #d4351c; box-shadow: 0 2px 0 #55150b; font-size:.8em; text-decoration:none' onClick='this.parentNode.parentNode.remove();'> Remove </a></strong></li>   ";
+
+                      document.getElementById(divName).appendChild(newdiv);
+
+
+
+
+                      counter++;
+                 }
+
+                 else if (counter == 4)  {
+                       // alert("You have reached the limit of adding " + counter + " inputs");
+                       var newdiv = document.createElement('div');
+
+                       newdiv.innerHTML =  "<li class='app-task-list__item'> <span class='app-task-list__task-name'><a href='b-01-reason-another' aria-describedby='contact-details-status'>   Another reason for dispute </a></span><strong class='govuk-tag- govuk-tag--grey- app-task-list__tag- ' style='float:right;'    > <a href='#ep' style='color:#fff; padding:5px; background-color: #d4351c; box-shadow: 0 2px 0 #55150b; font-size:.8em; text-decoration:none' onClick='this.parentNode.parentNode.remove();'> Remove </a></strong></li>   ";
+
+                       document.getElementById(divName).appendChild(newdiv);
+
+
+
+
+                       counter++;
+                  }
+                 else {
+
+                      var newdiv= document.createElement('div');
+
+                      newdiv.innerHTML =  "<li class='app-task-list__item'> <span class='app-task-list__task-name'><a href='b-01-reason-another' aria-describedby='contact-details-status' >  Another reason for dispute</a></span><strong class='govuk-tag- govuk-tag--grey- app-task-list__tag- ' style='float:right;'    > <a href='#ep' style='color:#fff; padding:5px; background-color: #d4351c; box-shadow: 0 2px 0 #55150b; font-size:.8em; text-decoration:none' onClick='this.parentNode.parentNode.remove();'> Remove </a></strong></li> ";
+
+                      document.getElementById(divName).appendChild(newdiv);
+
+
+
+
+                      counter++;
+
+                 }
+
+            }
+
+
+            </script>
+
+
+            <!--<form method="POST">-->
+                 <div id="dynamicInputR">
+                     <!-- Entry 1<br><input type="text" name="myInputs[]">-->
+
+                 </div>
+                 <input type="button" class="govuk-button govuk-button--secondary" data-module="govuk-button" value="Add another" value="Add more" onClick="addReason('dynamicInputR');">
+    <!-- <li class="app-task-list__item-">
+      <span class="app-task-list__task-name-"> -->
+
+                 <!-- </span>
+
+                 </li> -->
           </ul>
         </li>
 
