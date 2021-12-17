@@ -51,6 +51,8 @@
               {% endif %}
               <!-- <strong class="govuk-tag app-task-list__tag" id="read-declaration-status">Completed</strong> -->
             </li>
+
+  {% if  data['contacted'] == "email" %}
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
                 <a href="a-phone-number.html?change=false" aria-describedby="eligibility-status">
@@ -65,6 +67,10 @@
               {% endif %}
 
             </li>
+
+            {% else %}
+
+                {% endif %}
           </ul>
         </li>
             <li>
@@ -496,7 +502,7 @@
                           <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="list-convictions-status">Optional</strong>
                         {% endif %}
                       </li>
-                      </li>
+
 
                       <li class="app-task-list__item">
                         <span class="app-task-list__task-name">
@@ -875,12 +881,18 @@
 
                                                                     <li class="app-task-list__item">
                                                                       <span class="app-task-list__task-name">
-                                                                        <a href="#" aria-describedby="contact-details-status">
+                                                                        <a href="w-6-why?change=false" aria-describedby="contact-details-status">
 
                                                             What was your concern regarding the workplace?
                                                                         </a>
                                                                       </span>
-                                                                    <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="list-convictions-status">Optional</strong>
+
+                                                                      {% if  data['z-6-concern'] %}
+                                                                        <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+                                                                      {% else %}
+                                                                        <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="list-convictions-status">Optional</strong>
+                                                                      {% endif %}
+
                                                                     </li>
 
                                                                     <li class="app-task-list__item">
@@ -891,7 +903,13 @@
                                                           Why do you feel your claim is about whistleblowing?
                                                                         </a>
                                                                       </span>
-                                                                    <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="list-convictions-status">Optional</strong>
+
+
+                                                                      {% if  data['z-6-feel'] %}
+                                                                        <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+                                                                      {% else %}
+                                                                        <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="list-convictions-status">Optional</strong>
+                                                                      {% endif %}
                                                                     </li>
 
                                                                     <li class="app-task-list__item">

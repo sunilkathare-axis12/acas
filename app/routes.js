@@ -30,12 +30,20 @@ router.post('/page-one-email', function (req, res) {
   if (contacted == "email"){
     // Send user to next page
     res.redirect('/page-one-email')
-  } else {
+  }
+else if (contacted == "emailonly"){
+  // Send user to next page
+  res.redirect('/page-one-email')
+}
+
+  else {
     // Send user to ineligible page
     res.redirect('/page-one-post')
   }
 
 })
+
+
 
 // Run this code when a form is submitted to 'juggling-balls-answer'
 router.post('/who-are-you-representing', function (req, res) {
