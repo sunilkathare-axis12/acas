@@ -886,7 +886,107 @@ Have you been through any internal procedures or raised a grievance?
 
 
 
+            {% if  data['reason'] == "Whistleblowing" %}
+
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+ Concern regarding the workplace
+
+              </dt>
+              <dd class="govuk-summary-list__value">
+            {{ data['z-6-concern'] }}
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a href="z-6-concern?change=true">
+                  Change
+                  <span class="govuk-visually-hidden">  Concern regarding the workplace
+            </span>
+                </a>
+              </dd>
+            </div>
+
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+ Why the claim is  about whistleblowing?
+
+              </dt>
+              <dd class="govuk-summary-list__value">
+            {{ data['z-6-why'] }}
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a href="z-6-why?change=true">
+                  Change
+                  <span class="govuk-visually-hidden">   Why the claim is  about whistleblowing?
+            </span>
+                </a>
+              </dd>
+            </div>
+
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Do you know the date when this occured?
+
+
+              </dt>
+              <dd class="govuk-summary-list__value">
+            {{ data['z-6-when'] }} - {{ data['z-6-day'] }} {{ data['z-6-month'] }} {{ data['z-6-year'] }}
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a href="z-6-when?change=true">
+                  Change
+                  <span class="govuk-visually-hidden">   Why the claim is  about whistleblowing?
+            </span>
+                </a>
+              </dd>
+            </div>
+
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                What is the detriment (or dismissal) you faced?
+
+
+              </dt>
+              <dd class="govuk-summary-list__value">
+            {{ data['z-6-what'] }}
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a href="z-6-what?change=true">
+                  Change
+                  <span class="govuk-visually-hidden">   What is the detriment (or dismissal) you faced?
+            </span>
+                </a>
+              </dd>
+            </div>
+
+
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Have you been through any internal procedures or raised a grievance?
+
+
+              </dt>
+              <dd class="govuk-summary-list__value">
+            {{ data['z-6-legal'] }}
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a href="z-6-what?change=true">
+                  Change
+                  <span class="govuk-visually-hidden">   Have you been through any internal procedures or raised a grievance?
+            </span>
+                </a>
+              </dd>
+            </div>
+
+            {% else %}
+                    {% endif %}
+
+
+
       </dl>
+
+
+
+
 
       <h2 class="govuk-heading-m">Now send your application</h2>
 

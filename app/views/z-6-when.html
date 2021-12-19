@@ -1,0 +1,104 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<a href="task-list" class="govuk-back-link">Back</a>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+
+      {% if data['change'] == "true" %}
+        <form action="check-your-answers#reason">
+
+      {% else %}
+
+        <form action="task-list#reason">
+      {% endif %}
+
+
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading page-header" style="font-size:.8em; font-family: Arial; font-weight:bold;">
+              Do you know the date when this occured?
+            </h1>
+          </legend>
+          <div id="contact-hint" class="govuk-hint">
+            <!-- Select one option. -->
+          </div>
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="contact" name="z-6-when" type="radio" value="Yes" data-aria-controls="conditional-contact" {{ checked('z-6-when','Yes') }}>
+              <label class="govuk-label govuk-radios__label" for="contact">
+                Yes
+              </label>
+            </div>
+            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact">
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="contact-by-email">
+                  Enter date
+                </label>
+
+                <div id="passport-issued-hint" class="govuk-hint">
+                  For example, 27 3 2007
+                </div>
+                <div class="govuk-date-input" id="passport-issued">
+                  <div class="govuk-date-input__item">
+                    <div class="govuk-form-group">
+                      <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                        Day
+                      </label>
+                      <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="z-6-day" type="text" pattern="[0-9]*" inputmode="numeric" value="{{ data['z-6-day'] }}"></div>
+                  </div>
+                  <div class="govuk-date-input__item">
+                    <div class="govuk-form-group">
+                      <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+                        Month
+                      </label>
+                      <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="z-6-month" type="text" pattern="[0-9]*" inputmode="numeric" value="{{ data['z-6-month'] }}"></div>
+                  </div>
+                  <div class="govuk-date-input__item">
+                    <div class="govuk-form-group">
+                      <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+                        Year
+                      </label>
+                      <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="z-6-year" type="text" pattern="[0-9]*" inputmode="numeric" value="{{ data['z-6-year'] }}"></div>
+                  </div>
+                </div>
+
+
+
+              </div>
+
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="contact-2" name="z-6-when" type="radio" value="No" data-aria-controls="conditional-contact-2" {{ checked('z-6-when','No') }}>
+              <label class="govuk-label govuk-radios__label" for="contact-2">
+                No
+              </label>
+            </div>
+
+
+          </div>
+
+        </fieldset>
+      </div>
+
+
+
+
+            <button class="govuk-button btn-primary" data-module="govuk-button">
+              Save and continue
+            </button>
+
+            </form>
+    </div>
+  </div>
+
+{% endblock %}
