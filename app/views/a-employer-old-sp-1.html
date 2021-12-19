@@ -38,7 +38,7 @@
           </h1>
         </legend>
         <div id="contact-hint" class="govuk-hint">
-      In most cases the claim should be made against the organisation named in the payslip not the HR or the line manager. Make sure you put the legal name.
+       For example, if the dispute is about a holiday pay, the claim should be made against the organisation named in the contract or letter of employement not the HR or the line manager.
         </div>
         <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
           <div class="govuk-radios__item">
@@ -54,29 +54,13 @@
                   Legal name
                 </label>
                 <div id="more-detail-hint" class="govuk-hint">
-                  Get the name from your P45, P60 or recent payslip. <br> For example, BLUE BOX LIMITED.
 
-                  <details class="govuk-details" data-module="govuk-details">
-                <summary class="govuk-details__summary">
-                <span class="govuk-details__summary-text">
-                Useful links to name lookups
-                <!-- Link to Companies House search, if they have ‘ltd’ or ‘Limited’ at the end of their name -->
-                </span>
-                </summary>
-                <div class="govuk-details__text">
-                <p class="govuk-hint" style="font-size:.9em">
-                <br>
-                If they have ‘Plc’, ‘ltd’ or ‘Limited’ at the end of their name, they’ll be a company and you can check the <a href="https://find-and-update.company-information.service.gov.uk" target="_blank">Companies House information</a> on GOV.UK.
-                </p>
-                <p class="govuk-hint" style="font-size:.9em">  If you are looking for the name of a school, you can check <a href="https://get-information-schools.service.gov.uk" target="_blank">Information about schools </a> on GOV.UK.
+              To avoid jeopardising your case we will need the legal name of the organisation. For example, PRET A MANGER LIMITED.
+            Please get the name from a P45, P60, payslip, contract or letter of employment.
 
-                <!-- Look up <a href="https://find-and-update.company-information.service.gov.uk" target="_blank">Companies House search</a> or <a href="https://get-information-schools.service.gov.uk" target="_blank">Information about schools search</a> on GOV.UK to double check the legal name and address are correct. -->
-                <!-- You cIf you can find the orgainsation on GOV.UK companies house register, you can copy and paste the name from here -->
-                </p>
-                </div>
-                </details>
+If you do not have one of these documents, you can look to find the organisation's address on <a href="https://find-and-update.company-information.service.gov.uk" target="_blank" title="Click here search on Companies House "> Companies House search</a> on GOV.UK.
 
-
+            <!-- If you can find the orgainsation on GOV.UK companies house register, you can copy and paste the name from here -->
                 </div>
                 <input class="govuk-input" id="company-1-legal-name" name="company-1-legal-name" type="text" spellcheck="false" autocomplete="name" value="{{ data['company-1-legal-name'] }}"></div>
 
@@ -85,28 +69,16 @@
                   Legal address
                   </label>
                 <div id="more-detail-hint" class="govuk-hint">
-                  This  may be the head office or registered office address.<br>
+                To avoid jeopardising your case we will need their legal address. Please get the address from your a P45, P60, payslip, contract or letter of employment.
 
-   Get the address from your P45, P60 or recent payslip.
-   <details class="govuk-details" data-module="govuk-details">
-   <summary class="govuk-details__summary">
-   <span class="govuk-details__summary-text">
-   Useful links to address lookups
-   <!-- Link to Companies House search, if they have ‘ltd’ or ‘Limited’ at the end of their name -->
-   </span>
-   </summary>
-   <div class="govuk-details__text">
-   <p class="govuk-hint" style="font-size:.9em">
-   <br>
-   If they have ‘Plc’, ‘ltd’ or ‘Limited’ at the end of their address, they’ll be a company and you can check the <a href="https://find-and-update.company-information.service.gov.uk" target="_blank">Companies House information</a> on GOV.UK.
-   </p>
-   <p class="govuk-hint" style="font-size:.9em">  If you are looking for the address of a school, you can check <a href="https://get-information-schools.service.gov.uk" target="_blank">Information about schools </a> on GOV.UK.
 
-   <!-- Look up <a href="https://find-and-update.company-information.service.gov.uk" target="_blank">Companies House search</a> or <a href="https://get-information-schools.service.gov.uk" target="_blank">Information about schools search</a> on GOV.UK to double check the legal name and address are correct. -->
-   <!-- You cIf you can find the orgainsation on GOV.UK companies house register, you can copy and paste the name from here -->
-   </p>
-   </div>
-   </details>
+            If you do not have one of these documents, you can look to find the organisation's address on <a href="https://find-and-update.company-information.service.gov.uk" target="_blank" title="Click here search on Companies House "> Companies House search</a> on GOV.UK.
+
+
+                <!-- You have to give us their formal, legal address if you want to use this service. This
+              may be the head office or registered office address and not your workplace. Look
+              on your payslip, contract, or other documents from your employer. You can also
+              search online. -->
 
                 </div>
 
@@ -115,7 +87,14 @@
                   <!-- <div id="waste-hint" class="govuk-hint">
                        Please confirm if you have copied the legal name and address from a P45, P60, payslip, contract or letter of employment.
                      </div> -->
-
+                     <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                       <div class="govuk-checkboxes__item">
+                         <input class="govuk-checkboxes__input" id="waste" name="copied" type="checkbox" value="Yes" {{ checked('copied','Yes') }}>
+                         <label class="govuk-label govuk-checkboxes__label" for="waste">
+                         Confirm the name and address has been copied from a P45, P60, payslip, contract or letter of employment.
+                         </label>
+                       </div>
+                  </div>
 
                 </div>
 
@@ -147,29 +126,16 @@
                 </label>
               <div id="more-detail-hint" class="govuk-hint">
 
-If ther work or worked with this person, you may want to give the organisation's address.
-This  may be the head office or registered office address.
+If you work or worked with this person, you may want to give the organisation's address.
+              <!-- Please get the address of the person from a P45, P60, payslip, contract or letter of employment. -->
+              <!-- For example, PRET A MANGER LIMITED. -->
+              Please get the name from a P45, P60, payslip, contract or letter of employment.
+  If you do not have one of these documents, you can look to find the employers address on <a href="https://find-and-update.company-information.service.gov.uk" target="_blank" title="Click here search on Companies House "> Companies House search</a> on GOV.UK.
+              <!-- You have to give us their formal, legal address if you want to use this service. This
+            may be the head office or registered office address and not your workplace. Look
+            on your payslip, contract, or other documents from your employer. You can also
+            search online. -->
 
-Get the address from your P45, P60 or recent payslip.
-<details class="govuk-details" data-module="govuk-details">
-<summary class="govuk-details__summary">
-<span class="govuk-details__summary-text">
-Useful links to address lookups
-<!-- Link to Companies House search, if they have ‘ltd’ or ‘Limited’ at the end of their name -->
-</span>
-</summary>
-<div class="govuk-details__text">
-<p class="govuk-hint" style="font-size:.9em">
-<br>
-If they have ‘Plc’, ‘ltd’ or ‘Limited’ at the end of their address, they’ll be a company and you can check the <a href="https://find-and-update.company-information.service.gov.uk" target="_blank">Companies House information</a> on GOV.UK.
-</p>
-<p class="govuk-hint" style="font-size:.9em">  If you are looking for the address of a school, you can check <a href="https://get-information-schools.service.gov.uk" target="_blank">Information about schools </a> on GOV.UK.
-
-<!-- Look up <a href="https://find-and-update.company-information.service.gov.uk" target="_blank">Companies House search</a> or <a href="https://get-information-schools.service.gov.uk" target="_blank">Information about schools search</a> on GOV.UK to double check the legal name and address are correct. -->
-<!-- You cIf you can find the orgainsation on GOV.UK companies house register, you can copy and paste the name from here -->
-</p>
-</div>
-</details>
               </div>
 
                 <textarea class="govuk-textarea" id="more-detail" name="person-1-address" rows="3">{{ data['person-1-address'] }}</textarea>
@@ -178,7 +144,14 @@ If they have ‘Plc’, ‘ltd’ or ‘Limited’ at the end of their address, 
                 <!-- <div id="waste-hint" class="govuk-hint">
                      Please confirm if you have copied the address from P45, P60, payslip, contract or letter of employment.
                    </div> -->
-
+                   <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                     <div class="govuk-checkboxes__item">
+                       <input class="govuk-checkboxes__input" id="waste" name="copied-p" type="checkbox" value="Yes" {{ checked('copied-p','Yes') }}>
+                       <label class="govuk-label govuk-checkboxes__label" for="waste">
+                       Confirm the name and address has been copied from a P45, P60, payslip, contract or letter of employment.
+                       </label>
+                     </div>
+                </div>
 
               </div>
 
