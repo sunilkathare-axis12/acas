@@ -48,7 +48,14 @@
 
               </label>
               <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
+{% if  data['representing'] == "myself" %}
+
               You could be owed money instead of holiday, or your employer hasn’t paid you, or has taken money from your wages without good reason.
+
+              {% else %}
+  Claimant could be owed money instead of holiday, or the employer hasn’t paid the claimant , or has taken money from  the claimant's  wages without good reason.
+                      {% endif %}
+
 
         Read more about <a href="https://www.acas.org.uk/pay-and-wages" target="_blank">      wages owed or holiday pay</a>.
               </div>
@@ -60,7 +67,14 @@
               Redundancy pay
               </label>
               <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
+
+          {% if  data['representing'] == "myself" %}
           You could be owed money if the employer didn't follow the right process, including collective consultation and giving the right notice periods and pay. You must have 2 years service to make this cliam.
+
+          {% else %}
+Claimant could be owed money if the employer didn't follow the right process, including collective consultation and giving the right notice periods and pay. Claimant must have 2 years service to make this cliam.
+
+                  {% endif %}
   Read more about <a href="https://www.acas.org.uk/dismissals/unfair-dismissal" target="_blank"> redundancy pay </a>.
               </div>
             </div>
@@ -70,7 +84,17 @@
               Discrimination
               </label>
               <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
+
+    {% if  data['representing'] == "myself" %}
+
               You could be make claim if there has been a case of discrimination based on disability, age, race, religion & belief, sex, marriage, gender reassignment, and or sexual orientation.
+
+              {% else %}
+
+              Claimant could be make claim if there has been a case of discrimination based on disability, age, race, religion & belief, sex, marriage, gender reassignment, and or sexual orientation.
+
+        {% endif %}
+
 Read more about <a href="https://www.acas.org.uk/discrimination-and-the-law" target="_blank">  discrimination</a>.
 
 
@@ -94,7 +118,14 @@ Read more about <a href="https://www.acas.org.uk/discrimination-and-the-law" tar
             Unfair dismissal
               </label>
               <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
+
+                    {% if  data['representing'] == "myself" %}
             If you think your dismissal was unfair you might be able to challenge it. You must have 2 years service to make this cliam.
+            {% else %}
+  If the claimant thinks that the dismissal was unfair , than the  claimant might be able to challenge it. Claimant must have 2 years service to make this cliam.
+                    {% endif %}
+
+
             Read more about <a href="https://www.acas.org.uk/dismissals/unfair-dismissal" target="_blank"> unfair dismissal </a>.
               </div>
             </div>
@@ -106,7 +137,13 @@ Read more about <a href="https://www.acas.org.uk/discrimination-and-the-law" tar
               </label>
               <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
         Constructive dismissal occurs when an employee resigns as a result of the employer creating a hostile work environment. Since the resignation was not truly voluntary, it is, in effect, a termination.
+    {% if  data['representing'] == "myself" %}
+
           You must have 2 years service to make this cliam.
+
+          {% else %}
+      Claimant must have 2 years service to make this cliam.
+          {% endif %}
              Read more about <a href="https://www.acas.org.uk/dismissals/constructive-dismissal" target="_blank"> constructive dismissal</a>. <!-- -->
               </div>
             </div>
@@ -118,7 +155,14 @@ Read more about <a href="https://www.acas.org.uk/discrimination-and-the-law" tar
             Equal pay
               </label>
               <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
+
+  {% if  data['representing'] == "myself" %}
+
           You could be owed money if could you feel your employer has failed to provide equal pay.
+
+            {% else %}
+Claimant could be owed money if could they feel that their employer has failed to provide equal pay.
+                {% endif %}
 Read more about <a href="https://www.acas.org.uk/equal-pay" target="_blank"> equal pay</a>.
 
               </div>

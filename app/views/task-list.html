@@ -18,7 +18,9 @@
       <p class="govuk-body govuk-!-margin-bottom-7">You have completed 2 of 6 sections.</p> -->
 
       <ol class="app-task-list">
-        <li>
+       <li>
+
+           {% if  data['representing'] == "myself" %}
           <h2 class="app-task-list__section">
             <span class="app-task-list__section-number">1. </span> Enter your details
           </h2>
@@ -49,8 +51,10 @@
               {% else %}
               <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
               {% endif %}
-              <!-- <strong class="govuk-tag app-task-list__tag" id="read-declaration-status">Completed</strong> -->
+
             </li>
+
+
 
   {% if  data['contacted'] == "email" %}
             <li class="app-task-list__item">
@@ -72,7 +76,55 @@
 
                 {% endif %}
           </ul>
+
+
+
+          {% else %}
+
+          <h2 class="app-task-list__section">
+            <span class="app-task-list__section-number">1. </span> Enter claimant details
+          </h2>
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="a-full-name.html?change=false" aria-describedby="eligibility-status">
+                  Claimant legal name
+                </a>
+              </span>
+
+              {% if  data['full-name'] %}
+                <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+              {% else %}
+              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
+              {% endif %}
+
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="a-address.html?change=false" aria-describedby="read-declaration-status">
+                Claimant address name
+                </a>
+              </span>
+              {% if  data['address_line_1'] %}
+                <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+              {% else %}
+              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
+              {% endif %}
+              <!-- <strong class="govuk-tag app-task-list__tag" id="read-declaration-status">Completed</strong> -->
+            </li>
+          </ul>
+
+
+            {% endif %}
+
+
+
+
+
         </li>
+
+  {% if  data['representing'] == "myself" %}
+
             <li>
               <h2 class="app-task-list__section">
                 <span class="app-task-list__section-number">2. </span>If anyone is helping you with your claim, this person will be your 'representative'. Please enter representive details if you have one
@@ -107,10 +159,48 @@
           </ul>
         </li>
 
+        {% else %}
 
         <li>
           <h2 class="app-task-list__section">
-            <span class="app-task-list__section-number">3. </span> Enter details of who your claim is against
+            <span class="app-task-list__section-number">2. </span>Enter your details
+          </h2>
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="a-rep-full-name-ec-rep" aria-describedby="company-information-status">
+                Your name
+                </a>
+              </span>
+              {% if  data['rep-full-name-ec'] %}
+                <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+              {% else %}
+              <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="list-convictions-status">Optional</strong>
+              {% endif %}
+                <!-- <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong> -->
+            </li>
+        <li class="app-task-list__item">
+          <span class="app-task-list__task-name">
+            <a href="a-address-rep-ec.html?change=false" aria-describedby="read-declaration-status">
+            Your contact details
+            </a>
+          </span>
+          {% if  data['email-rep-ec'] and data['phone-rep-ec'] %}
+            <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+          {% else %}
+          <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="list-convictions-status">Optional</strong>
+          {% endif %}
+          <!-- <strong class="govuk-tag app-task-list__tag" id="read-declaration-status">Completed</strong> -->
+        </li>
+      </ul>
+    </li>
+
+
+
+                {% endif %}
+        <li>
+          <h2 class="app-task-list__section">
+            <span class="app-task-list__section-number">3. </span> Enter details of who the claim is against
           </h2>
 
             <!-- <span class="govuk-hint">In most cases you can make a claim against one organistaion or person. Please get legal advice if you are making a claim against more than one organistaion or person. </span> -->
@@ -247,14 +337,14 @@
 
         <li>
           <h2 class="app-task-list__section" id="reason">
-            <span class="app-task-list__section-number">4. </span> Enter details about your dispute
+            <span class="app-task-list__section-number">4. </span> Enter details about the dispute
           </h2>
   <!-- <span class="govuk-hint">Once you select the reason you will be asked relavent question. Accurate information will help move early concilation quicker  </span> -->
           <ul class="app-task-list__items">
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
                 <a href="b-01-reason?change=false" aria-describedby="reason for dispute">
-                Reason for your dispute
+                Reason for the dispute
                 </a>&nbsp<strong> {{ data['reason'] }} </strong>
 
 
@@ -284,8 +374,12 @@
               <span class="app-task-list__task-name">
                 <a href="w-how-much?change=false" aria-describedby="contact-details-status">
                   <!-- How much do you want to claim? -->
-
+{% if  data['representing'] == "myself" %}
                 How much money do you think you are owed?
+
+                {% else %}
+  How much money does the claimant think their are owed?
+        {% endif %}
                 </a>
               </span>
               {% if  data['w-how-much'] %}
@@ -301,7 +395,7 @@
                 <a href="w-q2?change=false" aria-describedby="contact-details-status">
                   <!-- How much do you want to claim? -->
 
-                When did you have this problem with your pay?
+                When did you have this problem with the pay?
                 </a>
               </span>
               {% if  data['w-day'] %}
@@ -317,8 +411,11 @@
               <span class="app-task-list__task-name">
                 <a href="w-why?change=false" aria-describedby="contact-details-status">
                   <!-- How much do you want to claim? -->
-
+{% if  data['representing'] == "myself" %}
               Why do you think you are owed this money?
+              {% else %}
+  Why does the claimant think their are owed this money?
+        {% endif %}
                 </a>
               </span>
 

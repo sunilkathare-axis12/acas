@@ -13,16 +13,22 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
       <h1 class="page-header" style="font-size: 2em;  font-family: Arial; font-weight:bold;">
+
+        {% if  data['representing'] == "myself" %}
       Your representative’s contact details
+
+      {% else %}
+  Your contact details
+        {% endif %}
 
         <!-- <span class="govuk-caption-xl">{{releaseVersion}}</span> -->
       </h1>
 
 <div class="govuk-hint">
-
+{% if  data['representing'] == "myself" %}
   You will get a quicker response about your dispute if you provide your representative’s contact details.
-
-
+  {% else %}
+  {% endif %}
 
 </div >
       <!-- <h3 class="page-header" style="font-size: 1.5em;  font-family: Arial; font-weight:bold;">

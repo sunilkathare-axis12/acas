@@ -11,7 +11,14 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       <h1 class="page-header" style="font-size: 2em; font-family: Arial; font-weight:bold;">
+
+
+        {% if  data['representing'] == "myself" %}
       Provide your legal name
+
+      {% else %}
+    Provide your claimant name
+          {% endif %}
         <!-- <span class="govuk-caption-xl">{{releaseVersion}}</span> -->
       </h1>
 

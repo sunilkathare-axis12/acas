@@ -17,12 +17,26 @@
 
       <!-- before sending to ACAS -->
 
+      {% if  data['representing'] == "myself" %}
       <h2 class="govuk-heading-m">Your personal details</h2>
+        {% else %}
+
+          <h2 class="govuk-heading-m">Claimant details</h2>
+        {% endif %}
+
+
 
       <dl class="govuk-summary-list govuk-!-margin-bottom-9">
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
+
+            {% if  data['representing'] == "myself" %}
             Your legal name
+              {% else %}
+
+                Claimant name
+              {% endif %}
+
           </dt>
           <dd class="govuk-summary-list__value">
            {{ data['full-name'] }}
@@ -77,13 +91,26 @@
       {% if  data['rep-full-name-ec'] %}
 
 
-
+      {% if  data['representing'] == "myself" %}
       <h2 class="govuk-heading-m">Representaive details</h2>
+        {% else %}
+
+        <h2 class="govuk-heading-m">Your details</h2>
+        {% endif %}
+
+
 
       <dl class="govuk-summary-list govuk-!-margin-bottom-9">
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Representaive name
+
+            {% if  data['representing'] == "myself" %}
+                Representaive name
+              {% else %}
+
+              Your name
+              {% endif %}
+
           </dt>
           <dd class="govuk-summary-list__value">
            {{ data['rep-full-name-ec'] }}
@@ -244,6 +271,7 @@
             <!-- John Lewis -->
 
             {{ data['company-1-email'] }}
+            {{ data['person-1-email'] }}
 
           </dd>
           <dd class="govuk-summary-list__actions">
@@ -320,7 +348,13 @@
 
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
+
+            {% if  data['representing'] == "myself" %}
           How much money do you think you are owed?
+
+          {% else %}
+    How much money does the claimant think their are owed?
+        {% endif %}
           </dt>
           <dd class="govuk-summary-list__value">
         £ {{ data['w-how-much'] }}
@@ -328,7 +362,7 @@
           <dd class="govuk-summary-list__actions">
             <a href="w-how-much?change=true">
               Change
-              <span class="govuk-visually-hidden"> How much money do you think you are owed?</span>
+              <span class="govuk-visually-hidden"> How much money is owed?</span>
             </a>
           </dd>
         </div>
@@ -337,7 +371,7 @@
 
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-        When did you have this problem with your pay?
+        When did you have this problem with the pay?
           </dt>
           <dd class="govuk-summary-list__value">
        {{ data['w-day'] }} &nbsp;   {{ data['w-month'] }} &nbsp; {{ data['w-year'] }}
@@ -345,14 +379,19 @@
           <dd class="govuk-summary-list__actions">
             <a href="w-q2?change=true">
               Change
-              <span class="govuk-visually-hidden"> How much money do you think you are owed?</span>
+              <span class="govuk-visually-hidden"> When did you have this problem with the pay?</span>
             </a>
           </dd>
         </div>
 
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
+              {% if  data['representing'] == "myself" %}
           Why do you think you are owed this money?
+
+  {% else %}
+  Why does the claimant think their are owed this money?
+          {% endif %}
           </dt>
           <dd class="govuk-summary-list__value">
         {{ data['w-why'] }}

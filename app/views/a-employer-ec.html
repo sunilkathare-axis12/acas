@@ -57,7 +57,7 @@
 
               <!-- To avoid jeopardising your case we will need the legal name of the organisation.  -->
 
-            Get the name from your P45, P60 or recent payslip. <br> For example, BLUE BOX LIMITED.
+            Get the name from a P45, P60 or recent payslip. <br> For example, BLUE BOX LIMITED.
 
             <details class="govuk-details" data-module="govuk-details">
   <summary class="govuk-details__summary">
@@ -88,7 +88,7 @@
                 <div id="more-detail-hint" class="govuk-hint">
                  This  may be the head office or registered office address.<br>
 
-  Get the address from your P45, P60 or recent payslip.
+  Get the address from a P45, P60 or recent payslip.
   <details class="govuk-details" data-module="govuk-details">
   <summary class="govuk-details__summary">
   <span class="govuk-details__summary-text">
@@ -133,9 +133,13 @@
 
 
 
-<hr>
-<h3 class="govuk-heading-s"> Give the details of someone we can contact to see if the organisation is willing to sort things out without going to employment tribunal. This will usually be an HR officer or a senior member of staff. </h3>
 
+<br>
+<hr>
+
+<br>
+<h3 class="govuk-heading-s"> Give the details of someone we can contact to see if the organisation is willing to sort things out without going to employment tribunal. This will usually be an HR officer or a senior member of staff. </h3>
+<br>
                                   <div class="govuk-form-group">
                                     <label class="govuk-label" for="full-name">
                                       Job title
@@ -171,21 +175,39 @@
                                         To avoid jeopardising your case we need your correct legal name
                                       </div> -->
                                           <input class="govuk-input" id="full-name" name="company-1-phone" type="text" spellcheck="false"  value="{{ data['company-1-phone'] }}"></div>
-
+<br>
 <hr>
 
+<br>
 <h3 id="waste-hint" class="govuk-heading-s">
-     Can we speak to the organisation your dispute is against before speaking with you?
+  To speed up early concilation, can we speak to the organisation your dispute is against before speaking with you?
    </h3>
-   <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+
+   <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+     <div class="govuk-radios__item">
+       <input class="govuk-radios__input" id="changed-name" name="company-1-consent" type="radio" value="Yes" {{ checked('company-1-consent','Yes') }}>
+       <label class="govuk-label govuk-radios__label" for="changed-name">
+         Yes
+       </label>
+     </div>
+     <div class="govuk-radios__item">
+       <input class="govuk-radios__input" id="changed-name-2" name="company-1-consent" type="radio" value="No" {{ checked('company-1-consent','No') }}>
+       <label class="govuk-label govuk-radios__label" for="changed-name-2">
+         No
+       </label>
+     </div>
+   </div>
+   <!-- <div class="govuk-checkboxes" data-module="govuk-checkboxes">
      <div class="govuk-checkboxes__item">
        <input class="govuk-checkboxes__input" id="waste" name="company-1-consent" type="checkbox" value="Yes" {{ checked('company-1-consent','Yes') }}>
        <label class="govuk-label govuk-checkboxes__label" for="waste">
       Yes, I give permission to speak to the organisation first to speed up early concilation.
        </label>
      </div>
-</div>
-
+</div> -->
+<br>
+<hr><br>
+<br>
 
 
                 </div>
@@ -220,7 +242,7 @@
                If you work or worked with this person, you may want to give the organisation's
 address. This may be the head office or registered office address and not your workplace.
 
-Get the address from your P45, P60 or recent payslip.
+Get the address from a P45, P60 or recent payslip.
               <!-- You have to give us their formal, legal address if you want to use this service. This
             may be the head office or registered office address and not your workplace. Look
             on your payslip, contract, or other documents from your employer. You can also
@@ -244,8 +266,8 @@ Get the address from your P45, P60 or recent payslip.
                 </div> -->
 
 
-
-                <hr>
+<br>
+                <hr><br>
                 <h3 class="govuk-heading-s"> Give the details of the person that may be willing to sort things out without going to employment tribunal. This will usually be an HR officer or a senior member of staff. </h3>
 
                                                   <div class="govuk-form-group">
@@ -283,22 +305,39 @@ Get the address from your P45, P60 or recent payslip.
                                                         To avoid jeopardising your case we need your correct legal name
                                                       </div> -->
                                                           <input class="govuk-input" id="full-name" name="phone-employer-c" type="text" spellcheck="false"  value="{{ data['phone-employer-c'] }}"></div>
-
+<br>
                 <hr>
 
+                <br>
                 <h3 id="waste-hint" class="govuk-heading-s">
-                     Can we speak to the person your dispute is against before speaking with you?
+                  To speed up early concilation, can we speak to the person your dispute is against before speaking with you?
                    </h3>
-                   <div class="govuk-checkboxes" data-module="govuk-checkboxes">
-                     <div class="govuk-checkboxes__item">
-                       <input class="govuk-checkboxes__input" id="waste" name="copied" type="checkbox" value="Yes" {{ checked('copied','Yes') }}>
-                       <label class="govuk-label govuk-checkboxes__label" for="waste">
-                      Yes, I give permission to speak to the person first to speed up early concilation.
+
+                   <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+                     <div class="govuk-radios__item">
+                       <input class="govuk-radios__input" id="changed-name" name="person-1-consent" type="radio" value="Yes" {{ checked('person-1-consent','Yes') }}>
+                       <label class="govuk-label govuk-radios__label" for="changed-name">
+                         Yes
                        </label>
                      </div>
-                </div>
-
-
+                     <div class="govuk-radios__item">
+                       <input class="govuk-radios__input" id="changed-name-2" name="person-1-consent" type="radio" value="No" {{ checked('person-1-consent','No') }}>
+                       <label class="govuk-label govuk-radios__label" for="changed-name-2">
+                         No
+                       </label>
+                     </div>
+                   </div>
+                   <!-- <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                     <div class="govuk-checkboxes__item">
+                       <input class="govuk-checkboxes__input" id="waste" name="company-1-consent" type="checkbox" value="Yes" {{ checked('company-1-consent','Yes') }}>
+                       <label class="govuk-label govuk-checkboxes__label" for="waste">
+                      Yes, I give permission to speak to the organisation first to speed up early concilation.
+                       </label>
+                     </div>
+                </div> -->
+                <br>
+                <hr><br>
+                <br>
 
 
 

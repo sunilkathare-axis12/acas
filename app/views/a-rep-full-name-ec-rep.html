@@ -11,11 +11,24 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
       <h1 class="page-header" style="font-size: 2em; font-family: Arial; font-weight:bold;">
+
+        {% if  data['representing'] == "myself" %}
       Provide repesentative’s name
-        <!-- <span class="govuk-caption-xl">{{releaseVersion}}</span> -->
+
+
+
+  {% else %}
+  Provide your name
+          {% endif %}
+
+
       </h1>
 <div class="govuk-hint">
+    {% if  data['representing'] == "myself" %}
 We will contact your representative instead of you to talk about your dispute.
+{% else %}
+
+        {% endif %}
 
  </div>
 
@@ -31,7 +44,7 @@ We will contact your representative instead of you to talk about your dispute.
 
     <div class="govuk-form-group">
       <label class="govuk-label" for="full-name">
-        Full name of repesentative
+        Full name 
       </label>
       <div id="more-detail-hint" class="govuk-hint">
     <!-- To avoid jeopardising the case we will need your correct legal name as it appears on the passport -->
