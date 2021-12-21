@@ -29,7 +29,7 @@ router.post('/page-one-email', function (req, res) {
   // Check whether the variable matches a condition
   if (contacted == "email"){
     // Send user to next page
-    res.redirect('/page-one-email')
+    res.redirect('/page-one-phone')
   }
 else if (contacted == "emailonly"){
   // Send user to next page

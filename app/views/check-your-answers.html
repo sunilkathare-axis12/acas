@@ -27,8 +27,66 @@
 
 
       <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+
+  {% if  data['representing'] == "myself" %}
+
+        {% if  data['contacted'] == "email" %}
+        <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Phone number
+        </dt>
+        <dd class="govuk-summary-list__value">
+         {{ data['phone-number'] }}
+           <!-- Sarah Philips -->
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a href="a-phone-number.html?change=true">
+            Change
+            <span class="govuk-visually-hidden"> name</span>
+          </a>
+        </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Email address
+        </dt>
+        <dd class="govuk-summary-list__value">
+         {{ data['claimant-email'] }}
+           <!-- Sarah Philips -->
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a href="a-email.html?change=true">
+            Change
+            <span class="govuk-visually-hidden"> name</span>
+          </a>
+        </dd>
+        </div>
+        {% else %}
+        <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Email address
+        </dt>
+        <dd class="govuk-summary-list__value">
+         {{ data['claimant-email'] }}
+           <!-- Sarah Philips -->
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a href="a-email.html?change=true">
+            Change
+            <span class="govuk-visually-hidden"> name</span>
+          </a>
+        </dd>
+        </div>
+
+  {% endif %}
+
+  {% else %}
+{% endif %}
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
+
+
 
             {% if  data['representing'] == "myself" %}
             Your legal name
@@ -67,25 +125,9 @@
           </dd>
         </div>
 
-          {% if  data['contacted'] == "email" %}
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Phone number
-          </dt>
-          <dd class="govuk-summary-list__value">
-           {{ data['phone-number'] }}
-             <!-- Sarah Philips -->
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="a-phone-number.html?change=true">
-              Change
-              <span class="govuk-visually-hidden"> name</span>
-            </a>
-          </dd>
-        </div>
-        {% else %}
 
-            {% endif %}
+
+
 
       </dl>
       {% if  data['rep-full-name-ec'] %}
@@ -123,6 +165,47 @@
             </a>
           </dd>
         </div>
+
+
+        {% if  data['representing'] == "others" %}
+
+              {% if  data['contacted'] == "email" %}
+              <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Phone number
+              </dt>
+              <dd class="govuk-summary-list__value">
+               {{ data['phone-number'] }}
+                 <!-- Sarah Philips -->
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a href="a-phone-number.html?change=true">
+                  Change
+                  <span class="govuk-visually-hidden"> name</span>
+                </a>
+              </dd>
+              </div>
+
+              <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Email address
+              </dt>
+              <dd class="govuk-summary-list__value">
+               {{ data['claimant-email'] }}
+                 <!-- Sarah Philips -->
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a href="a-email.html?change=true">
+                  Change
+                  <span class="govuk-visually-hidden"> name</span>
+                </a>
+              </dd>
+              </div>
+              {% else %}
+        {% endif %}
+
+        {% else %}
+      {% endif %}
         <!-- <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
           Address

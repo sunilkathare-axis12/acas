@@ -20,12 +20,68 @@
       <ol class="app-task-list">
        <li>
 
+
+
+
+
            {% if  data['representing'] == "myself" %}
           <h2 class="app-task-list__section">
             <span class="app-task-list__section-number">1. </span> Enter your details
           </h2>
           <!-- <span class="govuk-hint">It is important that you enter correct legal name and address </span> -->
           <ul class="app-task-list__items">
+
+            {% if  data['contacted'] == "email" %}
+                      <li class="app-task-list__item">
+                        <span class="app-task-list__task-name">
+                          <a href="a-phone-number.html?change=false" aria-describedby="eligibility-status">
+                            Your phone number
+                          </a>
+                        </span>
+
+                        {% if  data['phone-number'] %}
+                          <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+                        {% else %}
+                        <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="list-convictions-status">Optional</strong>
+                        {% endif %}
+
+                      </li>
+<li class="app-task-list__item">
+                      <span class="app-task-list__task-name">
+                        <a href="a-email.html?change=false" aria-describedby="eligibility-status">
+                          Your email number
+                        </a>
+                      </span>
+
+                      {% if  data['claimant-email'] %}
+                        <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+                      {% else %}
+                      <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="list-convictions-status">Optional</strong>
+                      {% endif %}
+
+                    </li>
+
+                      {% else %}
+
+                      <li class="app-task-list__item">
+                                            <span class="app-task-list__task-name">
+                                              <a href="a-email.html?change=false" aria-describedby="eligibility-status">
+                                                Your email number
+                                              </a>
+                                            </span>
+
+                                            {% if  data['claimant-email'] %}
+                                              <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+                                            {% else %}
+                                            <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="list-convictions-status">Optional</strong>
+                                            {% endif %}
+
+                                          </li>
+
+                          {% endif %}
+
+
+
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
                 <a href="a-full-name.html?change=false" aria-describedby="eligibility-status">
@@ -56,25 +112,7 @@
 
 
 
-  {% if  data['contacted'] == "email" %}
-            <li class="app-task-list__item">
-              <span class="app-task-list__task-name">
-                <a href="a-phone-number.html?change=false" aria-describedby="eligibility-status">
-                  Your phone number
-                </a>
-              </span>
 
-              {% if  data['phone-number'] %}
-                <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
-              {% else %}
-              <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="list-convictions-status">Optional</strong>
-              {% endif %}
-
-            </li>
-
-            {% else %}
-
-                {% endif %}
           </ul>
 
 
@@ -85,6 +123,43 @@
             <span class="app-task-list__section-number">1. </span> Enter claimant details
           </h2>
           <ul class="app-task-list__items">
+
+
+            {% if  data['contacted'] == "email" %}
+                      <li class="app-task-list__item">
+                        <span class="app-task-list__task-name">
+                          <a href="a-phone-number.html?change=false" aria-describedby="eligibility-status">
+                            Your phone number
+                          </a>
+                        </span>
+
+                        {% if  data['phone-number'] %}
+                          <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+                        {% else %}
+                        <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="list-convictions-status">Optional</strong>
+                        {% endif %}
+
+                      </li>
+<li class="app-task-list__item">
+                      <span class="app-task-list__task-name">
+                        <a href="a-phone-number.html?change=false" aria-describedby="eligibility-status">
+                          Your email number
+                        </a>
+                      </span>
+
+                      {% if  data['claimant-email'] %}
+                        <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+                      {% else %}
+                      <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="list-convictions-status">Optional</strong>
+                      {% endif %}
+
+                    </li>
+
+                      {% else %}
+
+                          {% endif %}
+
+
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
                 <a href="a-full-name.html?change=false" aria-describedby="eligibility-status">

@@ -1,0 +1,50 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<a href="page-one" class="govuk-back-link">Back</a>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="page-header" style="font-size: 2em;  font-family: Arial; font-weight:bold;">
+      Enter your phone number
+      </h1>
+
+      <div id="email-hint" class="govuk-hint">
+      <!-- <p>    This will only be used to send you security updates or if you need to recover your sign in details  </p> -->
+        <p>
+          <!-- Please enter personsal email address for convenience and privacy.  -->
+          </p>
+      </div>
+
+  <form action="page-one-email">
+
+
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="email">
+        Phone number
+      </label>
+        <input class="govuk-input govuk-input--width-20" id="phone-name" name="phone-number" type="text" spellcheck="false" autocomplete="phone" value="{{ data['phone-number'] }}" inputmode="numeric">
+
+
+    </div>
+
+
+
+
+
+
+            <button class="govuk-button btn-primary" data-module="govuk-button">
+              Save and continue
+            </button>
+
+            </form>
+    </div>
+  </div>
+
+{% endblock %}
