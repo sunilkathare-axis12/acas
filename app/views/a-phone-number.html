@@ -9,7 +9,7 @@
 
 <a href="task-list" class="govuk-back-link">Back</a>
   <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-grid-column-full">
       <h1 class="page-header" style="font-size: 2em; font-family: Arial; font-weight:bold;">
       Enter your phone number
         <!-- <span class="govuk-caption-xl">{{releaseVersion}}</span> -->
@@ -33,10 +33,96 @@
       <div id="more-detail-hint" class="govuk-hint">
   <!-- You’ll be able to talk to us about your dispute quicker if you provide your phone number. This could be your personal mobile number. -->
   </div>
-      <input class="govuk-input" id="phone-name" name="phone-number" type="text" spellcheck="false" autocomplete="name" value="{{ data['phone-number'] }}"></div>
+  <input class="govuk-input govuk-input--width-20" id="phone-name" name="phone-number" type="text" spellcheck="false" autocomplete="phone" value="{{ data['phone-number'] }}" inputmode="numeric">
+    </div>
+
+      <script>
+
+
+      var counter = 1;
+
+      var limit = 5;
+
+      function addInput(divName){
+
+           if (counter == 2)  {
+                // alert("You have reached the limit of adding " + counter + " inputs");
+                var newdiv = document.createElement('div');
+
+                newdiv.innerHTML =  "<br><h2 class='govuk-heading-s'>Another number </h2> <input class='govuk-input' id='phone-name' name='phone-number' type='text' spellcheck='false' autocomplete='name' value='{{ data['phone-number'] }}'>  ";
+
+                document.getElementById(divName).appendChild(newdiv);
 
 
 
+
+                counter++;
+           }
+          else if (counter == 3)  {
+                // alert("You have reached the limit of adding " + counter + " inputs");
+                var newdiv = document.createElement('div');
+
+                newdiv.innerHTML =  "<br><h2 class='govuk-heading-s'>Another number </h2> <input class='govuk-input' id='phone-name' name='phone-number' type='text' spellcheck='false' autocomplete='name' value='{{ data['phone-number'] }}'>  ";
+
+                document.getElementById(divName).appendChild(newdiv);
+
+
+
+
+                counter++;
+           }
+
+           else if (counter == 4)  {
+                 // alert("You have reached the limit of adding " + counter + " inputs");
+                 var newdiv = document.createElement('div');
+
+                 newdiv.innerHTML =  "<br><h2 class='govuk-heading-s'>Another number </h2> <input class='govuk-input' id='phone-name' name='phone-number' type='text' spellcheck='false' autocomplete='name' value='{{ data['phone-number'] }}'>  ";
+
+                 document.getElementById(divName).appendChild(newdiv);
+
+
+
+
+                 counter++;
+            }
+           else {
+
+                var newdiv = document.createElement('div');
+
+                newdiv.innerHTML =  "<br><h2 class='govuk-heading-s'>Another number </h2> <input class='govuk-input' id='phone-name' name='phone-number' type='text' spellcheck='false' autocomplete='name' value='{{ data['phone-number'] }}'>  ";
+
+                document.getElementById(divName).appendChild(newdiv);
+
+
+
+
+                counter++;
+
+           }
+
+      }
+
+
+      </script>
+
+
+      <!--<form method="POST">-->
+           <div id="dynamicInput">
+               <!-- Entry 1<br><input type="text" name="myInputs[]">-->
+
+           </div>
+           <input type="button" class="govuk-button govuk-button--secondary" style="font-size:18px;" data-module="govuk-button" value="Add another number" value="Add another number" onClick="addInput('dynamicInput');">
+<br>
+
+
+
+<div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="200">
+<div class="govuk-form-group">
+<label class="govuk-label" for="label-as-page-heading">
+Please mention if you have any special needs or have difficulty using a phone. For example, you might want to use a text phone or language interpreter.
+</label>
+<textarea class="govuk-textarea govuk-js-character-count" id="label-as-page-heading" name="label-as-page-heading" rows="5" aria-describedby="label-as-page-heading-info"></textarea>
+</div>
 
             <button class="govuk-button btn-primary" data-module="govuk-button">
               Save and continue
