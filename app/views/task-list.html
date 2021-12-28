@@ -1265,15 +1265,23 @@
 
                                                                             <li class="app-task-list__item">
                                                                               <span class="app-task-list__task-name">
-                                                                                <a href="#" aria-describedby="contact-details-status">
+                                                                                <a href="z-7-o-details?change=false" aria-describedby="contact-details-status">
 
                                                                     Give details about the dispute?
                                                                                 </a>
                                                                               </span>
-                                                                            <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="list-convictions-status">Optional</strong>
+
+                                                                              {% if  data['z-7-o-details'] %}
+                                                                                <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+                                                                              {% else %}
+                                                                                <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="list-convictions-status">Optional</strong>
+                                                                              {% endif %}
+
+
+
                                                                             </li>
 
-                                                                            <li class="app-task-list__item">
+                                                                            <!-- <li class="app-task-list__item">
                                                                               <span class="app-task-list__task-name">
                                                                                 <a href="#" aria-describedby="contact-details-status">
 
@@ -1282,39 +1290,44 @@
                                                                                 </a>
                                                                               </span>
                                                                             <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="list-convictions-status">Optional</strong>
-                                                                            </li>
+                                                                            </li> -->
 
                                                                             <li class="app-task-list__item">
                                                                               <span class="app-task-list__task-name">
-                                                                                <a href="#" aria-describedby="contact-details-status">
+                                                                                <a href="z-7-when?change=false" aria-describedby="contact-details-status">
 
 
-                                                                  What date did this occur?
+                                                                                  Do you know the last date when this occured?
+
                                                                                 </a>
                                                                               </span>
-                                                                            <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="list-convictions-status">Optional</strong>
+
+                                                                              {% if  data['z-7-when'] %}
+                                                                                <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+                                                                              {% else %}
+                                                                                <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="list-convictions-status">Optional</strong>
+                                                                              {% endif %}
+
+
                                                                             </li>
 
-                                                                            <li class="app-task-list__item">
-                                                                              <span class="app-task-list__task-name">
-                                                                                <a href="#" aria-describedby="contact-details-status">
 
-
-
-                                                                        What is the detriment (or dismissal) you faced ?
-                                                                                      </a>
-                                                                                    </span>
-                                                                                  <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="list-convictions-status">Optional</strong>
-                                                                                  </li>
 
                                                                                   <li class="app-task-list__item">
                                                                                     <span class="app-task-list__task-name">
-                                                                                      <a href="#" aria-describedby="contact-details-status">
+                                                                                      <a href="z-7-legal?change=false" aria-describedby="contact-details-status">
 
                                                                     Have you been through any internal procedures or raised a grievance?
                                                                                 </a>
                                                                               </span>
-                                                                            <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="list-convictions-status">Optional</strong>
+
+                                                                              {% if  data['z-7-legal'] %}
+                                                                                <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+                                                                              {% else %}
+                                                                                <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="list-convictions-status">Optional</strong>
+                                                                              {% endif %}
+
+
                                                                             </li>
 
 

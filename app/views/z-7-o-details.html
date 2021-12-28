@@ -1,0 +1,56 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<a href="task-list" class="govuk-back-link">Back</a>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+
+      {% if data['change'] == "true" %}
+        <form action="check-your-answers#reason">
+
+      {% else %}
+
+        <form action="task-list#reason">
+      {% endif %}
+
+
+
+
+      <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="200">
+  <div class="govuk-form-group">
+    <h1 class="govuk-label-wrapper"
+
+    ><label class="govuk-label- govuk-label--l- page-header" for="with-hint" style="font-size:.8em; font-family: Arial; font-weight:bold;">
+      Give details about the dispute?
+      </label>
+    </h1>
+    <div id="with-hint-hint" class="govuk-hint">
+      Keep it brief and do not include personal or financial information like your National Insurance number or credit card details.
+    </div>
+    <textarea class="govuk-textarea govuk-js-character-count" id="with-hint" name="z-7-o-details" rows="5" aria-describedby="with-hint-info with-hint-hint">{{ data['z-6-why'] }}</textarea>
+  </div>
+
+  <div id="with-hint-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
+    You can enter up to 200 characters
+  </div>
+
+</div>
+
+
+
+            <button class="govuk-button btn-primary" data-module="govuk-button">
+              Save and continue
+            </button>
+
+            </form>
+    </div>
+  </div>
+
+{% endblock %}
