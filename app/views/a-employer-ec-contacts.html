@@ -14,10 +14,10 @@
 
 
         {% if  data['representing'] == "myself" %}
-      Enter organisation's legal name
+     Give the details of the person that may be willing to sort things out without going to employment tribunal
 
       {% else %}
-    Enter organisation's legal name
+   Give the details of the person that may be willing to sort things out without going to employment tribunal
           {% endif %}
         <!-- <span class="govuk-caption-xl">{{releaseVersion}}</span> -->
       </h1>
@@ -33,43 +33,43 @@
 
 
 
-    <div class="govuk-form-group">
-      <!-- <label class="govuk-label" for="full-name">
-        Legal name
-      </label> -->
+      <h3 class="govuk-heading-s"> This will usually be an HR officer or a senior member of staff. </h3>
 
-      <div id="more-detail-hint" class="govuk-hint">
-
-    <!-- To avoid jeopardising your case we will need the legal name of the organisation.  -->
-
-    Get the name from a P45, P60 or recent payslip. <br> For example, BLUE BOX LIMITED.
-      </div>
-
-    <details class="govuk-details" data-module="govuk-details">
-    <summary class="govuk-details__summary">
-    <span class="govuk-details__summary-text">
-  Lookup legal name on companies house search or school search on GOV.UK
-    <!-- Link to Companies House search, if they have ‘ltd’ or ‘Limited’ at the end of their name -->
-    </span>
-    </summary>
-    <div class="govuk-details__text">
-    <p class="govuk-hint" style="font-size:.9em">
-    <br>
-    If they have ‘Plc’, ‘ltd’ or ‘Limited’ at the end of their name, they’ll be a company and you can check the <a href="https://find-and-update.company-information.service.gov.uk" target="_blank">Companies House information</a> on GOV.UK.
-    </p>
-    <p class="govuk-hint" style="font-size:.9em">  If you are looking for the name of a school, you can check <a href="https://get-information-schools.service.gov.uk" target="_blank">Information about schools </a> on GOV.UK.
-
-    <!-- Look up <a href="https://find-and-update.company-information.service.gov.uk" target="_blank">Companies House search</a> or <a href="https://get-information-schools.service.gov.uk" target="_blank">Information about schools search</a> on GOV.UK to double check the legal name and address are correct. -->
-    <!-- You cIf you can find the orgainsation on GOV.UK companies house register, you can copy and paste the name from here -->
-    </p>
-    </div>
-    </details>
-
-      <input class="govuk-input" id="company-1-legal-name" name="company-1-legal-name" type="text" spellcheck="false" autocomplete="name" value="{{ data['company-1-legal-name'] }}">
+                                        <div class="govuk-form-group">
+                                          <label class="govuk-label" for="full-name">
+                                            Job title
+                                          </label>
+                                          <!-- <div id="more-detail-hint" class="govuk-hint">
+                                        To avoid jeopardising your case we need your correct legal name
+                                      </div> -->
+                                          <input class="govuk-input" id="full-name" name="company-1-job-title" type="text" spellcheck="false"  value="{{ data['company-1-job-title'] }}"></div>
 
 
-    </div>
+                                          <div class="govuk-form-group">
+                                            <label class="govuk-label" for="full-name">
+                                              Full name
+                                            </label>
+                                            <!-- <div id="more-detail-hint" class="govuk-hint">
+                                          To avoid jeopardising your case we need your correct legal name
+                                        </div> -->
+                                            <input class="govuk-input" id="full-name" name="company-1-full-name" type="text" spellcheck="false"  value="{{ data['company-1-full-name'] }}"></div>
 
+                                            <div class="govuk-form-group">
+                                              <label class="govuk-label" for="full-name">
+                                                Email address
+                                              </label>
+                                              <!-- <div id="more-detail-hint" class="govuk-hint">
+                                            To avoid jeopardising your case we need your correct legal name
+                                          </div> -->
+                                              <input class="govuk-input" id="full-name" name="company-1-email" type="text" spellcheck="false"  value="{{ data['company-1-email'] }}"></div>
+                                              <div class="govuk-form-group">
+                                                <label class="govuk-label" for="full-name">
+                                                  Phone number (include extension)
+                                                </label>
+                                                <!-- <div id="more-detail-hint" class="govuk-hint">
+                                              To avoid jeopardising your case we need your correct legal name
+                                            </div> -->
+                                                <input class="govuk-input" id="full-name" name="company-1-phone" type="text" spellcheck="false"  value="{{ data['company-1-phone'] }}"></div>
 
 
 
