@@ -1,0 +1,66 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<a href="task-list" class="govuk-back-link">Back</a>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+
+
+      {% if data['change'] == "true" %}
+        <form action="check-your-answers#reason">
+
+      {% else %}
+
+        <form action="task-list#reason">
+      {% endif %}
+
+
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="page-header" style="font-size: .9em; font-family: Arial; font-weight:bold;">
+
+             Can we speak to the organisation your dispute is against before speaking with you?
+            </h1>
+          </legend>
+          <div id="changed-name-hint" class="govuk-hint">
+            This will enable us to speed up early concilation.
+
+          </div>
+          <div class="govuk-radios govuk-radios--inline">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="changed-name" name="company-1-consent" type="radio" value="Yes" {{ checked('company-1-consent','Yes') }}>
+              <label class="govuk-label govuk-radios__label" for="changed-name">
+                Yes
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="changed-name-2" name="company-1-consent" type="radio" value="No" {{ checked('company-1-consent','No') }}>
+              <label class="govuk-label govuk-radios__label" for="changed-name-2">
+                No
+              </label>
+            </div>
+          </div>
+
+        </fieldset>
+      </div>
+
+
+
+            <button class="govuk-button btn-primary" data-module="govuk-button">
+              Save and continue
+            </button>
+
+            </form>
+    </div>
+  </div>
+
+{% endblock %}
