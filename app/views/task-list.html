@@ -369,6 +369,21 @@
 
       </li>
 
+      <li class="app-task-list__item">
+        <span class="app-task-list__task-name">
+          <a href="z-z-speak?change=false" aria-describedby="contact-details-status">
+          Can we speak to the orgnistaion before we speak to you?
+          </a>
+        </span>
+        {% if  data['company-1-consent'] %}
+          <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+        {% else %}
+          <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="list-convictions-status">Optional</strong>
+        {% endif %}
+
+    </li>
+
+
           {% else %}
 
               {% endif %}
