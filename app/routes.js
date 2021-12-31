@@ -74,7 +74,7 @@ router.post('/try-ec', function (req, res) {
     res.redirect('/page-one')
   } else {
     // Send user to ineligible page
-    res.redirect('/a-no-ec-contact')
+    res.redirect('/a-no-ec-contact-myself')
   }
 
 })
