@@ -1,0 +1,80 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+
+
+<a href="task-list" class="govuk-back-link">Back</a>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <h1 class="page-header" style="font-size: 2em;  font-family: Arial; font-weight:bold;">
+
+        {% if  data['representing'] == "myself" %}
+      Your representative’s contact details
+
+      {% else %}
+  Your contact details
+        {% endif %}
+
+        <!-- <span class="govuk-caption-xl">{{releaseVersion}}</span> -->
+      </h1>
+
+<div class="govuk-hint">
+{% if  data['representing'] == "myself" %}
+  You will get a quicker response about your dispute if you provide your representative’s contact details.
+  {% else %}
+  {% endif %}
+
+</div >
+      <!-- <h3 class="page-header" style="font-size: 1.5em;  font-family: Arial; font-weight:bold;">
+        Address
+
+
+      </h3> -->
+
+
+      {% if data['change'] == "true" %}
+        <form action="check-your-answers#address">
+
+      {% else %}
+
+        <form action="task-list">
+      {% endif %}
+
+
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="full-name">
+          Email address
+        </label>
+        <!-- <div id="more-detail-hint" class="govuk-hint">
+      To avoid jeopardising your case we need your correct legal name
+    </div> -->
+        <input class="govuk-input govuk-input--width-20"  id="full-name" name="email-rep-ec" type="text" spellcheck="false"  value="{{ data['email-rep-ec'] }}"></div>
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="full-name">
+            Phone number
+          </label>
+          <!-- <div id="more-detail-hint" class="govuk-hint">
+        To avoid jeopardising your case we need your correct legal name
+      </div> -->
+          <input class="govuk-input govuk-input--width-10" id="full-name"  name="phone-rep-ec" type="text" spellcheck="false"  value="{{ data['phone-rep-ec'] }}"></div>
+
+
+
+
+
+            <button class="govuk-button btn-primary" data-module="govuk-button">
+              Save and continue
+            </button>
+
+            </form>
+    </div>
+  </div>
+
+{% endblock %}
