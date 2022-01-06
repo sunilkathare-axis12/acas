@@ -110,7 +110,14 @@
         </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Address
+
+            {% if  data['representing'] == "myself" %}
+            Your  address
+              {% else %}
+
+                Claimant address
+              {% endif %}
+
           </dt>
           <dd class="govuk-summary-list__value">
 
@@ -157,7 +164,7 @@
           </dt>
           <dd class="govuk-summary-list__value">
            {{ data['rep-full-name-ec'] }}
-             
+
           </dd>
           <dd class="govuk-summary-list__actions">
             <a href="a-rep-full-name-ec-rep.html?change=true">
@@ -226,6 +233,10 @@
           </dd>
         </div> -->
 
+        {% if  data['representing'] == "myself" %}
+
+
+
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
           Email
@@ -257,6 +268,11 @@
           </dd>
         </div>
 
+
+      {% else %}
+
+
+      {% endif %}
 
       </dl>
 

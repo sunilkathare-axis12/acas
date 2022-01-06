@@ -39,8 +39,8 @@
 
 <a href="task-list" class="govuk-back-link">Back</a>
   <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
-      <h1 class="page-header" style="font-size: 2.42em;  font-family: Arial; font-weight:bold;">
+    <div class="govuk-grid-column-full">
+      <h1 class="page-header" style="font-size: 2.1em;  font-family: Arial; font-weight:bold;">
 
         {% if  data['representing'] == "myself" %}
         What is your address?
@@ -58,9 +58,9 @@ What is claimant's address?
       <form id="example_form">
         <div class="address_container">
           <div class="form-group govuk-form-group">
-            <label for="address" class="govuk-label">Search for address or postcode</label>
+            <label for="address" class="govuk-label">Search by postcode or address </label>
             <div id="more-detail-hint" class="govuk-hint">
-          For example, Manor Farm Barns, Framingham Pigot or NR14 7PZ
+          For example, NR14 7PZ or Manor Farm Barns, Framingham Pigot
         </div>
             <input
               type="text"
@@ -87,7 +87,8 @@ What is claimant's address?
       </form>
 
       <div id="more-detail-hint" class="govuk-hint">
-    You can also enter your address below. You will need to do this if you do not live in the UK.
+    You can also enter your address below.
+    <!-- You will need to do this if this address is not in the UK. -->
   </div>
       <hr />
       <br />
