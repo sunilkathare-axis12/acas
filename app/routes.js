@@ -63,7 +63,7 @@ router.post('/who-are-you-representing', function (req, res) {
 })
 
 // Run this code when a form is submitted to 'try ec'
-router.post('/try-ec', function (req, res) {
+router.post('/try-ec-myself', function (req, res) {
 
   // Make a variable and give it the value from 'how-many-balls'
   var tryec = req.session.data['try-ec']
@@ -75,6 +75,23 @@ router.post('/try-ec', function (req, res) {
   } else {
     // Send user to ineligible page
     res.redirect('/a-no-ec-contact-myself')
+  }
+
+})
+
+// Run this code when a form is submitted to 'try ec'
+router.post('/try-ec', function (req, res) {
+
+  // Make a variable and give it the value from 'how-many-balls'
+  var tryec = req.session.data['try-ec']
+
+  // Check whether the variable matches a condition
+  if (tryec == "yes"){
+    // Send user to next page
+    res.redirect('/page-one')
+  } else {
+    // Send user to ineligible page
+    res.redirect('/a-no-ec-contact')
   }
 
 })
