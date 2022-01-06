@@ -1,0 +1,84 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<a href="task-list" class="govuk-back-link">Back</a>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <h1 class="page-header" style="font-size: 2em; font-family: Arial; font-weight:bold;">
+
+
+        {% if  data['representing'] == "myself" %}
+      Enter organisation's legal name
+
+      {% else %}
+    Enter organisation's legal name
+          {% endif %}
+        <!-- <span class="govuk-caption-xl">{{releaseVersion}}</span> -->
+      </h1>
+
+
+      {% if data['change'] == "true" %}
+        <form action="check-your-answers-no-ec-myself#name">
+
+      {% else %}
+
+        <form action="task-list-no-ec-myself">
+      {% endif %}
+
+
+
+    <div class="govuk-form-group">
+      <!-- <label class="govuk-label" for="full-name">
+        Legal name
+      </label> -->
+
+      <div id="more-detail-hint" class="govuk-hint">
+
+    <!-- To avoid jeopardising your case we will need the legal name of the organisation.  -->
+
+    Get the name from a P45, P60 or recent payslip. <br> For example, BLUE BOX LIMITED.
+      </div>
+
+    <details class="govuk-details" data-module="govuk-details">
+    <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+  Lookup legal name on companies house search or school search on GOV.UK
+    <!-- Link to Companies House search, if they have ‘ltd’ or ‘Limited’ at the end of their name -->
+    </span>
+    </summary>
+    <div class="govuk-details__text">
+    <p class="govuk-hint" style="font-size:.9em">
+    <br>
+    If they have ‘Plc’, ‘ltd’ or ‘Limited’ at the end of their name, they’ll be a company and you can check the <a href="https://find-and-update.company-information.service.gov.uk" target="_blank">Companies House information</a> on GOV.UK.
+    </p>
+    <p class="govuk-hint" style="font-size:.9em">  If you are looking for the name of a school, you can check <a href="https://get-information-schools.service.gov.uk" target="_blank">Information about schools </a> on GOV.UK.
+
+    <!-- Look up <a href="https://find-and-update.company-information.service.gov.uk" target="_blank">Companies House search</a> or <a href="https://get-information-schools.service.gov.uk" target="_blank">Information about schools search</a> on GOV.UK to double check the legal name and address are correct. -->
+    <!-- You cIf you can find the orgainsation on GOV.UK companies house register, you can copy and paste the name from here -->
+    </p>
+    </div>
+    </details>
+
+      <input class="govuk-input" id="company-1-legal-name" name="company-1-legal-name" type="text" spellcheck="false" autocomplete="name" value="{{ data['company-1-legal-name'] }}">
+
+
+    </div>
+
+
+
+
+            <button class="govuk-button btn-primary" data-module="govuk-button">
+              Save and continue
+            </button>
+
+            </form>
+    </div>
+  </div>
+
+{% endblock %}
