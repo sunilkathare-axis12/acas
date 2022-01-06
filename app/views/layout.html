@@ -86,9 +86,104 @@
 
 {% set mainClasses = mainClasses | default("govuk-main-wrapper--auto-spacing") %}
 
+
+
 {% if useAutoStoreData %}
   {% block footer %}
-    {{ govukFooter({
+
+
+
+      <div class="footer__wrapper">
+      <footer id="footer" class="footer" role="contentinfo">
+        <div id="footer__inner" class="container">
+            <div class="region region-footer">
+    <div class="row">
+      <div class="col-xs-12 col-md-4 col-lg-5">
+        <a class="footer-logo" href="https://www.acas.org.uk/">
+          <img src="/public/images/acas-logo.png" alt="Acas logo">
+        </a>
+<br>
+
+      </div>
+
+      <div class="col-xs-12 col-md-8 col-lg-7">
+        <section id="footer_menus" class="row">
+
+
+<div id="block-acas-footer" class="block block-system block-system-menu-blockfooter clearfix col-xs-12 col-sm-4">
+
+    <nav role="navigation" aria-labelledby="block-acas-footer-menu">
+
+                      <span class="sr-only" id="block-acas-footer-menu">
+      Footer menu
+    </span>
+
+
+      <ul class="menu menu--footer">
+<li>
+          <a href="/prototype-admin/clear-data"> Clear data</a>
+
+            </li>
+                              <li>
+                  <a href="https://tell.acas.org.uk/terms" class="menu menu--footer" target="_blank" data-drupal-link-system-path="node/88">Terms and conditions</a>
+                          </li>
+                              <li>
+                  <a href="https://beta.acas.org.uk/privacy" class="menu menu--footer" target="_blank">Privacy</a>
+                          </li>
+                              <li>
+                  <a href="https://beta.acas.org.uk/cookies" class="menu menu--footer" target="_blank">Cookies</a>
+                          </li>
+        </ul>
+
+
+
+  </nav>
+
+</div>
+
+
+<div id="block-secondaryfooter" class="block block-system block-system-menu-blocksecondary-footer clearfix col-xs-12 col-sm-4">
+
+    <nav role="navigation" aria-labelledby="block-secondaryfooter-menu">
+
+                      <span class="sr-only" id="block-secondaryfooter-menu">
+      Secondary footer
+    </span>
+
+
+      <ul class="menu menu--secondary-footer">
+                              <li>
+                                <a href="https://beta.acas.org.uk/accessibility" class="menu menu--secondary-footer" target="_blank">Accessibility</a>
+
+                          </li>
+                              <li><a href="https://beta.acas.org.uk/contact" class="menu menu--secondary-footer" target="_blank">Contact us</a>
+
+                          </li>
+                              <li>
+                    <a href="https://tell.acas.org.uk/copyright" class="menu menu--secondary-footer" target="_blank" data-drupal-link-system-path="node/91">Copyright</a>
+                          </li>
+                              <li>
+                  <a href="http://www.acas.org.uk/" class="menu menu--secondary-footer" target="_blank">Acas home</a>
+                          </li>
+        </ul>
+
+
+
+  </nav>
+
+</div>
+
+        </section>
+      </div>
+    </div>
+  </div>
+
+        </div>
+      </footer>
+    </div>
+
+
+    <!-- {{ govukFooter({
       meta: {
         items: [
           {
@@ -104,7 +199,7 @@
       }
     }) }}
   {% endblock %}
-{% endif %}
+{% endif %} -->
 
 {% block bodyEnd %}
   {% block scripts %}
