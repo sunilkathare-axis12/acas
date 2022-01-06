@@ -21,11 +21,11 @@
 
 
       {% if data['change'] == "true" %}
-        <form action="check-your-answers#e-address">
+        <form action="check-your-answers-myself#e-address">
 
       {% else %}
 
-        <form action="task-list">
+        <form action="task-list-no-ec-myself">
       {% endif %}
 
 
@@ -40,7 +40,7 @@
         <div id="contact-hint" class="govuk-hint">
        In most cases the claim should be made against the organisation named in the payslip not the HR or the line manager.
 
-        <!-- Make sure you put the legal name. -->
+       <!-- Make sure you put the legal name. -->
         </div>
         <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
           <div class="govuk-radios__item">

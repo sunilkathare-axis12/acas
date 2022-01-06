@@ -122,12 +122,29 @@
             </li> -->
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
-                <a href="a-employer" aria-describedby="contact-details-status">
+                <a href="a-employer-no-ec-myself?change=false" aria-describedby="contact-details-status">
                 Organisation or person
+
+
+
                 </a>
+
+
+                {% if  data['employer-type'] == "organisation" %}
+                  : Organisation
+                {% else %}
+
+              {% endif %}
+
+              {% if  data['employer-type'] == "person" %}
+              :  Person
+              {% else %}
+
+              {% endif %}
+
               </span>
 
-              <!-- company-1-legal-name -->
+
               {% if  data['company-1-legal-name'] %}
                 <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
               {% else %}
@@ -135,8 +152,90 @@
               {% endif %}
 
           </li>
-  <!-- <li class="app-task-list__item-">
-    <span class="app-task-list__task-name-"> -->
+
+
+
+          {% if  data['employer-type'] == "organisation" %}
+
+
+
+          <li class="app-task-list__item">
+            <span class="app-task-list__task-name">
+              <a href="a-employer-ec-name?change=false" aria-describedby="contact-details-status">
+             Organisation legal name
+              </a>
+            </span>
+            {% if  data['company-1-legal-name'] %}
+              <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+            {% else %}
+            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
+            {% endif %}
+
+        </li>
+
+        <li class="app-task-list__item">
+          <span class="app-task-list__task-name">
+            <a href="a-employer-ec-address?change=false" aria-describedby="contact-details-status">
+            Organisation address
+            </a>
+          </span>
+          {% if  data['company-1-ec-address'] %}
+            <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+          {% else %}
+          <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
+          {% endif %}
+
+        </li>
+
+
+
+
+
+        {% else %}
+
+            {% endif %}
+
+
+            {% if  data['employer-type'] == "person" %}
+
+
+
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="a-employer-ec-name?change=false" aria-describedby="contact-details-status">
+                Person's name
+                </a>
+              </span>
+              {% if  data['person-1-legal-name'] %}
+                <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+              {% else %}
+              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
+              {% endif %}
+
+          </li>
+
+          <li class="app-task-list__item">
+            <span class="app-task-list__task-name">
+              <a href="a-employer-ec-address?change=false" aria-describedby="contact-details-status">
+              Person's address
+              </a>
+            </span>
+            {% if  data['company-1-ec-address'] %}
+              <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+            {% else %}
+            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
+            {% endif %}
+
+        </li>
+
+
+
+      
+          {% else %}
+
+              {% endif %}
+
+
           <script>
 
 
