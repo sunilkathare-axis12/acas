@@ -20,6 +20,23 @@
       <h2 class="govuk-heading-m">Your details</h2>
 
       <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Your email name
+          </dt>
+          <dd class="govuk-summary-list__value">
+           {{ data['claimant-email'] }}
+           
+
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="a-email-no-ec-myself.html?change=true">
+              Change
+              <span class="govuk-visually-hidden"> name</span>
+            </a>
+          </dd>
+        </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
             Your legal name

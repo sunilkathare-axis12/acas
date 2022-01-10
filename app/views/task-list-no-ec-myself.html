@@ -26,6 +26,20 @@
           <ul class="app-task-list__items">
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
+                <a href="a-email-no-ec-myself.html?change=false" aria-describedby="eligibility-status">
+                  Your email address
+                </a>
+              </span>
+
+              {% if  data['claimant-email'] %}
+                <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+              {% else %}
+              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
+              {% endif %}
+
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
                 <a href="a-full-name-no-ec-myself.html?change=false" aria-describedby="eligibility-status">
                   Your legal name
                 </a>
