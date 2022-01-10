@@ -27,7 +27,7 @@
           <dd class="govuk-summary-list__value">
            {{ data['full-name'] }}
            {{ data['full-name-last'] }}
-            
+
           </dd>
           <dd class="govuk-summary-list__actions">
             <a href="a-full-name.html?change=true">
@@ -69,10 +69,10 @@
           </dt>
           <dd class="govuk-summary-list__value">
            {{ data['rep-full-name'] }}
-             <!-- Sarah Philips -->
+
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="a-full-name-no-ec-rep.html?change=true">
+            <a href="a-rep-full-name-no-ec-rep.html?change=true">
               Change
               <span class="govuk-visually-hidden"> name</span>
             </a>
@@ -80,27 +80,39 @@
         </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-             Your contact details
+             Your email
           </dt>
           <dd class="govuk-summary-list__value">
-        <!--  72 Guild Street
-            <br>London
-            <br>SE23 6FH    -->
 
-                 {{ data['rep_address_line_1'] }} <br>{{ data['rep_address_line_2'] }}
-                <br>      {{ data['rep_posttown'] }}
-                  <br>      {{ data['rep_postcode'] }}
-            <!-- 72 Guild Street
-            <br>London
-            <br>SE23 6FH -->
+              {{ data['claimant-email'] }}
+
+
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="a-rep-address-no-ec-rep.html?change=true">
+            <a href="a-rep-contact-details-no-ec.html?change=true">
               Change
-              <span class="govuk-visually-hidden"> Address</span>
+              <span class="govuk-visually-hidden">    Your email</span>
             </a>
           </dd>
         </div>
+
+        <!-- <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+             Your Phone number
+          </dt>
+          <dd class="govuk-summary-list__value">
+
+        {{ data['phone-rep-no-ec'] }}
+
+
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="a-rep-contact-details-no-ec.html?change=true">
+              Change
+              <span class="govuk-visually-hidden">    Your phone</span>
+            </a>
+          </dd>
+        </div> -->
 
 
       </dl>

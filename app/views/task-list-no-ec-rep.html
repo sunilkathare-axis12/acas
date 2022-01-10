@@ -60,7 +60,7 @@
           <ul class="app-task-list__items">
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
-                <a href="a-rep-full-name-no-ec-rep" aria-describedby="company-information-status">
+                <a href="a-rep-full-name-no-ec-rep?change=false" aria-describedby="company-information-status">
                 Your name
                 </a>
               </span>
@@ -73,11 +73,11 @@
             </li>
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
-                <a href="a-rep-address-no-ec-rep" aria-describedby="contact-details-status">
-                  Your contact details
+                <a href="a-rep-contact-details-no-ec?change=false" aria-describedby="contact-details-status">
+                  Your email address
                 </a>
               </span>
-              {% if  data['rep_address_line_1'] %}
+              {% if  data['claimant-email'] %}
                 <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
               {% else %}
               <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
