@@ -11,8 +11,14 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
       <h1 class="page-header" style="font-size: 2em; font-family: Arial; font-weight:bold;">
-      How much money do you think you are owed?
-        <!-- <span class="govuk-caption-xl">{{releaseVersion}}</span> -->
+        {% if  data['representing'] == "myself" %}
+                      How much do you think you are owed?
+
+                        {% else %}
+                              How much do they think their are owed?
+
+                {% endif %}
+
       </h1>
 
 

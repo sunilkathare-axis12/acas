@@ -32,7 +32,15 @@
       </label>
     </h1>
     <div id="with-hint-hint" class="govuk-hint">
-      Keep it brief and do not include personal or financial information like your National Insurance number or credit card details.
+
+      {% if  data['representing'] == "myself" %}
+        Keep it brief and do not include personal or financial information like your National Insurance number or credit card details.
+
+                      {% else %}
+Keep it brief and do not include personal or financial information like their National Insurance number or credit card details.
+
+              {% endif %}
+
     </div>
     <textarea class="govuk-textarea govuk-js-character-count" id="with-hint" name="z-7-o-details" rows="5" aria-describedby="with-hint-info with-hint-hint">{{ data['z-7-o-details'] }}</textarea>
   </div>

@@ -621,9 +621,15 @@
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
                 <a href="w-q2?change=false" aria-describedby="contact-details-status">
-                  <!-- How much do you want to claim? -->
+                  {% if  data['representing'] == "myself" %}
+                                    When did you have this problem with the pay?
 
-                When did you have this problem with the pay?
+                                  {% else %}
+                                    When did the claimant  have this problem with the pay?
+
+                          {% endif %}
+
+
                 </a>
               </span>
               {% if  data['w-day'] %}
@@ -675,7 +681,16 @@
                 <span class="app-task-list__task-name">
                   <a href="d-r-two-years?change=false" aria-describedby="two-years">
 
-            Have you worked for this organisation for more than 2 years?
+                    {% if  data['representing'] == "myself" %}
+                                  Have you worked for this organisation for more than 2 years?
+
+                                    {% else %}
+                                      Have they worked for this organisation for more than 2 years?
+
+                            {% endif %}
+
+
+
 
                   </a>
                 </span>
@@ -703,8 +718,16 @@
               <li class="app-task-list__item">
                 <span class="app-task-list__task-name">
                   <a href="y-r-end-date?change=false" aria-describedby="contact-details-status">
-                    <!-- How much do you want to claim? -->
-            What was your effective date of termination?
+
+                    {% if  data['representing'] == "myself" %}
+                                    What was your effective date of termination?
+
+                                    {% else %}
+                                      What was their effective date of termination?
+
+                            {% endif %}
+
+
 
                   </a>
                 </span>
@@ -724,7 +747,15 @@
                 <span class="app-task-list__task-name">
                   <a href="y-r-pay-date?change=false" aria-describedby="contact-details-status">
 
-            What date should you have received your payment?
+                    {% if  data['representing'] == "myself" %}
+                                    What date should you have received your payment?
+
+                                    {% else %}
+                                        What date should they have received their payment?
+
+                            {% endif %}
+
+
 
                   </a>
                 </span>
@@ -739,7 +770,15 @@
                 <span class="app-task-list__task-name">
                   <a href="y-r-how-much?change=false" aria-describedby="contact-details-status">
 
-          How much do you think you are owed?
+                    {% if  data['representing'] == "myself" %}
+                                  How much do you think you are owed?
+
+                                    {% else %}
+                                          How much do they think their are owed?
+
+                            {% endif %}
+
+
 
                   </a>
                 </span>
@@ -756,7 +795,14 @@
                 <span class="app-task-list__task-name">
                   <a href="y-r-notice?change=false" aria-describedby="contact-details-status">
 
-        Did you work a notice period?
+                    {% if  data['representing'] == "myself" %}
+                                Did you work a notice period?
+
+                                    {% else %}
+                                        Did they work a notice period?
+
+                            {% endif %}
+
 
                   </a>
                 </span>
@@ -775,7 +821,15 @@
                 <span class="app-task-list__task-name">
                   <a href="y-r-internal?change=false" aria-describedby="contact-details-status">
 
-        Have you gone through any internal procedures to try to resolve this?
+                    {% if  data['representing'] == "myself" %}
+                            Have you gone through any internal procedures to try to resolve this?
+
+                                    {% else %}
+                                    Have they gone through any internal procedures to try to resolve this?
+
+                            {% endif %}
+
+
 
                   </a>
                 </span>
@@ -798,9 +852,16 @@
                       <li class="app-task-list__item">
                         <span class="app-task-list__task-name">
                           <a href="z-d-why?change=false" aria-describedby="Discrimination">
-                            <!-- How much do you want to claim? -->
 
-                        Why do you believe you have been discriminated against at work?
+                            {% if  data['representing'] == "myself" %}
+                                    Why do you believe you have been discriminated against at work?
+
+                                            {% else %}
+                                            Why do they believe they have been discriminated against at work?
+
+                                    {% endif %}
+
+
                           </a>
                         </span>
                         {% if  data['z-d-why'] %}
@@ -848,9 +909,15 @@
                       <li class="app-task-list__item">
                         <span class="app-task-list__task-name">
                           <a href="z-d-details?change=false" aria-describedby="contact-details-status">
-                            <!-- How much do you want to claim? -->
+                            {% if  data['representing'] == "myself" %}
+                            Specify details on why you think you have been discriminated against
 
-                      Specify details on why to think you have been discriminated against
+                                            {% else %}
+                                            Specify details on why they think they have been discriminated against
+
+                                    {% endif %}
+
+
                           </a>
                         </span>
                         {% if  data['z-d-details'] %}
@@ -885,7 +952,15 @@
                                   <span class="app-task-list__task-name">
                                     <a href="z-2-w-why?change=false" aria-describedby="contact-details-status">
 
-                            Why do you feel you have been wrongfully dismissed?
+                                      {% if  data['representing'] == "myself" %}
+                                      Why do you feel you have been wrongfully dismissed?
+
+                                                      {% else %}
+                                                      Why do they feel they have been wrongfully dismissed?
+
+                                              {% endif %}
+
+
                                     </a>
                                   </span>
                                   {% if  data['z-2-w-why'] %}
@@ -899,8 +974,15 @@
                                   <span class="app-task-list__task-name">
                                     <a href="z-2-w-contract?change=false" aria-describedby="contact-details-status">
 
+                                      {% if  data['representing'] == "myself" %}
+                                      Do you have a contract?
 
-                          Do you have a contract?
+                                                      {% else %}
+                                                      Do they have a contract?
+
+                                              {% endif %}
+
+
                                     </a>
                                   </span>
 
@@ -916,8 +998,15 @@
                                   <span class="app-task-list__task-name">
                                     <a href="z-2-w-clause?change=false" aria-describedby="contact-details-status">
 
+                                      {% if  data['representing'] == "myself" %}
+                                    What clause in your contract was breached?
 
-                        What clause in your contract was breached?
+                                                      {% else %}
+                                                      What clause in the contract was breached?
+
+                                              {% endif %}
+
+
                                     </a>
                                   </span>
 
@@ -935,8 +1024,14 @@
                                   <span class="app-task-list__task-name">
                                     <a href="z-2-w-try?change=false" aria-describedby="contact-details-status">
 
+                                      {% if  data['representing'] == "myself" %}
+                                    Have you gone through any internal procedures to try to resolve this?
 
-                    Have you gone through any internal procedures to try to resolve this?
+                                                      {% else %}
+                                                          Have they gone through any internal procedures to try to resolve this?
+
+                                              {% endif %}
+
                                     </a>
                                   </span>
 
@@ -958,8 +1053,14 @@
                                             <span class="app-task-list__task-name">
                                               <a href="z-3-years?change=false" aria-describedby="contact-details-status">
 
+                                                {% if  data['representing'] == "myself" %}
+                                              Have you worked for this organisation for more than 2 years?
 
-                                      Have you worked for this organisation for more than 2 years?
+                                                                {% else %}
+                                                                Have they worked for this organisation for more than 2 years?
+
+                                                        {% endif %}
+
                                               </a>
                                             </span>
                                             {% if  data['z-3-years'] %}
@@ -979,7 +1080,7 @@
                                               <a href="z-3-end-date?change=false" aria-describedby="contact-details-status">
 
 
-                                                What was your effective date of termination?
+                                                What was the effective date of termination?
 
                                               </a>
                                             </span>
@@ -997,7 +1098,8 @@
                                               <a href="z-3-reason?change=false" aria-describedby="contact-details-status">
 
 
-                                  What reason was given for your dismissal?
+
+                                  What reason was given for the dismissal?
                                               </a>
                                             </span>
 
@@ -1014,8 +1116,14 @@
                                             <span class="app-task-list__task-name">
                                               <a href="z-3-feel?change=false" aria-describedby="contact-details-status">
 
+                                                {% if  data['representing'] == "myself" %}
+                                            Why do you feel this was unfair?
 
-                              Why do you feel this was unfair?
+                                                                {% else %}
+                                                                Why do they feel this was unfair?
+
+                                                        {% endif %}
+
                                               </a>
                                             </span>
 
@@ -1032,8 +1140,14 @@
                                             <span class="app-task-list__task-name">
                                               <a href="z-3-appeal?change=false" aria-describedby="contact-details-status">
 
+                                                {% if  data['representing'] == "myself" %}
+                                          Have you appealed against the dismissal?
 
-                                      Have you appealed against the dismissal?
+                                                                {% else %}
+                                                              Have they appealed against the dismissal?
+
+                                                        {% endif %}
+
                                               </a>
                                             </span>
 
@@ -1057,8 +1171,14 @@
                                                       <span class="app-task-list__task-name">
                                                         <a href="z-4-years?change=false" aria-describedby="contact-details-status">
 
+                                                          {% if  data['representing'] == "myself" %}
+                                                      Have you worked for this organisation for more than 2 years?
 
-                                                Have you worked for this organisation for more than 2 years?
+                                                                          {% else %}
+                                                                          Have they worked for this organisation for more than 2 years?
+
+                                                                  {% endif %}
+
                                                         </a>
                                                       </span>
 
@@ -1077,8 +1197,14 @@
                                                       <span class="app-task-list__task-name">
                                                         <a href="z-4-end-date?change=false" aria-describedby="contact-details-status">
 
+                                                          {% if  data['representing'] == "myself" %}
+                                                      When did you resign?
 
-                                              When did you resign?
+                                                                          {% else %}
+                                                                      When did they resign?
+
+                                                                  {% endif %}
+
                                                         </a>
                                                       </span>
 
@@ -1095,8 +1221,14 @@
                                                       <span class="app-task-list__task-name">
                                                         <a href="z-4-why?change=false" aria-describedby="contact-details-status">
 
+                                                          {% if  data['representing'] == "myself" %}
+                                                  Why did you feel you had no option but to resign?
 
-                                                Why did you feel you had no option but to resign?
+                                                                          {% else %}
+                                                                    Why did they feel they had no option but to resign?
+
+                                                                  {% endif %}
+
                                                         </a>
                                                       </span>
                                                       {% if  data['z-4-why'] %}
@@ -1111,8 +1243,14 @@
                                                       <span class="app-task-list__task-name">
                                                         <a href="z-4-appeal?change=false" aria-describedby="contact-details-status">
 
+                                                          {% if  data['representing'] == "myself" %}
+                                                        Did you raise a grievance regarding the situation?
 
-                                            Did you raise a grievance regarding the situation?
+                                                                          {% else %}
+                                                                    Did they raise a grievance regarding the situation?
+
+                                                                  {% endif %}
+
                                                         </a>
                                                       </span>
 
@@ -1136,7 +1274,15 @@
                                                               <span class="app-task-list__task-name">
                                                                 <a href="z-5-why?change=false" aria-describedby="contact-details-status">
 
-                                                      Why do you feel your employer has failed to provide equal pay?
+
+                                                                  {% if  data['representing'] == "myself" %}
+                                                                  Why do you feel your employer has failed to provide equal pay?
+
+                                                                                  {% else %}
+                                                                              Why do they feel their employer has failed to provide equal pay?
+
+                                                                          {% endif %}
+
                                                                 </a>
                                                               </span>
 
@@ -1171,8 +1317,14 @@
                                                               <span class="app-task-list__task-name">
                                                                 <a href="z-5-others?change=false" aria-describedby="contact-details-status">
 
+                                                                  {% if  data['representing'] == "myself" %}
+                                                                Are there any other people in your situation who have also made a claim?
 
-                                                    Are there any other people in your situation who have also made a claim?
+                                                                                  {% else %}
+                                                                            Are there any other people in their situation who have also made a claim?
+
+                                                                          {% endif %}
+
                                                                 </a>
                                                               </span>
                                                               {% if  data['z-5-others'] %}
@@ -1186,8 +1338,15 @@
                                                               <span class="app-task-list__task-name">
                                                                 <a href="z-5-internal?change=false" aria-describedby="contact-details-status">
 
+                                                                  {% if  data['representing'] == "myself" %}
+                                                              Have you been through any internal procedures or raised a grievance?
 
-                                                    Have you been through any internal procedures or raised a grievance?
+                                                                                  {% else %}
+                                                                          Have their been through any internal procedures or raised a grievance?
+
+                                                                          {% endif %}
+
+
                                                                 </a>
                                                               </span>
 
@@ -1208,7 +1367,15 @@
                                                                       <span class="app-task-list__task-name">
                                                                         <a href="z-6-concern?change=false" aria-describedby="contact-details-status">
 
-                                                            What was your concern regarding the workplace?
+
+                                                                          {% if  data['representing'] == "myself" %}
+                                                                        What was your concern regarding the workplace?
+
+                                                                                          {% else %}
+                                                                                  What was their concern regarding the workplace?
+
+                                                                                  {% endif %}
+
                                                                         </a>
                                                                       </span>
 
@@ -1223,9 +1390,15 @@
                                                                     <li class="app-task-list__item">
                                                                       <span class="app-task-list__task-name">
                                                                         <a href="z-6-why?change=false" aria-describedby="contact-details-status">
+                                                                          {% if  data['representing'] == "myself" %}
+                                                                            Why do you feel your claim is about whistleblowing?
+
+                                                                                          {% else %}
+                                                                                    Why do they feel their claim is about whistleblowing?
+
+                                                                                  {% endif %}
 
 
-                                                          Why do you feel your claim is about whistleblowing?
                                                                         </a>
                                                                       </span>
 
@@ -1241,8 +1414,15 @@
                                                                       <span class="app-task-list__task-name">
                                                                         <a href="z-6-when?change=false"" aria-describedby="contact-details-status">
 
+                                                                          {% if  data['representing'] == "myself" %}
+                                                                              Do you know what date did this occur?
 
-                                                          Do you know what date did this occur?
+                                                                                          {% else %}
+
+                                                                                    Do they know what date did this occur?
+
+                                                                                  {% endif %}
+
                                                                         </a>
                                                                       </span>
                                                                       {% if  data['z-6-when'] %}
@@ -1257,9 +1437,17 @@
                                                                       <span class="app-task-list__task-name">
                                                                         <a href="z-6-what?change=false"" aria-describedby="contact-details-status">
 
+                                                                          {% if  data['representing'] == "myself" %}
+                                                                              What is the detriment (or dismissal) you faced because of whistleblowing?
+
+                                                                                          {% else %}
+
+                                                                                    What is the detriment (or dismissal) they faced because of whistleblowing?
+
+                                                                                  {% endif %}
 
 
-                                                                What is the detriment (or dismissal) you faced because of whistleblowing?
+
                                                                               </a>
                                                                             </span>
 
@@ -1275,7 +1463,16 @@
                                                                             <span class="app-task-list__task-name">
                                                                               <a href="z-6-legal?change=false" aria-describedby="contact-details-status">
 
-                                                            Have you been through any internal procedures or raised a grievance?
+                                                                                {% if  data['representing'] == "myself" %}
+                                                                                  Have you been through any internal procedures or raised a grievance?
+
+                                                                                                {% else %}
+
+                                                                                          Have they been through any internal procedures or raised a grievance?
+
+                                                                                        {% endif %}
+
+
                                                                         </a>
                                                                       </span>
 
@@ -1327,8 +1524,16 @@
                                                                               <span class="app-task-list__task-name">
                                                                                 <a href="z-7-when?change=false" aria-describedby="contact-details-status">
 
+                                                                                  {% if  data['representing'] == "myself" %}
+                                                                                          Do you know the date when this occured?
 
-                                                                                  Do you know the date when this occured?
+                                                                                                  {% else %}
+
+                                                                                                  Do they know the date when this occured?
+
+                                                                                          {% endif %}
+
+
 
                                                                                 </a>
                                                                               </span>
@@ -1348,7 +1553,16 @@
                                                                                     <span class="app-task-list__task-name">
                                                                                       <a href="z-7-legal?change=false" aria-describedby="contact-details-status">
 
-                                                                    Have you been through any internal procedures or raised a grievance?
+                                                                                        {% if  data['representing'] == "myself" %}
+                                                                                              Have you been through any internal procedures or raised a grievance?
+
+                                                                                                        {% else %}
+
+                                                                                                      Have they been through any internal procedures or raised a grievance?
+
+                                                                                                {% endif %}
+
+
                                                                                 </a>
                                                                               </span>
 

@@ -504,7 +504,13 @@
 
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
+            {% if  data['representing'] == "myself" %}
         When did you have this problem with the pay?
+
+          {% else %}
+  When did they have this problem with the pay?
+        {% endif %}
+
           </dt>
           <dd class="govuk-summary-list__value">
        {{ data['w-day'] }} &nbsp;   {{ data['w-month'] }} &nbsp; {{ data['w-year'] }}
@@ -582,7 +588,13 @@
 
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-          Date should you have received your payment?
+            {% if  data['representing'] == "myself" %}
+                            What date should you have received your payment?
+
+                            {% else %}
+                                What date should they have received their payment?
+
+                    {% endif %}
           </dt>
           <dd class="govuk-summary-list__value">
        {{ data['y-r-pay-day'] }} &nbsp;   {{ data['y-r-pay-month'] }} &nbsp; {{ data['y-r-pay-year'] }}
@@ -599,7 +611,13 @@
 
 <div class="govuk-summary-list__row">
   <dt class="govuk-summary-list__key">
-How much do you think you are owed?
+    {% if  data['representing'] == "myself" %}
+                  How much do you think you are owed?
+
+                    {% else %}
+                          How much do they think their are owed?
+
+            {% endif %}
   </dt>
   <dd class="govuk-summary-list__value">
 £ {{ data['y-r-how-much'] }}
@@ -614,7 +632,13 @@ How much do you think you are owed?
 
 <div class="govuk-summary-list__row">
   <dt class="govuk-summary-list__key">
-  Did you work a notice period?
+    {% if  data['representing'] == "myself" %}
+                Did you work a notice period?
+
+                    {% else %}
+                        Did they work a notice period?
+
+            {% endif %}
   </dt>
   <dd class="govuk-summary-list__value">
 {{ data['y-r-notice'] }}
@@ -629,7 +653,14 @@ How much do you think you are owed?
 
 <div class="govuk-summary-list__row">
   <dt class="govuk-summary-list__key">
-Have you gone through any internal procedures to try to resolve this?
+    {% if  data['representing'] == "myself" %}
+            Have you gone through any internal procedures to try to resolve this?
+
+                    {% else %}
+                    Have they gone through any internal procedures to try to resolve this?
+
+            {% endif %}
+
   </dt>
   <dd class="govuk-summary-list__value">
 {{ data['y-r-internal'] }}
@@ -703,7 +734,13 @@ Have you gone through any internal procedures to try to resolve this?
 
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-          Details of why you think you have discriminated against
+            {% if  data['representing'] == "myself" %}
+            Details on why you think you have been discriminated against
+
+                            {% else %}
+                            Details on why they think they have been discriminated against
+
+                    {% endif %}
 
           </dt>
           <dd class="govuk-summary-list__value">
@@ -712,7 +749,13 @@ Have you gone through any internal procedures to try to resolve this?
           <dd class="govuk-summary-list__actions">
             <a href="z-d-details?change=true">
               Change
-              <span class="govuk-visually-hidden"> Details of why you think you have discriminated against
+              <span class="govuk-visually-hidden">       {% if  data['representing'] == "myself" %}
+                    Details on why you think you have been discriminated against
+
+                                    {% else %}
+                                    Details on why they think they have been discriminated against
+
+                            {% endif %}
       </span>
             </a>
           </dd>
@@ -727,7 +770,15 @@ Have you gone through any internal procedures to try to resolve this?
           {% if  data['reason'] == "Wrongful dismissal" %}
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
+
+              {% if  data['representing'] == "myself" %}
             Why do you feel you have been wrongfully dismissed?
+
+                              {% else %}
+                            Why do they feel they have been wrongfully dismissed?
+
+                      {% endif %}
+
 
             </dt>
             <dd class="govuk-summary-list__value">
@@ -736,7 +787,13 @@ Have you gone through any internal procedures to try to resolve this?
             <dd class="govuk-summary-list__actions">
               <a href="z-2-w-why?change=true">
                 Change
-                <span class="govuk-visually-hidden"> Why do you feel you have been wrongfully dismissed?
+                <span class="govuk-visually-hidden">     {% if  data['representing'] == "myself" %}
+                  Why do you feel you have been wrongfully dismissed?
+
+                                    {% else %}
+                                  Why do they feel they have been wrongfully dismissed?
+
+                            {% endif %}
         </span>
               </a>
             </dd>
@@ -744,7 +801,15 @@ Have you gone through any internal procedures to try to resolve this?
 
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
+
+              {% if  data['representing'] == "myself" %}
           Do you have a contract?
+
+                              {% else %}
+                            Do they have a contract?
+
+                      {% endif %}
+
 
             </dt>
             <dd class="govuk-summary-list__value">
@@ -753,7 +818,13 @@ Have you gone through any internal procedures to try to resolve this?
             <dd class="govuk-summary-list__actions">
               <a href="z-2-w-contract?change=true">
                 Change
-                <span class="govuk-visually-hidden"> Why do you feel you have been wrongfully dismissed?
+                <span class="govuk-visually-hidden">   {% if  data['representing'] == "myself" %}
+              Do you have a contract?
+
+                                  {% else %}
+                                Do they have a contract?
+
+                          {% endif %}
         </span>
               </a>
             </dd>
@@ -764,7 +835,14 @@ Have you gone through any internal procedures to try to resolve this?
 
 <div class="govuk-summary-list__row">
   <dt class="govuk-summary-list__key">
+    {% if  data['representing'] == "myself" %}
 What clause in your contract was breached?
+
+                    {% else %}
+                What clause in their contract was breached?
+
+            {% endif %}
+
 
   </dt>
   <dd class="govuk-summary-list__value">
@@ -773,7 +851,13 @@ What clause in your contract was breached?
   <dd class="govuk-summary-list__actions">
     <a href="z-2-w-clause?change=true">
       Change
-      <span class="govuk-visually-hidden"> What clause in your contract was breached?
+      <span class="govuk-visually-hidden">     {% if  data['representing'] == "myself" %}
+      What clause in your contract was breached?
+
+                          {% else %}
+                      What clause in their contract was breached?
+
+                  {% endif %}
 </span>
     </a>
   </dd>
@@ -846,7 +930,15 @@ Tried internal procedures to try to resolve this
 
             <div class="govuk-summary-list__row">
               <dt class="govuk-summary-list__key">
-             Reason given for your dismissal
+
+                {% if  data['representing'] == "myself" %}
+           Reason given for your dismissal
+
+                                {% else %}
+                           Reason given for their dismissal
+
+                        {% endif %}
+
 
               </dt>
               <dd class="govuk-summary-list__value">
@@ -865,7 +957,15 @@ Tried internal procedures to try to resolve this
 
             <div class="govuk-summary-list__row">
               <dt class="govuk-summary-list__key">
+
+                {% if  data['representing'] == "myself" %}
              Why do you feel this was unfair?
+
+                                {% else %}
+                           Why do they feel this was unfair?
+
+                        {% endif %}
+
 
               </dt>
               <dd class="govuk-summary-list__value">
@@ -874,7 +974,13 @@ Tried internal procedures to try to resolve this
               <dd class="govuk-summary-list__actions">
                 <a href="z-3-feel?change=true">
                   Change
-                  <span class="govuk-visually-hidden"> Why do you feel this was unfair?
+                  <span class="govuk-visually-hidden">  {% if  data['representing'] == "myself" %}
+                 Why do you feel this was unfair?
+
+                                    {% else %}
+                               Why do they feel this was unfair?
+
+                            {% endif %}
             </span>
                 </a>
               </dd>
@@ -883,7 +989,15 @@ Tried internal procedures to try to resolve this
 
             <div class="govuk-summary-list__row">
               <dt class="govuk-summary-list__key">
+
+                {% if  data['representing'] == "myself" %}
             Have you appealed against the dismissal?
+
+                                {% else %}
+                             Have they appealed against the dismissal?
+
+                        {% endif %}
+
 
               </dt>
               <dd class="govuk-summary-list__value">
@@ -892,7 +1006,13 @@ Tried internal procedures to try to resolve this
               <dd class="govuk-summary-list__actions">
                 <a href="z-3-appeal?change=true">
                   Change
-                  <span class="govuk-visually-hidden"> Why do you feel this was unfair?
+                  <span class="govuk-visually-hidden">     {% if  data['representing'] == "myself" %}
+                  Have you appealed against the dismissal?
+
+                                      {% else %}
+                                   Have they appealed against the dismissal?
+
+                              {% endif %}
             </span>
                 </a>
               </dd>
@@ -924,7 +1044,16 @@ Tried internal procedures to try to resolve this
 
     <div class="govuk-summary-list__row">
       <dt class="govuk-summary-list__key">
+
+
+        {% if  data['representing'] == "myself" %}
   When did you resign?
+
+                        {% else %}
+                       When did they resign?
+
+                {% endif %}
+
 
       </dt>
       <dd class="govuk-summary-list__value">
@@ -933,7 +1062,14 @@ Tried internal procedures to try to resolve this
       <dd class="govuk-summary-list__actions">
         <a href="z-4-end-date?change=true">
           Change
-          <span class="govuk-visually-hidden">   More than 2 years of service
+          <span class="govuk-visually-hidden">     {% if  data['representing'] == "myself" %}
+      When did you resign?
+
+                            {% else %}
+                           When did they resign?
+
+                    {% endif %}
+
     </span>
         </a>
       </dd>
@@ -942,7 +1078,17 @@ Tried internal procedures to try to resolve this
 
     <div class="govuk-summary-list__row">
       <dt class="govuk-summary-list__key">
+
+
+        {% if  data['representing'] == "myself" %}
 Why did you feel you had no option but to resign?
+
+                        {% else %}
+                      Why did they feel they had no option but to resign?
+
+                {% endif %}
+
+
 
       </dt>
       <dd class="govuk-summary-list__value">
@@ -951,7 +1097,13 @@ Why did you feel you had no option but to resign?
       <dd class="govuk-summary-list__actions">
         <a href="z-4-why?change=true">
           Change
-          <span class="govuk-visually-hidden">   Why did you feel you had no option but to resign?
+          <span class="govuk-visually-hidden">         {% if  data['representing'] == "myself" %}
+        Why did you feel you had no option but to resign?
+
+                                {% else %}
+                              Why did they feel they had no option but to resign?
+
+                        {% endif %}
     </span>
         </a>
       </dd>
@@ -959,7 +1111,15 @@ Why did you feel you had no option but to resign?
 
     <div class="govuk-summary-list__row">
       <dt class="govuk-summary-list__key">
+
+        {% if  data['representing'] == "myself" %}
 Did you raise a grievance regarding the situation?
+
+                        {% else %}
+                    Did they raise a grievance regarding the situation?
+
+                {% endif %}
+
 
       </dt>
       <dd class="govuk-summary-list__value">
@@ -968,7 +1128,14 @@ Did you raise a grievance regarding the situation?
       <dd class="govuk-summary-list__actions">
         <a href="z-4-appeal?change=true">
           Change
-          <span class="govuk-visually-hidden">  Did you raise a grievance regarding the situation?
+          <span class="govuk-visually-hidden">   {% if  data['representing'] == "myself" %}
+    Did you raise a grievance regarding the situation?
+
+                            {% else %}
+                        Did they raise a grievance regarding the situation?
+
+                    {% endif %}
+
     </span>
         </a>
       </dd>
@@ -984,7 +1151,15 @@ Did you raise a grievance regarding the situation?
 
     <div class="govuk-summary-list__row">
       <dt class="govuk-summary-list__key">
+        {% if  data['representing'] == "myself" %}
 Why do you feel your employer has failed to provide equal pay?
+
+                        {% else %}
+                  Why do they feel their employer has failed to provide equal pay?
+
+                {% endif %}
+
+
 
       </dt>
       <dd class="govuk-summary-list__value">
@@ -993,7 +1168,13 @@ Why do you feel your employer has failed to provide equal pay?
       <dd class="govuk-summary-list__actions">
         <a href="z-5-why?change=true">
           Change
-          <span class="govuk-visually-hidden"> Why do you feel your employer has failed to provide equal pay?
+          <span class="govuk-visually-hidden">   {% if  data['representing'] == "myself" %}
+    Why do you feel your employer has failed to provide equal pay?
+
+                            {% else %}
+                      Why do they feel their employer has failed to provide equal pay?
+
+                    {% endif %}
     </span>
         </a>
       </dd>
@@ -1018,7 +1199,14 @@ Is the comparator of the opposite sex?
 
     <div class="govuk-summary-list__row">
       <dt class="govuk-summary-list__key">
+        {% if  data['representing'] == "myself" %}
 Are there any other people in your situation who have also made a claim?
+
+                        {% else %}
+                Are there any other people in their situation who have also made a claim?
+
+                {% endif %}
+
 
       </dt>
       <dd class="govuk-summary-list__value">
@@ -1027,7 +1215,13 @@ Are there any other people in your situation who have also made a claim?
       <dd class="govuk-summary-list__actions">
         <a href="z-5-others?change=true">
           Change
-          <span class="govuk-visually-hidden"> Are there any other people in your situation who have also made a claim?
+          <span class="govuk-visually-hidden">   {% if  data['representing'] == "myself" %}
+    Are there any other people in your situation who have also made a claim?
+
+                            {% else %}
+                    Are there any other people in their situation who have also made a claim?
+
+                    {% endif %}
     </span>
         </a>
       </dd>
@@ -1035,7 +1229,16 @@ Are there any other people in your situation who have also made a claim?
 
     <div class="govuk-summary-list__row">
       <dt class="govuk-summary-list__key">
-Have you been through any internal procedures or raised a grievance?
+
+        {% if  data['representing'] == "myself" %}
+  Have you been through any internal procedures or raised a grievance?
+
+                        {% else %}
+              Have they been through any internal procedures or raised a grievance?
+
+                {% endif %}
+
+
 
       </dt>
       <dd class="govuk-summary-list__value">
@@ -1044,7 +1247,13 @@ Have you been through any internal procedures or raised a grievance?
       <dd class="govuk-summary-list__actions">
         <a href="z-5-internal?change=true">
           Change
-          <span class="govuk-visually-hidden"> Have you been through any internal procedures or raised a grievance?
+          <span class="govuk-visually-hidden">       {% if  data['representing'] == "myself" %}
+          Have you been through any internal procedures or raised a grievance?
+
+                                {% else %}
+                      Have they been through any internal procedures or raised a grievance?
+
+                        {% endif %}
     </span>
         </a>
       </dd>
@@ -1096,7 +1305,15 @@ Have you been through any internal procedures or raised a grievance?
 
             <div class="govuk-summary-list__row">
               <dt class="govuk-summary-list__key">
-                Do you know the date when this occured?
+                {% if  data['representing'] == "myself" %}
+          Do you know the date when this occured?
+
+                                {% else %}
+                        Do they know the date when this occured?
+
+                        {% endif %}
+
+
 
 
               </dt>
@@ -1106,7 +1323,13 @@ Have you been through any internal procedures or raised a grievance?
               <dd class="govuk-summary-list__actions">
                 <a href="z-6-when?change=true">
                   Change
-                  <span class="govuk-visually-hidden">   Why the claim is  about whistleblowing?
+                  <span class="govuk-visually-hidden">     {% if  data['representing'] == "myself" %}
+              Do you know the date when this occured?
+
+                                    {% else %}
+                            Do they know the date when this occured?
+
+                            {% endif %}
             </span>
                 </a>
               </dd>
@@ -1114,7 +1337,16 @@ Have you been through any internal procedures or raised a grievance?
 
             <div class="govuk-summary-list__row">
               <dt class="govuk-summary-list__key">
-                What is the detriment (or dismissal) you faced?
+
+                {% if  data['representing'] == "myself" %}
+          What is the detriment (or dismissal) you faced?
+
+                                {% else %}
+                          What is the detriment (or dismissal) they faced?
+
+                        {% endif %}
+
+
 
 
               </dt>
@@ -1124,7 +1356,13 @@ Have you been through any internal procedures or raised a grievance?
               <dd class="govuk-summary-list__actions">
                 <a href="z-6-what?change=true">
                   Change
-                  <span class="govuk-visually-hidden">   What is the detriment (or dismissal) you faced?
+                  <span class="govuk-visually-hidden">      {% if  data['representing'] == "myself" %}
+                What is the detriment (or dismissal) you faced?
+
+                                      {% else %}
+                                What is the detriment (or dismissal) they faced?
+
+                              {% endif %}
             </span>
                 </a>
               </dd>
@@ -1133,7 +1371,14 @@ Have you been through any internal procedures or raised a grievance?
 
             <div class="govuk-summary-list__row">
               <dt class="govuk-summary-list__key">
-                Have you been through any internal procedures or raised a grievance?
+                {% if  data['representing'] == "myself" %}
+    Have you been through any internal procedures or raised a grievance?
+
+                                {% else %}
+                        Have they been through any internal procedures or raised a grievance?
+
+                        {% endif %}
+
 
 
               </dt>
@@ -1143,7 +1388,13 @@ Have you been through any internal procedures or raised a grievance?
               <dd class="govuk-summary-list__actions">
                 <a href="z-6-what?change=true">
                   Change
-                  <span class="govuk-visually-hidden">   Have you been through any internal procedures or raised a grievance?
+                  <span class="govuk-visually-hidden">    {% if  data['representing'] == "myself" %}
+        Have you been through any internal procedures or raised a grievance?
+
+                                    {% else %}
+                            Have they been through any internal procedures or raised a grievance?
+
+                            {% endif %}
             </span>
                 </a>
               </dd>
@@ -1176,7 +1427,15 @@ Have you been through any internal procedures or raised a grievance?
 
                     <div class="govuk-summary-list__row">
                       <dt class="govuk-summary-list__key">
-                        Do you know the last date when this occured?
+
+                        {% if  data['representing'] == "myself" %}
+          Do you know the last date when this occured?
+
+                                        {% else %}
+                              Do they know the last date when this occured?
+
+                                {% endif %}
+
 
 
                       </dt>
@@ -1186,7 +1445,14 @@ Have you been through any internal procedures or raised a grievance?
                       <dd class="govuk-summary-list__actions">
                         <a href="z-7-when?change=true">
                           Change
-                          <span class="govuk-visually-hidden">   Do you know the last date when this occured?
+                          <span class="govuk-visually-hidden">       {% if  data['representing'] == "myself" %}
+                Do you know the last date when this occured?
+
+                                              {% else %}
+                                    Do they know the last date when this occured?
+
+                                      {% endif %}
+
                     </span>
                         </a>
                       </dd>
@@ -1197,7 +1463,16 @@ Have you been through any internal procedures or raised a grievance?
 
                     <div class="govuk-summary-list__row">
                       <dt class="govuk-summary-list__key">
-                        Have you been through any internal procedures or raised a grievance?
+
+                        {% if  data['representing'] == "myself" %}
+        Have you been through any internal procedures or raised a grievance?
+
+                                        {% else %}
+                            Have they been through any internal procedures or raised a grievance?
+
+                                {% endif %}
+
+
 
 
                       </dt>
@@ -1207,7 +1482,14 @@ Have you been through any internal procedures or raised a grievance?
                       <dd class="govuk-summary-list__actions">
                         <a href="z-7-legal?change=true">
                           Change
-                          <span class="govuk-visually-hidden">   Have you been through any internal procedures or raised a grievance?
+                          <span class="govuk-visually-hidden">    {% if  data['representing'] == "myself" %}
+            Have you been through any internal procedures or raised a grievance?
+
+                                            {% else %}
+                                Have they been through any internal procedures or raised a grievance?
+
+                                    {% endif %}
+                            
                     </span>
                         </a>
                       </dd>

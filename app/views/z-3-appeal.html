@@ -27,7 +27,15 @@
         <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
             <h1 class="page-header" style="font-size: .9em; font-family: Arial; font-weight:bold;">
-              Have you appealed against the dismissal?
+
+              {% if  data['representing'] == "myself" %}
+        Have you appealed against the dismissal?
+
+                              {% else %}
+            Have they appealed against the dismissal?
+
+                      {% endif %}
+
             </h1>
           </legend>
           <!-- <div id="changed-name-hint" class="govuk-hint">

@@ -26,7 +26,14 @@
         <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
             <h1 class="govuk-fieldset__heading page-header" style="font-size:.8em; font-family: Arial; font-weight:bold;">
-              Do you know the last date when this occured?
+              {% if  data['representing'] == "myself" %}
+            Do you know the last date when this occured?
+
+                              {% else %}
+        Do they know the last date when this occured?
+
+                      {% endif %}
+
             </h1>
           </legend>
           <div id="contact-hint" class="govuk-hint">

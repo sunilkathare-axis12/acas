@@ -27,11 +27,18 @@
         <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
             <h1 class="page-header" style="font-size: .9em; font-family: Arial; font-weight:bold;">
-              Have you worked for this organisation for more than 2 years?
+              {% if  data['representing'] == "myself" %}
+                            Have you worked for this organisation for more than 2 years?
+
+                              {% else %}
+                                Have they worked for this organisation for more than 2 years?
+
+                      {% endif %}
+
             </h1>
           </legend>
           <div id="changed-name-hint" class="govuk-hint">
-            To calculate your time in service, look for the start date on your contract or letter of employment and look for leaving date on your P45. You'll need over 2 years of service to make this claim.
+            To calculate the time in service, look for the start date on the contract or letter of employment and look for leaving date on the P45. Over 2 years of service is needed to make this claim.
           </div>
           <div class="govuk-radios govuk-radios--inline">
             <div class="govuk-radios__item">

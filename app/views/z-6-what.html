@@ -28,11 +28,26 @@
     <h1 class="govuk-label-wrapper"
 
     ><label class="govuk-label- govuk-label--l- page-header" for="with-hint" style="font-size:.8em; font-family: Arial; font-weight:bold;">
-      What is the detriment (or dismissal) you faced because of whistleblowing?
+
+      {% if  data['representing'] == "myself" %}
+        What is the detriment (or dismissal) you faced because of whistleblowing?
+
+                      {% else %}
+What is the detriment (or dismissal) they faced because of whistleblowing?
+
+              {% endif %}
+
       </label>
     </h1>
     <div id="with-hint-hint" class="govuk-hint">
+      {% if  data['representing'] == "myself" %}
       Keep it brief and do not include personal or financial information like your National Insurance number or credit card details.
+
+                      {% else %}
+Keep it brief and do not include personal or financial information like their National Insurance number or credit card details.
+
+              {% endif %}
+
     </div>
     <textarea class="govuk-textarea govuk-js-character-count" id="with-hint" name="z-6-what" rows="5" aria-describedby="with-hint-info with-hint-hint">{{ data['z-6-what'] }}</textarea>
   </div>

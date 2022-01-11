@@ -27,7 +27,14 @@
         <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
             <h1 class="page-header" style="font-size: .9em; font-family: Arial; font-weight:bold;">
-              Why do you believe you have been discriminated against at work?
+              {% if  data['representing'] == "myself" %}
+                      Why do you believe you have been discriminated against at work?
+
+                              {% else %}
+                              Why do they believe they have been discriminated against at work?
+
+                      {% endif %}
+            
             </h1>
           </legend>
           <div id="changed-name-hint" class="govuk-hint">

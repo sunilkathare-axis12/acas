@@ -27,7 +27,15 @@
         <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
             <h1 class="page-header" style="font-size: .9em; font-family: Arial; font-weight:bold;">
-            Have you gone through any internal procedures to try to resolve this?
+
+              {% if  data['representing'] == "myself" %}
+      Have you gone through any internal procedures to try to resolve this?
+
+                              {% else %}
+                Have they gone through any internal procedures to try to resolve this?
+
+                      {% endif %}
+
             </h1>
           </legend>
           <!-- <div id="changed-name-hint" class="govuk-hint">

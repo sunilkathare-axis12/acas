@@ -11,8 +11,13 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
       <h1 class="page-header" style="font-size: 2em; font-family: Arial; font-weight:bold;">
-      Specify details on why to think you have been discriminated against
-        <!-- <span class="govuk-caption-xl">{{releaseVersion}}</span> -->
+        {% if  data['representing'] == "myself" %}
+        Specify details on why you think you have been discriminated against
+
+                        {% else %}
+                        Specify details on why they think they have been discriminated against
+
+                {% endif %}
       </h1>
 
 
@@ -29,7 +34,7 @@
     <div class="govuk-form-group">
 
       <div id="more-detail-hint" class="govuk-hint">
-  For example, you might tell us what happened, when it happened, who was involved and whether it was a series of events or a single event.
+  For example, tell us what happened, when it happened, who was involved and whether it was a series of events or a single event.
   </div>
       <!-- <input class="govuk-input" id="full-name" name="w-how-much" type="text" spellcheck="false" autocomplete="name" value="{{ data['w-how-much'] }}"></div> -->
 <br>

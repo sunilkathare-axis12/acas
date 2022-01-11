@@ -27,7 +27,15 @@
         <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
             <h1 class="page-header" style="font-size: .9em; font-family: Arial; font-weight:bold;">
-          Did you raise a grievance regarding the situation?
+              {% if  data['representing'] == "myself" %}
+    Did you raise a grievance regarding the situation?
+
+                              {% else %}
+      Did they raise a grievance regarding the situation?
+
+                      {% endif %}
+
+
             </h1>
           </legend>
           <!-- <div id="changed-name-hint" class="govuk-hint">

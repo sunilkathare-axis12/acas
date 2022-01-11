@@ -27,8 +27,14 @@
       <div class="govuk-form-group">
         <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-            <h1 class="govuk-fieldset__heading"class="page-header" style="font-size: .9em; font-family: Arial; font-weight:bold;">
-                When did you have this problem with the pay?
+            <h1 class="govuk-fieldset__heading"class="page-header" style="font-size: .8em; font-family: Arial; font-weight:bold;">
+
+
+                {% if  data['representing'] == "myself" %}    When did you have this problem with the pay?
+                {% else %}
+                  When did the claimant have this problem with the pay?
+
+                        {% endif %}
             </h1>
           </legend>
           <div id="passport-issued-hint" class="govuk-hint">

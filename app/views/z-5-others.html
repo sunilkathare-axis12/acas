@@ -27,7 +27,15 @@
         <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
             <h1 class="page-header" style="font-size: .9em; font-family: Arial; font-weight:bold;">
-              Are there any other people in your situation who have also made a claim?
+
+              {% if  data['representing'] == "myself" %}
+                  Are there any other people in your situation who have also made a claim?
+
+                              {% else %}
+            Are there any other people in their situation who have also made a claim?
+
+                      {% endif %}
+
             </h1>
           </legend>
           <!-- <div id="changed-name-hint" class="govuk-hint">

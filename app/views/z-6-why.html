@@ -28,11 +28,19 @@
     <h1 class="govuk-label-wrapper"
 
     ><label class="govuk-label- govuk-label--l- page-header" for="with-hint" style="font-size:.8em; font-family: Arial; font-weight:bold;">
-      Why do you feel your claim is about whistleblowing?
+      {% if  data['representing'] == "myself" %}
+            Why do you feel your claim is about whistleblowing?
+
+                      {% else %}
+  Why do they feel their claim is about whistleblowing?
+
+              {% endif %}
+
+
       </label>
     </h1>
     <div id="with-hint-hint" class="govuk-hint">
-      Keep it brief and do not include personal or financial information like your National Insurance number or credit card details.
+      Keep it brief and do not include personal or financial information like National Insurance number or credit card details.
     </div>
     <textarea class="govuk-textarea govuk-js-character-count" id="with-hint" name="z-6-why" rows="5" aria-describedby="with-hint-info with-hint-hint">{{ data['z-6-why'] }}</textarea>
   </div>
