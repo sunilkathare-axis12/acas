@@ -30,7 +30,7 @@
 
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="a-full-name.html?change=true">
+            <a href="a-full-name-no-ec-rep.html?change=true">
               Change
               <span class="govuk-visually-hidden"> name</span>
             </a>
@@ -122,15 +122,43 @@
       <dl class="govuk-summary-list govuk-!-margin-bottom-9">
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-          Company name
+         Orgainsations or persons
           </dt>
           <dd class="govuk-summary-list__value">
-          {{ data['company-1-legal-name'] }}
-  {{ data['person-1-legal-name'] }}
+
+                            {% if  data['employer-type'] == "organisation" %}
+                            Organisation
+                            {% else %}
+
+                          {% endif %}
+
+                          {% if  data['employer-type'] == "person" %}
+                           Person
+                          {% else %}
+
+                          {% endif %}
 
           </dd>
           <dd class="govuk-summary-list__actions">
             <a href="a-employer?change=true">
+              Change
+              <span class="govuk-visually-hidden"> Change orgainsations or persons </span>
+            </a>
+          </dd>
+        </div>
+        {% if  data['employer-type'] == "organisation" %}
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+          Name
+          </dt>
+          <dd class="govuk-summary-list__value">
+          {{ data['company-1-legal-name'] }}
+
+
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="a-employer-no-ec-name?change=true">
               Change
               <span class="govuk-visually-hidden"> name</span>
             </a>
@@ -142,23 +170,88 @@
           </dt>
           <dd class="govuk-summary-list__value">
 
-            <!-- {{ data['e_address_line_1'] }} <br>{{ data['e__address_line_2'] }}
-           <br>      {{ data['e_posttown'] }}
-             <br>      {{ data['e_postcode'] }}
-             <br> -->
-               {{ data['company-1-address'] }}
-            {{ data['person-1-address'] }}
+            {{ data['company-1-ec-address'] }}
+
+            {% if  data['company-1-ec-address_line_2'] %}
+                <br>{{ data['company-1-ec-address_line_2'] }}
+            {% else %}
+
+            {% endif %}
+
+           <br>      {{ data['company-1-ec_posttown'] }}
+             <br>      {{ data['company-1-ec_postcode'] }}
+             <br>
+
+
+
+               <!-- {{ data['company-1-address'] }}
+            {{ data['person-1-address'] }} -->
             <!-- 171 Victoria Street
             <br>London
             <br>SW1E 5NN -->
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="a-employer#?change=true">
+            <a href="a-employer-no-ec-address?change=true">
               Change
               <span class="govuk-visually-hidden"> Address</span>
             </a>
           </dd>
         </div>
+
+        {% else %}
+
+      {% endif %}
+
+      {% if  data['employer-type'] == "person" %}
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+        Name
+        </dt>
+        <dd class="govuk-summary-list__value">
+
+    {{ data['person-1-legal-name'] }}
+
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a href="a-employer-no-ec-name-myself-person?change=true">
+            Change
+            <span class="govuk-visually-hidden"> name</span>
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Address
+        </dt>
+        <dd class="govuk-summary-list__value">
+
+
+
+
+           {{ data['person-1-ec-address'] }} <br>{{ data['person-1-ec-address_line_2'] }}
+          <br>      {{ data['person-1-ec_posttown'] }}
+            <br>      {{ data['person-1-ec_postcode'] }}
+            <br>
+             <!-- {{ data['company-1-address'] }}
+          {{ data['person-1-address'] }} -->
+          <!-- 171 Victoria Street
+          <br>London
+          <br>SW1E 5NN -->
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a href="a-employer-no-ec-address-myself-person?change=true">
+            Change
+            <span class="govuk-visually-hidden"> Address</span>
+          </a>
+        </dd>
+      </div>
+
+      {% else %}
+
+    {% endif %}
+
+
 
 
 

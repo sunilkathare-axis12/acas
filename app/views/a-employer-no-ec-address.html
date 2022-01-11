@@ -41,7 +41,7 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
       <h1 class="page-header" style="font-size: 2em;  font-family: Arial; font-weight:bold;">
-    What is the  organisation's address?
+    What is the organisation's address?
 
         <!-- <span class="govuk-caption-xl">{{releaseVersion}}</span> -->
       </h1>
@@ -126,11 +126,11 @@
 
       <!-- <form id="output_form"> -->
       {% if data['change'] == "true" %}
-        <form action="check-your-answers#address">
+        <form action="check-your-answers-no-ec-rep#address">
 
       {% else %}
 
-        <form action="task-list">
+        <form action="task-list-no-ec-rep">
       {% endif %}
         <div class="form-group">
           <label for="address_line_1" class="govuk-label">Address line 1</label>
