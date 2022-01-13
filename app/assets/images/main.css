@@ -123,19 +123,19 @@ table {
 
 @keyframes colors {
   0% {
-    stroke: #008C95;
+    stroke: #045e65;
   }
   25% {
-    stroke: #008C95;
+    stroke: #045e65;
   }
   50% {
-    stroke: #008C95;
+    stroke: #045e65;
   }
   75% {
-    stroke: #008C95;
+    stroke: #045e65;
   }
   100% {
-    stroke: #008C95;
+    stroke: #045e65;
   }
 }
 @keyframes dash {
@@ -1374,7 +1374,7 @@ h5,
 h5 a, .h5, .h5 a,
 h6,
 h6 a, .h6, .h6 a {
-  color: #008C95;
+  color: #045e65;
   font-family: "Century Gothic Bold", "AppleGothic", sans-serif;
 }
 
@@ -1996,7 +1996,7 @@ h1, .block-in-this-section-block, div.field--name-field-promoted-links, #block-h
 }
 
 .beta-icon {
-  background: #008C95;
+  background: #045e65;
   color: #fff;
   text-transform: uppercase;
 }
@@ -2429,7 +2429,7 @@ select {
   opacity: 0;
 }
 .form-type-radio input[type="radio"]:hover + span:before, .form-type-radio input[type="radio"]:focus + span:before {
-  box-shadow: 0 0 0 4px #008C95;
+  box-shadow: 0 0 0 4px #045e65;
 }
 .form-type-radio input:checked + span:after {
   opacity: 1;
@@ -2492,7 +2492,7 @@ select {
   opacity: 0;
 }
 .webform-type-checkboxes input[type="checkbox"]:hover + span:before, .webform-type-checkboxes input[type="checkbox"]:focus + span:before {
-  box-shadow: 0 0 0 4px #008C95;
+  box-shadow: 0 0 0 4px #045e65;
 }
 .webform-type-checkboxes input:checked + span:after {
   opacity: 1;
@@ -3239,7 +3239,7 @@ article.teaser .article__content p {
   background-image: url("../images/icons/icon-print-guide.svg");
 }
 .print-download-email .btn-panel {
-  border: 3px solid #008C95;
+  border: 3px solid #045e65;
   border-radius: 7px;
   float: left;
   min-height: 14em;
@@ -3398,10 +3398,10 @@ ul.breadcrumb--search li:first-child:after {
   display: block;
 }
 #views-exposed-form-solr-search-content-page-1 .form-inline.active, #views-exposed-form-solr-search-content-page-1 .form-item-edit-keys.active, #views-exposed-form-search-content-page-1 .form-inline.active, #views-exposed-form-search-content-page-1 .form-item-edit-keys.active, #block-exposedformsearch-contentpage-1 .form-inline.active, #block-exposedformsearch-contentpage-1 .form-item-edit-keys.active, #search-form .form-inline.active, #search-form .form-item-edit-keys.active {
-  border-color: #008C95;
+  border-color: #045e65;
 }
 #views-exposed-form-solr-search-content-page-1 .form-inline.active #edit-submit-solr-search-content, #views-exposed-form-solr-search-content-page-1 .form-item-edit-keys.active #edit-submit-solr-search-content, #views-exposed-form-search-content-page-1 .form-inline.active #edit-submit-solr-search-content, #views-exposed-form-search-content-page-1 .form-item-edit-keys.active #edit-submit-solr-search-content, #block-exposedformsearch-contentpage-1 .form-inline.active #edit-submit-solr-search-content, #block-exposedformsearch-contentpage-1 .form-item-edit-keys.active #edit-submit-solr-search-content, #search-form .form-inline.active #edit-submit-solr-search-content, #search-form .form-item-edit-keys.active #edit-submit-solr-search-content {
-  background-color: #008C95;
+  background-color: #045e65;
 }
 #views-exposed-form-solr-search-content-page-1:active #edit-submit-solr-search-content,
 #views-exposed-form-solr-search-content-page-1:active #edit-submit-search-content,
@@ -3428,10 +3428,10 @@ ul.breadcrumb--search li:first-child:after {
 #search-form:focus #edit-submit-search, #search-form:hover #edit-submit-solr-search-content,
 #search-form:hover #edit-submit-search-content,
 #search-form:hover #edit-submit-search {
-  background-color: #008C95;
+  background-color: #045e65;
 }
 #views-exposed-form-solr-search-content-page-1:active .form-inline, #views-exposed-form-solr-search-content-page-1:focus .form-inline, #views-exposed-form-solr-search-content-page-1:hover .form-inline, #views-exposed-form-search-content-page-1:active .form-inline, #views-exposed-form-search-content-page-1:focus .form-inline, #views-exposed-form-search-content-page-1:hover .form-inline, #block-exposedformsearch-contentpage-1:active .form-inline, #block-exposedformsearch-contentpage-1:focus .form-inline, #block-exposedformsearch-contentpage-1:hover .form-inline, #search-form:active .form-inline, #search-form:focus .form-inline, #search-form:hover .form-inline {
-  border-color: #008C95;
+  border-color: #045e65;
 }
 
 #search-form {
@@ -3589,7 +3589,7 @@ noscript {
 }
 
 .beta-icon {
-  background: #008C95;
+  background: #045e65;
   color: #fff;
   text-transform: uppercase;
 }
@@ -3794,7 +3794,7 @@ form#user-login-form [disabled]#edit-submit:focus {
   opacity: 0;
 }
 .webform-type-checkboxes input[type="checkbox"]:hover + span:before, .webform-type-checkboxes input[type="checkbox"]:focus + span:before {
-  box-shadow: 0 0 0 4px #008C95;
+  box-shadow: 0 0 0 4px #045e65;
 }
 .webform-type-checkboxes input:checked + span:after {
   opacity: 1;
@@ -4667,7 +4667,7 @@ noscript {
   background-image: url("../images/icons/icon-print-guide.svg");
 }
 .print-download-email .btn-panel {
-  border: 3px solid #008C95;
+  border: 3px solid #045e65;
   border-radius: 7px;
   float: left;
   min-height: 14em;
@@ -4861,7 +4861,7 @@ div.field--name-field-promoted-links div.field--item .promoted-link__content p {
   opacity: 0;
 }
 .form-type-radio input[type="radio"]:hover + span:before, .form-type-radio input[type="radio"]:focus + span:before {
-  box-shadow: 0 0 0 4px #008C95;
+  box-shadow: 0 0 0 4px #045e65;
 }
 .form-type-radio input:checked + span:after {
   opacity: 1;
@@ -4986,10 +4986,10 @@ ul.breadcrumb--search li:first-child:after {
   display: block;
 }
 #views-exposed-form-solr-search-content-page-1 .form-inline.active, #views-exposed-form-solr-search-content-page-1 .form-item-edit-keys.active, #views-exposed-form-search-content-page-1 .form-inline.active, #views-exposed-form-search-content-page-1 .form-item-edit-keys.active, #block-exposedformsearch-contentpage-1 .form-inline.active, #block-exposedformsearch-contentpage-1 .form-item-edit-keys.active, #search-form .form-inline.active, #search-form .form-item-edit-keys.active {
-  border-color: #008C95;
+  border-color: #045e65;
 }
 #views-exposed-form-solr-search-content-page-1 .form-inline.active #edit-submit-solr-search-content, #views-exposed-form-solr-search-content-page-1 .form-item-edit-keys.active #edit-submit-solr-search-content, #views-exposed-form-search-content-page-1 .form-inline.active #edit-submit-solr-search-content, #views-exposed-form-search-content-page-1 .form-item-edit-keys.active #edit-submit-solr-search-content, #block-exposedformsearch-contentpage-1 .form-inline.active #edit-submit-solr-search-content, #block-exposedformsearch-contentpage-1 .form-item-edit-keys.active #edit-submit-solr-search-content, #search-form .form-inline.active #edit-submit-solr-search-content, #search-form .form-item-edit-keys.active #edit-submit-solr-search-content {
-  background-color: #008C95;
+  background-color: #045e65;
 }
 #views-exposed-form-solr-search-content-page-1:active #edit-submit-solr-search-content,
 #views-exposed-form-solr-search-content-page-1:active #edit-submit-search-content,
@@ -5016,10 +5016,10 @@ ul.breadcrumb--search li:first-child:after {
 #search-form:focus #edit-submit-search, #search-form:hover #edit-submit-solr-search-content,
 #search-form:hover #edit-submit-search-content,
 #search-form:hover #edit-submit-search {
-  background-color: #008C95;
+  background-color: #045e65;
 }
 #views-exposed-form-solr-search-content-page-1:active .form-inline, #views-exposed-form-solr-search-content-page-1:focus .form-inline, #views-exposed-form-solr-search-content-page-1:hover .form-inline, #views-exposed-form-search-content-page-1:active .form-inline, #views-exposed-form-search-content-page-1:focus .form-inline, #views-exposed-form-search-content-page-1:hover .form-inline, #block-exposedformsearch-contentpage-1:active .form-inline, #block-exposedformsearch-contentpage-1:focus .form-inline, #block-exposedformsearch-contentpage-1:hover .form-inline, #search-form:active .form-inline, #search-form:focus .form-inline, #search-form:hover .form-inline {
-  border-color: #008C95;
+  border-color: #045e65;
 }
 
 #search-form {
