@@ -1797,8 +1797,11 @@ div.field--name-field-promoted-links div.field--item .promoted-link__wrapper {
 }
 
 p, .guidance-text, .text--guidance, .prescribed .text--guidance {
-  margin-bottom: 25px;
+  /* margin-bottom: 25px; */
 }
+li{
+
+color: #0b0c0c !important;}
 
 .guidance-text,
 .text--guidance,

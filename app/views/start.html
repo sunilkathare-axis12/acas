@@ -4,12 +4,9 @@
   Start page example
 {% endblock %}
 
-{% block header %}
-  <!-- Blank header with no service name for the start page -->
-  {{ govukHeader() }}
-{% endblock %}
 
-{% block beforeContent %}
+
+<!-- {% block beforeContent %}
   <div class="govuk-breadcrumbs">
     <ol class="govuk-breadcrumbs__list">
       <li class="govuk-breadcrumbs__list-item">
@@ -23,44 +20,116 @@
       </li>
     </ol>
   </div>
-{% endblock %}
+{% endblock %} -->
 
 {% block content %}
   <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-grid-column-full">
 
-      <h1 class="govuk-heading-xl">
+      <h1 class="page-header acas-heading">
         {% if serviceName %} {{ serviceName }} {% endif %}
       </h1>
 
-      <p>Use this service to:</p>
+      <p>Use this service to notify Acas that you want to:</p>
 
-      <ul class="govuk-list govuk-list--bullet">
-        <li>try early concilation</li>
+      <!-- Use this form to notify Acas that you want to -->
+
+      <ul class="govuk-list- govuk-list--bullet-">
+
         <li>get a certificate to make a claim to an employment tribunal </li>
+          <li>try early concilation</li>
         <!-- <li>do something else</li> -->
       </ul>
 
-      <p>Registering takes around 5 minutes.</p>
+  <p>The form will ask you for: </p>
+      <ul class="govuk-list- govuk-list--bullet-">
 
-      <a href="#" role="button" draggable="false" class="govuk-button govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-8"  data-module="govuk-button">
+        <li>your full name - for example, the name on your passport or driving licence </li>
+          <li>the name and address of the organisation or employer - find this on a recent letter, payslip, P60 or P45</li>
+        <!-- <li>do something else</li> -->
+      </ul>
+
+    <p>  This is all you need to get a certificate to take to an employment tribunal.</p>
+    <br>
+
+    <h2 class="govuk-heading-m"> If you want to try Acas early conciliation</h2>
+
+    <p>   It’s helpful if you can provide:</p>
+
+    <ul class="govuk-list- govuk-list--bullet-">
+
+  <li>your phone number and email address - so we can get in touch with you quickly </li>
+      <!-- <li>the contact details of someone at your work we can speak to about the issue - for example a line manager or HR </li> -->
+  <li>the contact details of someone that may be willing to sort things out without going to employment tribunal - for example, a line manager or HR </li>
+
+        <li>brief details about what’s happened - you’ll have the chance to tell us more later on</li>
+      <!-- <li>do something else</li> -->
+    </ul>
+
+    <!-- <p> The form will automatically save so you can return to it if you need to.</p> -->
+
+
+
+      <!-- <p>Registering takes around 5 minutes.</p> -->
+
+      <a href="/a-01-represent" role="button" draggable="false" class="govuk-button govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-8"  data-module="govuk-button">
         Start now
         <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" role="presentation" focusable="false">
           <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z"></path>
         </svg>
       </a>
 
-      <h2 class="govuk-heading-m">Before you start</h2>
+  <p>The online service is also available in <a href="#">Welsh (Cymraeg)</a>.</p>
+      <!-- <h2 class="govuk-heading-m">Before you start</h2> -->
 
-      <p>You can also <a href="#">register by post</a>.</p>
+<h2 class="govuk-heading-m"> Other ways to notify Acas</h2>
 
-      <p>The online service is also available in <a href="#">Welsh (Cymraeg)</a>.</p>
+If you’re not able to use the form, you can:
 
-      <p>You can’t register for this service if you’re in the UK illegally.</p>
+
+      <!-- <p>You can also <a href="#">register by post</a>.</p> -->
+
+
+
+      <div class="govuk-inset-text- border-thin">
+
+        <!-- lin-border -->
+
+
+          <!-- <h2 class="govuk-heading-m"> Help applying online</h2> -->
+      <!-- <h3 class="govuk-heading-s"> Call  Acas early conciliation helpline </h3> -->
+
+          <h3 class="govuk-heading-s"> Call Acas helpline </h3>
+
+    <p> Telephone: 0300 123 1122<br>
+    Monday to Friday, 8am to 6pm</p>
+    <br>
+
+    <p> Calls cost 12p a minute from a landline, and from 3p to 45p a minute from a mobile.</p>
+
+
+
+    <p>
+
+
+
+    Make sure you keep a note of the date you called and the name of the person you spoke to. They’ll fill in the form for you over the phone.</p>
+
+<br>
+    <h2 class="govuk-heading-s"> By post</h2>
+
+    <p> You can also <a href="public/images/tell-acas-notification-paper-form-individuals-dec-21.pdf" target="_blank">download a paper version of the form  </a> and post it to:</p>
+    <p> EC Notifification <br>
+    Acas (DEC) <br>
+    PO BOX 0279 <br>
+    Nottingham <br>
+    NG2 9PE</p>
+
+      </div>
 
     </div>
 
-    <div class="govuk-grid-column-one-third">
+    <!-- <div class="govuk-grid-column-one-third">
 
       <aside class="app-related-items" role="complementary">
         <h2 class="govuk-heading-m" id="subsection-title">
@@ -87,6 +156,6 @@
         </nav>
       </aside>
 
-    </div>
+    </div> -->
   </div>
 {% endblock %}
