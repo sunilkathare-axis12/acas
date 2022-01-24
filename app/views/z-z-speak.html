@@ -14,11 +14,11 @@
 
 
       {% if data['change'] == "true" %}
-        <form action="check-your-answers#reason">
+        <form action="check-your-answers#respondent-details">
 
       {% else %}
 
-        <form action="task-list#reason">
+        <form action="task-list#respondent-details">
       {% endif %}
 
 
@@ -28,14 +28,16 @@
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
             <h1 class="page-header" style="font-size: .9em; font-family: Arial; font-weight:bold;">
 
-             Can we speak to the organisation your dispute is against before speaking with you?
+             Can we speak to them before speaking with you?
+
+              <!-- Can we speak to the them organisation your dispute is against before speaking with you? -->
             </h1>
           </legend>
           <div id="changed-name-hint" class="govuk-hint">
             <!-- We need to speak to the organisation you're making a claim against to understand if they are willing to take part in conciliation.<br><br>
           If we speak to them first it can save everyone time and give us more time for conciliation to take place. -->
 
-            If we speak to them first it can give us more time for conciliation to take place.
+            If we speak to them first it can give us more time for conciliation to take place
 
           </div>
           <div class="govuk-radios govuk-radios--inline">

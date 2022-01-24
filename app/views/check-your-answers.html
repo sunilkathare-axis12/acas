@@ -355,106 +355,7 @@
 
       </dl>
 
-      <h2 class="govuk-heading-m"> Details of someone we can contact</h2>
 
-      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-
-
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-          Job title
-          </dt>
-          <dd class="govuk-summary-list__value">
-
-
-            {{ data['company-1-job-title'] }}
-
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="a-employer-ec-contacts?change=true">
-              Change
-              <span class="govuk-visually-hidden"> name</span>
-            </a>
-          </dd>
-        </div>
-
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-          Full name
-          </dt>
-          <dd class="govuk-summary-list__value">
-
-
-            {{ data['company-1-full-name'] }}
-
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="a-employer-ec-contacts?change=true">
-              Change
-              <span class="govuk-visually-hidden"> name</span>
-            </a>
-          </dd>
-        </div>
-
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-          Email
-          </dt>
-          <dd class="govuk-summary-list__value">
-            <!-- John Lewis -->
-
-            {{ data['company-1-email'] }}
-            {{ data['person-1-email'] }}
-
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="a-employer-ec-contacts?change=true">
-              Change
-              <span class="govuk-visually-hidden"> name</span>
-            </a>
-          </dd>
-        </div>
-
-
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-          Phone
-          </dt>
-          <dd class="govuk-summary-list__value">
-
-
-            {{ data['company-1-phone'] }}
-
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="a-employer-ec-contacts?change=true">
-              Change
-              <span class="govuk-visually-hidden"> name</span>
-            </a>
-          </dd>
-        </div>
-
-
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-          Permission to speak to the organisation first
-          </dt>
-          <dd class="govuk-summary-list__value">
-
-
-            {{ data['company-1-consent'] }}
-
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="z-z-speak?change=true">
-              Change
-              <span class="govuk-visually-hidden"> name</span>
-            </a>
-          </dd>
-        </div>
-
-
-      </dl>
 
       <h2 class="govuk-heading-m" id="reason">Case details</h2>
 
@@ -1502,7 +1403,106 @@ Are there any other people in your situation who have also made a claim?
 
       </dl>
 
+      <h2 class="govuk-heading-m" id="respondent-details"> Details of someone we can contact</h2>
 
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+          Job title
+          </dt>
+          <dd class="govuk-summary-list__value">
+
+
+            {{ data['respondent-job'] }}
+
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="z-z-job?change=true">
+              Change
+              <span class="govuk-visually-hidden"> name</span>
+            </a>
+          </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+          Full name
+          </dt>
+          <dd class="govuk-summary-list__value">
+
+
+            {{ data['respondent-name'] }}
+
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="z-z-name?change=true">
+              Change
+              <span class="govuk-visually-hidden"> name</span>
+            </a>
+          </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+          Email
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <!-- John Lewis -->
+
+            {{ data['respondent-email'] }}
+            <!-- {{ data['person-1-email'] }} -->
+
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="z-z-email?change=true">
+              Change
+              <span class="govuk-visually-hidden"> name</span>
+            </a>
+          </dd>
+        </div>
+
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+          Phone
+          </dt>
+          <dd class="govuk-summary-list__value">
+
+
+            {{ data['respondent-phone'] }}
+
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="z-z-phone?change=true">
+              Change
+              <span class="govuk-visually-hidden"> name</span>
+            </a>
+          </dd>
+        </div>
+
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+          Permission to speak to them first
+          </dt>
+          <dd class="govuk-summary-list__value">
+
+
+            {{ data['company-1-consent'] }}
+
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="z-z-speak?change=true">
+              Change
+              <span class="govuk-visually-hidden"> name</span>
+            </a>
+          </dd>
+        </div>
+
+
+      </dl>
 
 
 

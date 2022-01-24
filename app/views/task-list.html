@@ -357,7 +357,7 @@
 
         </li>
 
-        <li class="app-task-list__item">
+        <!-- <li class="app-task-list__item">
           <span class="app-task-list__task-name">
             <a href="a-employer-ec-contacts?change=false" aria-describedby="contact-details-status">
             Contact details of someone we can contact
@@ -383,7 +383,7 @@
           <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="list-convictions-status">Optional</strong>
         {% endif %}
 
-    </li>
+    </li> -->
 
 
           {% else %}
@@ -423,7 +423,7 @@
 
           </li>
 
-          <li class="app-task-list__item">
+          <!-- <li class="app-task-list__item">
             <span class="app-task-list__task-name">
               <a href="a-employer-ec-address?change=false" aria-describedby="contact-details-status">
               Contact details of the person
@@ -449,7 +449,7 @@
             <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="list-convictions-status">Optional</strong>
           {% endif %}
 
-      </li>
+      </li> -->
 
             {% else %}
 
@@ -1687,9 +1687,86 @@
           </ul>
         </li>
 
+
+        <li>
+          <h2 class="app-task-list__section" id="respondent-details">
+            <span class="app-task-list__section-number">5. </span> Enter details of the person that may be willing to sort things out without going to employment tribunal
+          </h2>
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="z-z-job?change=false" aria-describedby="job-title">
+              Job title
+                </a>
+              </span>
+              {% if  data['respondent-job'] %}
+                <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+              {% else %}
+              <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="list-convictions-status">Optional</strong>
+              {% endif %}
+                <!-- <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong> -->
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="z-z-name?change=false" aria-describedby="full-name">
+                  Full name
+                </a>
+              </span>
+              {% if  data['respondent-name'] %}
+                <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+              {% else %}
+              <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="list-convictions-status">Optional</strong>
+              {% endif %}
+              <!-- <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong> -->
+            </li>
+
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="z-z-email?change=false" aria-describedby="contact-details-status">
+                  Email address
+                </a>
+              </span>
+              {% if  data['respondent-email'] %}
+                <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+              {% else %}
+          <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="list-convictions-status">Optional</strong>
+              {% endif %}
+              <!-- <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong> -->
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="z-z-phone?change=false" aria-describedby="contact-details-status">
+                  Phone number
+                </a>
+              </span>
+              {% if  data['respondent-phone'] %}
+                <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+              {% else %}
+            <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="list-convictions-status">Optional</strong>
+              {% endif %}
+              <!-- <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong> -->
+            </li>
+
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="z-z-speak?change=false" aria-describedby="contact-details-status">
+                  Can we speak to them before we speak to you?
+                </a>
+              </span>
+              {% if  data['company-1-consent'] %}
+                <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+              {% else %}
+            <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="list-convictions-status">Optional</strong>
+              {% endif %}
+              <!-- <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong> -->
+            </li>
+
+          </ul>
+        </li>
+
         <li>
           <h2 class="app-task-list__section">
-            <span class="app-task-list__section-number">5. </span> Check your answer and send to ACAS
+            <span class="app-task-list__section-number">6. </span> Check your answer and send to ACAS
           </h2>
           <ul class="app-task-list__items">
 
