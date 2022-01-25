@@ -1693,19 +1693,7 @@
             <span class="app-task-list__section-number">5. </span> Enter details of the person that may be willing to sort things out without going to employment tribunal
           </h2>
           <ul class="app-task-list__items">
-            <li class="app-task-list__item">
-              <span class="app-task-list__task-name">
-                <a href="z-z-job?change=false" aria-describedby="job-title">
-              Job title
-                </a>
-              </span>
-              {% if  data['respondent-job'] %}
-                <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
-              {% else %}
-              <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="list-convictions-status">Optional</strong>
-              {% endif %}
-                <!-- <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong> -->
-            </li>
+
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
                 <a href="z-z-name?change=false" aria-describedby="full-name">
@@ -1718,6 +1706,19 @@
               <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="list-convictions-status">Optional</strong>
               {% endif %}
               <!-- <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong> -->
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="z-z-job?change=false" aria-describedby="job-title">
+              Job title
+                </a>
+              </span>
+              {% if  data['respondent-job'] %}
+                <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+              {% else %}
+              <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="list-convictions-status">Optional</strong>
+              {% endif %}
+                <!-- <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong> -->
             </li>
 
             <li class="app-task-list__item">
