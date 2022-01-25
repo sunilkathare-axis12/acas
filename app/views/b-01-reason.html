@@ -23,203 +23,219 @@
 
             {% else %}
 
-              <form action="task-list">
+              <form action="task-list#reason">
             {% endif %}
 
-      <div class="govuk-form-group">
-        <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
-          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-            <h1 class="govuk-fieldset__heading" style="font-size: .9em; font-family: Arial; font-weight:bold;">
-              What is the reason for your dispute?
-            </h1>
-          </legend>
-          <div id="sign-in-hint" class="govuk-hint">
-            Please select the main reason for the dispute. If you need to add another reason for dispute, after you save and continue you can use "Add another reason for dispute" button to another reason.
-           <!--Please get legal advice to understand what you can make a claim against  -->
-<!--
-          Your conversation with Acas is not part of the employment tribunal process. We will only use the information you give to discuss your options with you, and we can only involve your employer in discussions if you give your permission. -->
-          </div>
-          <div class="govuk-radios ">
+
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                  <h1 class="govuk-fieldset__heading" style="font-size: .9em; font-family: Arial; font-weight:bold;">
+                      What is the reason for your dispute?
+                  </h1>
+                </legend>
+                <div id="contact-hint" class="govuk-hint">
+                Please select the main reason for the dispute. If you need to add another reason for dispute, after you save and continue you can use "Add another reason for dispute" button to another reason.
+                </div>
+                <div class="govuk-radios" data-module="govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="reason"  name="reason" value="Wages owed or holiday pay" type="radio" data-aria-controls="conditional-reason" aria-describedby="reason-item-1"  {{ checked('reason','Wages owed or holiday pay') }}>
+                    <label class="govuk-label govuk-radios__label" for="reason">
+                    Wages owed or holiday pay
+
+                    </label>
+                    <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
+      {% if  data['representing'] == "myself" %}
+
+                    You could be owed money instead of holiday, or your employer hasn’t paid you, or has taken money from your wages without good reason.
+
+                    {% else %}
+        Claimant could be owed money instead of holiday, or the employer hasn’t paid the claimant , or has taken money from  the claimant's  wages without good reason.
+                            {% endif %}
 
 
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="sign-in" name="reason" type="radio" value="Wages owed or holiday pay" aria-describedby="Wages owed or holiday pay" {{ checked('reason','Wages owed or holiday pay') }}>
-              <label class="govuk-label govuk-radios__label" for="sign-in">
-              Wages owed or holiday pay
+              Read more about <a href="https://www.acas.org.uk/pay-and-wages" target="_blank" rel="noopener noreferrer">      wages owed or holiday pay (opens in a new window or tab)</a>.
+                    </div>
 
-              </label>
-              <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
-{% if  data['representing'] == "myself" %}
+                  </div>
 
-              You could be owed money instead of holiday, or your employer hasn’t paid you, or has taken money from your wages without good reason.
+                  <!-- <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact">
+                    <div class="govuk-form-group">
+                      <label class="govuk-label" for="contact-by-email">
+                        Email address
+                      </label>
+                      <input class="govuk-input govuk-!-width-one-third" id="contact-by-email" name="contact-by-email" type="email" spellcheck="false" autocomplete="email"></div>
 
-              {% else %}
-  Claimant could be owed money instead of holiday, or the employer hasn’t paid the claimant , or has taken money from  the claimant's  wages without good reason.
-                      {% endif %}
+                  </div> -->
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="reason-2" name="reason" type="radio" value="Redundancy Pay" data-aria-controls="conditional-reason-2" aria-describedby="reason-item-2"  {{ checked('reason','Redundancy Pay') }}>
+                    <label class="govuk-label govuk-radios__label" for="reason-2">
+                    Redundancy pay
+                    </label>
+                    <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
+
+                {% if  data['representing'] == "myself" %}
+                You could be owed money if the employer didn't follow the right process, including collective consultation and giving the right notice periods and pay. You must have 2 years service to make this cliam.
+
+                {% else %}
+      Claimant could be owed money if the employer didn't follow the right process, including collective consultation and giving the right notice periods and pay. Claimant must have 2 years service to make this cliam.
+
+                        {% endif %}
+        Read more about <a href="https://www.acas.org.uk/dismissals/unfair-dismissal" target="_blank"> redundancy pay (opens in a new window or tab)</a>.
+                    </div>
 
 
-        Read more about <a href="https://www.acas.org.uk/pay-and-wages" target="_blank" rel="noopener noreferrer">      wages owed or holiday pay (opens in a new window or tab)</a>.
-              </div>
-            </div>
+                  </div>
+                  <!-- <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-2">
+                    <div class="govuk-form-group">
+                      <label class="govuk-label" for="contact-by-phone">
+                        Phone number
+                      </label>
+                      <input class="govuk-input govuk-!-width-one-third" id="contact-by-phone" name="contact-by-phone" type="tel" autocomplete="tel"></div>
 
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="sign-in" name="reason" type="radio" value="Redundancy Pay" aria-describedby="Redundancy Pay" {{ checked('reason','Redundancy Pay') }}>
-              <label class="govuk-label govuk-radios__label" for="sign-in">
-              Redundancy pay
-              </label>
-              <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
+                  </div> -->
 
-          {% if  data['representing'] == "myself" %}
-          You could be owed money if the employer didn't follow the right process, including collective consultation and giving the right notice periods and pay. You must have 2 years service to make this cliam.
 
-          {% else %}
-Claimant could be owed money if the employer didn't follow the right process, including collective consultation and giving the right notice periods and pay. Claimant must have 2 years service to make this cliam.
+
+
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="reason-3" name="reason" type="radio" value="Discrimination" data-aria-controls="conditional-reason-3"  aria-describedby="reason-item-3"  {{ checked('reason','Discrimination') }}>
+                    <label class="govuk-label govuk-radios__label" for="reason-3">
+                    Discrimination
+                    </label>
+                    <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
+
+                  {% if  data['representing'] == "myself" %}
+
+                    You could make claim if there has been a case of discrimination based on disability, age, race, religion & belief, sex, marriage, gender reassignment, and or sexual orientation.
+
+                    {% else %}
+
+                    Claimant could make claim if there has been a case of discrimination based on disability, age, race, religion & belief, sex, marriage, gender reassignment, and or sexual orientation.
 
                   {% endif %}
-  Read more about <a href="https://www.acas.org.uk/dismissals/unfair-dismissal" target="_blank"> redundancy pay (opens in a new window or tab)</a>.
-              </div>
-            </div>
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="sign-in" name="reason" type="radio" value="Discrimination" aria-describedby="Discrimination" {{ checked('reason','Discrimination') }}>
-              <label class="govuk-label govuk-radios__label" for="sign-in">
-              Discrimination
-              </label>
-              <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
 
-    {% if  data['representing'] == "myself" %}
-
-              You could make claim if there has been a case of discrimination based on disability, age, race, religion & belief, sex, marriage, gender reassignment, and or sexual orientation.
-
-              {% else %}
-
-              Claimant could make claim if there has been a case of discrimination based on disability, age, race, religion & belief, sex, marriage, gender reassignment, and or sexual orientation.
-
-        {% endif %}
-
-Read more about <a href="https://www.acas.org.uk/discrimination-and-the-law" target="_blank" rel="noopener noreferrer">  discrimination (opens in a new window or tab)</a>.
+                  Read more about <a href="https://www.acas.org.uk/discrimination-and-the-law" target="_blank" rel="noopener noreferrer">  discrimination (opens in a new window or tab)</a>.
 
 
-              </div>
-            </div>
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="sign-in-2" name="reason" type="radio" value="Wrongful dismissal" aria-describedby="Wrongful dismissal" {{ checked('reason','Wrongful dismissal') }}>
-              <label class="govuk-label govuk-radios__label" for="sign-in-2">
-                Wrongful dismissal
-              </label>
-              <div id="sign-in-2-item-hint" class="govuk-hint govuk-radios__hint">
-              Wrongful dismissal is a claim for a breach of the employment contract. The most common breach is where the employer dismissed the employee without notice or with less than the minimum notice period.
-              Read more about <a href="https://www.acas.org.uk/dismissals/unfair-dismissal" target="_blank" rel="noopener noreferrer"> wrongful dismissal (opens in a new window or tab)</a>.
-              </div>
-            </div>
-          </div>
-          <div class="govuk-radios">
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="sign-in" name="reason" type="radio" value="Unfair dismissal" aria-describedby="Unfair dismissal" {{ checked('reason','Unfair dismissal') }}>
-              <label class="govuk-label govuk-radios__label" for="sign-in">
-            Unfair dismissal
-              </label>
-              <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
-
-                    {% if  data['representing'] == "myself" %}
-            If you think your dismissal was unfair you might be able to challenge it. You must have 2 years service to make this cliam.
-            {% else %}
-  If the claimant thinks that the dismissal was unfair , than the  claimant might be able to challenge it. Claimant must have 2 years service to make this cliam.
-                    {% endif %}
+                    </div>
+                  </div>
 
 
-            Read more about <a href="https://www.acas.org.uk/dismissals/unfair-dismissal" target="_blank" rel="noopener noreferrer"> unfair dismissal (opens in a new window or tab)</a>.
-              </div>
-            </div>
-
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="sign-in" name="reason" type="radio" value="Constructive dismissal" aria-describedby="Constructive dismissal" {{ checked('reason','Constructive dismissal') }}>
-              <label class="govuk-label govuk-radios__label" for="sign-in">
-            Constructive dismissal
-              </label>
-              <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
-        Constructive dismissal occurs when an employee resigns as a result of the employer creating a hostile work environment. Since the resignation was not truly voluntary, it is, in effect, a termination.
-    {% if  data['representing'] == "myself" %}
-
-          You must have 2 years service to make this cliam.
-
-          {% else %}
-      Claimant must have 2 years service to make this cliam.
-          {% endif %}
-             Read more about <a href="https://www.acas.org.uk/dismissals/constructive-dismissal" target="_blank" rel="noopener noreferrer"> constructive dismissal (opens in a new window or tab)</a>. <!-- -->
-              </div>
-            </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="reason-4" name="reason" type="radio" value="Wrongful dismissal" data-aria-controls="conditional-reason-4"  {{ checked('reason','Wrongful dismissal') }}>
+                    <label class="govuk-label govuk-radios__label" for="reason-4"">
+                      Wrongful dismissal
+                    </label>
+                    <div id="sign-in-2-item-hint" class="govuk-hint govuk-radios__hint">
+                    Wrongful dismissal is a claim for a breach of the employment contract. The most common breach is where the employer dismissed the employee without notice or with less than the minimum notice period.
+                    Read more about <a href="https://www.acas.org.uk/dismissals/unfair-dismissal" target="_blank" rel="noopener noreferrer"> wrongful dismissal (opens in a new window or tab)</a>.
+                    </div>
+                  </div>
 
 
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="sign-in" name="reason" type="radio" value="Equal pay" aria-describedby="equal-pay" {{ checked('reason','Equal pay') }}>
-              <label class="govuk-label govuk-radios__label" for="sign-in">
-            Equal pay
-              </label>
-              <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
-
-  {% if  data['representing'] == "myself" %}
-
-          You could be owed money if could you feel your employer has failed to provide equal pay.
-
-            {% else %}
-Claimant could be owed money if could they feel that their employer has failed to provide equal pay.
-                {% endif %}
-Read more about <a href="https://www.acas.org.uk/equal-pay" target="_blank" rel="noopener noreferrer"> equal pay (opens in a new window or tab)</a>.
-
-              </div>
-            </div>
-
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="sign-in" name="reason" type="radio" value="Whistleblowing" aria-describedby="Whistle blowing" {{ checked('reason','Whistleblowing') }}>
-              <label class="govuk-label govuk-radios__label" for="sign-in">
-          Whistleblowing
-              </label>
-              <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
-              Whistleblowing needs to relate to a Public Interest Disclosure (i.e. they raised a concern that was in the public interest)
-Read more about <a href="https://www.acas.org.uk/archive/whistleblowing" target="_blank" rel="noopener noreferrer"> whistleblowing (opens in a new window or tab)</a>.
-              </div>
-            </div>
 
 
-<div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
 
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="contact-2" name="reason" type="radio" value="Others" data-aria-controls="conditional-contact-2" {{ checked('reason','Others') }}>
-              <label class="govuk-label govuk-radios__label" for="contact-2">
-                Others
-              </label>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="reason-5" name="reason" type="radio" value="Unfair dismissal"  data-aria-controls="conditional-reason-5"    {{ checked('reason','Unfair dismissal') }}>
+                    <label class="govuk-label govuk-radios__label" for="reason-5">
+                  Unfair dismissal
+                    </label>
+                    <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
 
-              <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
- If the reason is not list above, select others and specify the reason. There could be other reasons like flexible working.
+                          {% if  data['representing'] == "myself" %}
+                  If you think your dismissal was unfair you might be able to challenge it. You must have 2 years service to make this cliam.
+                  {% else %}
+                  If the claimant thinks that the dismissal was unfair , than the  claimant might be able to challenge it. Claimant must have 2 years service to make this cliam.
+                          {% endif %}
 
-              </div>
-            </div>
-            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-2">
-              <div class="govuk-form-group">
-                <label class="govuk-label" for="contact-by-phone">
-                  Specify the reason
-                </label>
-                  <input class="govuk-input" id="full-name" name="reason-others" type="text" spellcheck="false" autocomplete="reason-others" value="{{ data['reason-others'] }}">
-                <!-- <input class="govuk-input govuk-!-width-one-third" id="reason-others" name="reason-others" type="tel" autocomplete="tel">-->
+
+                  Read more about <a href="https://www.acas.org.uk/dismissals/unfair-dismissal" target="_blank" rel="noopener noreferrer"> unfair dismissal (opens in a new window or tab)</a>.
+                    </div>
+                  </div>
+
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="reason-6" name="reason" type="radio" value="Constructive dismissal" data-aria-controls="conditional-reason-6"  {{ checked('reason','Constructive dismissal') }}>
+                    <label class="govuk-label govuk-radios__label" for="reason-6">
+                  Constructive dismissal
+                    </label>
+                    <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
+                  Constructive dismissal occurs when an employee resigns as a result of the employer creating a hostile work environment. Since the resignation was not truly voluntary, it is, in effect, a termination.
+                  {% if  data['representing'] == "myself" %}
+
+                  You must have 2 years service to make this cliam.
+
+                  {% else %}
+                  Claimant must have 2 years service to make this cliam.
+                  {% endif %}
+                   Read more about <a href="https://www.acas.org.uk/dismissals/constructive-dismissal" target="_blank" rel="noopener noreferrer"> constructive dismissal (opens in a new window or tab)</a>.
+                    </div>
+                  </div>
+
+
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="reason-7" name="reason" type="radio" value="Equal pay" data-aria-controls="conditional-reason-7"    {{ checked('reason','Equal pay') }}>
+                    <label class="govuk-label govuk-radios__label" for="reason-7">
+                  Equal pay
+                    </label>
+                    <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
+
+                  {% if  data['representing'] == "myself" %}
+
+                  You could be owed money if could you feel your employer has failed to provide equal pay.
+
+                  {% else %}
+                  Claimant could be owed money if could they feel that their employer has failed to provide equal pay.
+                      {% endif %}
+                  Read more about <a href="https://www.acas.org.uk/equal-pay" target="_blank" rel="noopener noreferrer"> equal pay (opens in a new window or tab)</a>.
+
+                    </div>
+                  </div>
+
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="reason-8" name="reason" type="radio" value="Whistleblowing" data-aria-controls="conditional-reason-8"   {{ checked('reason','Whistleblowing') }}>
+                    <label class="govuk-label govuk-radios__label" for="reason-8">
+                  Whistleblowing
+                    </label>
+                    <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
+                    Whistleblowing needs to relate to a Public Interest Disclosure (i.e. they raised a concern that was in the public interest)
+                  Read more about <a href="https://www.acas.org.uk/archive/whistleblowing" target="_blank" rel="noopener noreferrer"> whistleblowing (opens in a new window or tab)</a>.
+                    </div>
+                  </div>
+
+
+
+
+
+
+
+
+
+
+
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="reason-9" name="reason" type="radio" value="Others" data-aria-controls="conditional-reason-9" {{ checked('reason','Others') }}>
+                    <label class="govuk-label govuk-radios__label" for="reason-9">
+                      Others
+                    </label>
+                  </div>
+                  <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-reason-9">
+                    <div class="govuk-form-group">
+                      <label class="govuk-label" for="contact-by-phone">
+                        Specify the reason
+                      </label>
+                        <input class="govuk-input" id="full-name" name="reason-others" type="text" spellcheck="false" autocomplete="reason-others" value="{{ data['reason-others'] }}">
+
+
+
+                    </div>
+
+                  </div>
                 </div>
 
+              </fieldset>
             </div>
-
-
-            <!-- <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="sign-in" name="reason" type="radio" value="Not sure" aria-describedby="Not sure" {{ checked('reason','Not sure') }}>
-              <label class="govuk-label govuk-radios__label" for="sign-in">
-              I'm not sure
-              </label>
-              <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
-              If you are not sure, please get legal advice to understand what you can make a claim against. You can give details when have a call with ACAS officer.
-              </div>
-            </div> -->
-
-
-        </fieldset>
-      </div>
-
 
 
             <button class="govuk-button btn-primary" data-module="govuk-button">
