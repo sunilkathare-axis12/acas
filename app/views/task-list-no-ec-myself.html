@@ -26,42 +26,42 @@
           <ul class="app-task-list__items">
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
-                <a href="a-email-no-ec-myself.html?change=false" aria-describedby="eligibility-status">
+                <a href="a-email-no-ec-myself.html?change=false" aria-describedby="your-email-status">
                   Your email address
                 </a>
               </span>
 
               {% if  data['claimant-email'] %}
-                <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+                <strong class="govuk-tag app-task-list__tag" id="your-email-status">Completed</strong>
               {% else %}
-              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
+              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-your-email-status">Not started</strong>
               {% endif %}
 
             </li>
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
-                <a href="a-full-name-no-ec-myself.html?change=false" aria-describedby="eligibility-status">
+                <a href="a-full-name-no-ec-myself.html?change=false" aria-describedby="your-name-status">
                   Your legal name
                 </a>
               </span>
 
               {% if  data['full-name'] %}
-                <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+                <strong class="govuk-tag app-task-list__tag" id="your-name-status">Completed</strong>
               {% else %}
-              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
+              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-your-name">Not started</strong>
               {% endif %}
 
             </li>
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
-                <a href="a-address-no-ec-myself.html?change=false" aria-describedby="read-declaration-status">
+                <a href="a-address-no-ec-myself.html?change=false" aria-describedby="your-address-status">
                 Your address name
                 </a>
               </span>
               {% if  data['address_line_1'] %}
-                <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+                <strong class="govuk-tag app-task-list__tag" id="your-address-status">Completed</strong>
               {% else %}
-              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
+              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-your-address-status">Not started</strong>
               {% endif %}
               <!-- <strong class="govuk-tag app-task-list__tag" id="read-declaration-status">Completed</strong> -->
             </li>
@@ -136,7 +136,7 @@
             </li> -->
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
-                <a href="a-employer-no-ec-myself?change=false" aria-describedby="contact-details-status">
+                <a href="a-employer-no-ec-myself?change=false" aria-describedby="employer-status">
                 Organisation or person
 
 
@@ -160,9 +160,9 @@
 
 
               {% if  data['employer-type'] %}
-                <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+                <strong class="govuk-tag app-task-list__tag" id="employer-status">Completed</strong>
               {% else %}
-              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
+              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-employer-status">Not started</strong>
               {% endif %}
 
           </li>
@@ -175,28 +175,28 @@
 
           <li class="app-task-list__item">
             <span class="app-task-list__task-name">
-              <a href="a-employer-no-ec-name-myself?change=false" aria-describedby="contact-details-status">
+              <a href="a-employer-no-ec-name-myself?change=false" aria-describedby="employer-name-status">
              Organisation legal name
               </a>
             </span>
             {% if  data['company-1-legal-name'] %}
-              <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+              <strong class="govuk-tag app-task-list__tag" id="employer-name-status">Completed</strong>
             {% else %}
-            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
+            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-employer-name-status">Not started</strong>
             {% endif %}
 
         </li>
 
         <li class="app-task-list__item">
           <span class="app-task-list__task-name">
-            <a href="a-employer-no-ec-address-myself?change=false" aria-describedby="contact-details-status">
+            <a href="a-employer-no-ec-address-myself?change=false" aria-describedby="employer-address-status">
             Organisation address
             </a>
           </span>
           {% if  data['company-1-ec-address'] %}
-            <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+            <strong class="govuk-tag app-task-list__tag" id="employer-address-status">Completed</strong>
           {% else %}
-          <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
+          <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-employer-address-status">Not started</strong>
           {% endif %}
 
         </li>
@@ -216,28 +216,28 @@
 
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
-                <a href="a-employer-no-ec-name-myself-person?change=false" aria-describedby="contact-details-status">
+                <a href="a-employer-no-ec-name-myself-person?change=false" aria-describedby="person-status">
                 Person's name
                 </a>
               </span>
               {% if  data['person-1-legal-name'] %}
-                <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+                <strong class="govuk-tag app-task-list__tag" id="person-status">Completed</strong>
               {% else %}
-              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
+              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-person-status">Not started</strong>
               {% endif %}
 
           </li>
 
           <li class="app-task-list__item">
             <span class="app-task-list__task-name">
-              <a href="a-employer-no-ec-address-myself-person?change=false" aria-describedby="contact-details-status">
+              <a href="a-employer-no-ec-address-myself-person?change=false" aria-describedby="person-details-status">
               Person's address
               </a>
             </span>
             {% if  data['company-1-ec-address'] %}
-              <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+              <strong class="govuk-tag app-task-list__tag" id="person-details-status">Completed</strong>
             {% else %}
-            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
+            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-person-details-status">Not started</strong>
             {% endif %}
 
         </li>
@@ -249,6 +249,7 @@
 
               {% endif %}
 
+<li>
 
           <script>
 
@@ -327,7 +328,7 @@
                </div>
                <input type="button" class="govuk-button govuk-button--secondary" data-module="govuk-button" value="Add another" value="Add more" onClick="addInput('dynamicInput');">
 
-
+</li>
                <!-- </span>
 
                </li> -->
