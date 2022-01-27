@@ -14,10 +14,10 @@
 
 
         {% if  data['representing'] == "myself" %}
-      Enter your legal name
+      Enter your full name
 
       {% else %}
-    Enter claimant name
+    Enter claimant's full name
           {% endif %}
         <!-- <span class="govuk-caption-xl">{{releaseVersion}}</span> -->
       </h1>
@@ -35,10 +35,10 @@
 
       <div id="more-detail-hint" class="govuk-hint">
         {% if  data['representing'] == "myself" %}
-    Enter legal name as it appears on your passport, birth certificate or driving licence
+    Enter your full name as it appears on your passport, birth certificate or driving licence
 
       {% else %}
-  Enter legal name as it appears on the claimant's passport, birth certificate or driving licence
+  Enter full name as it appears on the claimant's passport, birth certificate or driving licence
           {% endif %}
 
 
