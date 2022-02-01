@@ -25,16 +25,31 @@
 
 
       {% if data['change'] == "true" %}
-        <form action="check-your-answers#name">
+        <form action="check-your-answers#reason">
 
       {% else %}
 
-        <form action="task-list">
+        <form action="task-list#reason">
       {% endif %}
 
 
 
     <div class="govuk-form-group">
+      <label class="govuk-label govuk-label--s- " for="more-detail" style="">
+        {% if  data['representing'] == "myself" %}
+              Specify the clause in your contract was breached
+
+                        {% else %}
+    Specify the clause in the contract was breached
+
+                {% endif %}
+
+
+        </label>
+
+      <div id="with-hint-hint" class="govuk-hint">
+        If you have a contract, copy the clause from your contract. Keep it brief and do not include personal or financial information like National Insurance number or credit card details.
+      </div>
 
       <!-- <div id="more-detail-hint" class="govuk-hint">
   For example, you might tell us what happened, when it happened, who was involved and whether it was a series of events or a single event.

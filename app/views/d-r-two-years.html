@@ -18,7 +18,7 @@
 
       {% else %}
 
-        <form action="task-list">
+        <form action="task-list#reason">
       {% endif %}
 
 
@@ -42,13 +42,13 @@
           </div>
           <div class="govuk-radios govuk-radios--inline">
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="changed-name" name="years-worked-r" type="radio" value="Yes" {{ checked('years-worked-r','Yes') }}>
+              <input class="govuk-radios__input" id="years-worked-r" name="years-worked-r" type="radio" value="Yes" {{ checked('years-worked-r','Yes') }}>
               <label class="govuk-label govuk-radios__label" for="changed-name">
                 Yes
               </label>
             </div>
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="changed-name-2" name="years-worked-r" type="radio" value="No" {{ checked('years-worked-r','No') }}>
+              <input class="govuk-radios__input" id="years-worked-r-2" name="years-worked-r" type="radio" value="No" {{ checked('years-worked-r','No') }}>
               <label class="govuk-label govuk-radios__label" for="changed-name-2">
                 No
               </label>

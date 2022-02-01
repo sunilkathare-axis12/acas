@@ -12,14 +12,14 @@
     <div class="govuk-grid-column-full">
       <h1 class="page-header" style="font-size: 2em; font-family: Arial; font-weight:bold;">
 
-        {% if  data['representing'] == "myself" %}
+      <label for="why-resign"> {% if  data['representing'] == "myself" %}
   Why did you feel you had no option but to resign? (optional)
 
                         {% else %}
   Why did they feel they had no option but to resign? (optional)
 
                 {% endif %}
-
+</label>
       </h1>
 
 
@@ -40,7 +40,7 @@
   </div> -->
       <!-- <input class="govuk-input" id="full-name" name="w-how-much" type="text" spellcheck="false" autocomplete="name" value="{{ data['w-how-much'] }}"></div> -->
 <br>
-        <textarea class="govuk-textarea" id="more-detail" name="z-4-why" rows="3">{{ data['z-4-why'] }}</textarea>
+        <textarea class="govuk-textarea" id="why-resign" name="z-4-why" rows="3">{{ data['z-4-why'] }}</textarea>
 
 <br>
             <button class="govuk-button btn-primary" data-module="govuk-button">

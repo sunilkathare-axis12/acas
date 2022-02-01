@@ -11,13 +11,13 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
       <h1 class="page-header" style="font-size: 2em; font-family: Arial; font-weight:bold;">
-        {% if  data['representing'] == "myself" %}
+      <label for="reason-for-dismissal"> {% if  data['representing'] == "myself" %}
   What reason was given for your dismissal? (optional)
 
                         {% else %}
   What reason was given for their dismissal? (optional)
 
-                {% endif %}
+                {% endif %}</label>
 
 
       </h1>
@@ -40,7 +40,7 @@
   </div> -->
       <!-- <input class="govuk-input" id="full-name" name="w-how-much" type="text" spellcheck="false" autocomplete="name" value="{{ data['w-how-much'] }}"></div> -->
 <br>
-        <textarea class="govuk-textarea" id="more-detail" name="z-3-reason" rows="3">{{ data['z-3-reason'] }}</textarea>
+        <textarea class="govuk-textarea" id="reason-for-dismissal" name="z-3-reason" rows="3">{{ data['z-3-reason'] }}</textarea>
 
 <br>
             <button class="govuk-button btn-primary" data-module="govuk-button">

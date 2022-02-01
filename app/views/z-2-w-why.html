@@ -10,7 +10,7 @@
 <a href="task-list" class="govuk-back-link">Back</a>
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
-      <h1 class="page-header" style="font-size: 2em; font-family: Arial; font-weight:bold;">
+    <label for="z-2-w-why">  <h1 class="page-header" style="font-size: 2em; font-family: Arial; font-weight:bold;">
 
         {% if  data['representing'] == "myself" %}
 Why do you feel you have been wrongfully dismissed? (optional)
@@ -21,14 +21,14 @@ Why do you feel you have been wrongfully dismissed? (optional)
                 {% endif %}
 
       </h1>
-
+</label>
 
       {% if data['change'] == "true" %}
         <form action="check-your-answers#reason">
 
       {% else %}
 
-        <form action="task-list#reason">
+        <form action="task-list#reason#reason">
       {% endif %}
 
 
@@ -40,7 +40,7 @@ Why do you feel you have been wrongfully dismissed? (optional)
   </div> -->
       <!-- <input class="govuk-input" id="full-name" name="w-how-much" type="text" spellcheck="false" autocomplete="name" value="{{ data['w-how-much'] }}"></div> -->
 <br>
-        <textarea class="govuk-textarea" id="more-detail" name="z-2-w-why" rows="3">{{ data['z-2-w-why'] }}</textarea>
+        <textarea class="govuk-textarea" id="z-2-w-why" name="z-2-w-why" rows="3">{{ data['z-2-w-why'] }}</textarea>
 
 <br>
             <button class="govuk-button btn-primary" data-module="govuk-button">

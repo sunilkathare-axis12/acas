@@ -11,7 +11,7 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
       <h1 class="page-header" style="font-size: 2em; font-family: Arial; font-weight:bold;">
-
+<label for="was-unfair">
                       {% if  data['representing'] == "myself" %}
               Why do you feel this was unfair? (optional)
 
@@ -19,7 +19,7 @@
                 Why do they feel this was unfair? (optional)
 
                               {% endif %}
-
+</label>
       </h1>
 
 
@@ -40,7 +40,7 @@
   </div> -->
       <!-- <input class="govuk-input" id="full-name" name="w-how-much" type="text" spellcheck="false" autocomplete="name" value="{{ data['w-how-much'] }}"></div> -->
 <br>
-        <textarea class="govuk-textarea" id="more-detail" name="z-3-feel" rows="3">{{ data['z-3-feel'] }}</textarea>
+        <textarea class="govuk-textarea" id="was-unfair" name="z-3-feel" rows="3">{{ data['z-3-feel'] }}</textarea>
 
 <br>
             <button class="govuk-button btn-primary" data-module="govuk-button">
