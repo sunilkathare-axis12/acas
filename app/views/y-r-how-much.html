@@ -33,12 +33,21 @@
 
 
     <div class="govuk-form-group">
-      <!-- <label class="govuk-label" for="full-name">
-        Full name
+    <label class="govuk-label" for="cost">
+      {% if  data['representing'] == "myself" %}
+                    Enter the amount you think you owed
+
+                      {% else %}
+                            Enter the amount you think  the claimant's owed ? (optional)
+
+              {% endif %}
+
       </label>
-      <div id="more-detail-hint" class="govuk-hint">
-  Enter full legal name as it appears on your passport, birth certificate or driving licence.
-  </div> -->
+      <div id="cost-hint" class="govuk-hint">
+Useful link to <a href="https://www.gov.uk/calculate-your-redundancy-pay" target="_blank"> calculate your statutory redundancy pay </a>
+  </div>
+
+   <!-- -->
       <!-- <input class="govuk-input" id="full-name" name="w-how-much" type="text" spellcheck="false" autocomplete="name" value="{{ data['w-how-much'] }}"></div> -->
 <br>
       <div class="govuk-input__wrapper">

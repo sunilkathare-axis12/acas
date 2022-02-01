@@ -9,7 +9,7 @@
 
 <a href="task-list" class="govuk-back-link">Back</a>
   <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-grid-column-full">
       <h1 class="page-header" style="font-size: 2em; font-family: Arial; font-weight:bold;">
       Enter your email address
         <!-- <span class="govuk-caption-xl">{{releaseVersion}}</span> -->
@@ -27,14 +27,18 @@
 
 
     <div class="govuk-form-group">
-      <label class="govuk-label" for="full-name">
+      <label class="govuk-label" for="email">
         Email address
       </label>
-      <div id="more-detail-hint" class="govuk-hint">
-  <!-- You’ll be able to talk to us about your dispute quicker if you provide your phone number. This could be your personal mobile number. -->
+
+
+  <div id="email-hint" class="govuk-hint">
+  <p>    This will only be used to send you a link return to the form or a certifciate. </p>
+
   </div>
+
     <input class="govuk-input" id="email" name="claimant-email" type="email" spellcheck="false" aria-describedby="email-hint" autocomplete="email" value="{{ data['claimant-email'] }}">
-      </div>
+  </div>
 
 
 
