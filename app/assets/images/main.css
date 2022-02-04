@@ -2031,7 +2031,7 @@ h1, .block-in-this-section-block, div.field--name-field-promoted-links, #block-h
   display: none;
 }
 
-.btn-primary, .btn-secondary, .webform-button--preview, .webform-button--previous:not(.back--link),
+.btn-primary-, .btn-secondary, .webform-button--preview, .webform-button--previous:not(.back--link),
 .webform-button--next:not(.back--link), .webform-wizard-pages-link, form#user-login-form #edit-submit {
   cursor: pointer;
   background: #045e65;
@@ -2044,8 +2044,8 @@ h1, .block-in-this-section-block, div.field--name-field-promoted-links, #block-h
   text-align: center;
   width: fit-content;
 }
-.btn-primary:hover, .btn-secondary:hover, .webform-button--preview:hover, .webform-button--previous:hover:not(.back--link),
-.webform-button--next:hover:not(.back--link), .webform-wizard-pages-link:hover, form#user-login-form #edit-submit:hover, .btn-primary:focus, .btn-secondary:focus, .webform-button--preview:focus, .webform-button--previous:focus:not(.back--link),
+.btn-primary-:hover, .btn-secondary:hover, .webform-button--preview:hover, .webform-button--previous:hover:not(.back--link),
+.webform-button--next:hover:not(.back--link), .webform-wizard-pages-link:hover, form#user-login-form #edit-submit:hover, .btn-primary-:focus, .btn-secondary:focus, .webform-button--preview:focus, .webform-button--previous:focus:not(.back--link),
 .webform-button--next:focus:not(.back--link), .webform-wizard-pages-link:focus, form#user-login-form #edit-submit:focus {
   background: #fff;
   border: 1px solid #045e65;
@@ -3629,7 +3629,7 @@ noscript {
   display: none;
 }
 
-.btn-primary, .btn-secondary, .webform-button--preview, .webform-button--previous:not(.back--link),
+.btn-primary-, .btn-secondary, .webform-button--preview, .webform-button--previous:not(.back--link),
 .webform-button--next:not(.back--link), .webform-wizard-pages-link, form#user-login-form #edit-submit {
   cursor: pointer;
   background: #045e65;
@@ -3642,8 +3642,8 @@ noscript {
   text-align: center;
   width: fit-content;
 }
-.btn-primary:hover, .btn-secondary:hover, .webform-button--preview:hover, .webform-button--previous:hover:not(.back--link),
-.webform-button--next:hover:not(.back--link), .webform-wizard-pages-link:hover, form#user-login-form #edit-submit:hover, .btn-primary:focus, .btn-secondary:focus, .webform-button--preview:focus, .webform-button--previous:focus:not(.back--link),
+.btn-primary-:hover, .btn-secondary:hover, .webform-button--preview:hover, .webform-button--previous:hover:not(.back--link),
+.webform-button--next:hover:not(.back--link), .webform-wizard-pages-link:hover, form#user-login-form #edit-submit:hover, .btn-primary-:focus, .btn-secondary:focus, .webform-button--preview:focus, .webform-button--previous:focus:not(.back--link),
 .webform-button--next:focus:not(.back--link), .webform-wizard-pages-link:focus, form#user-login-form #edit-submit:focus {
   background: #fff;
   border: 1px solid #045e65;
@@ -5535,15 +5535,15 @@ nav.tabs {
 .prescribed .guidance-text, .prescribed .text--guidance {
   border-color: #4d4d4d;
 }
-.prescribed .btn-primary, .prescribed .btn-secondary, .prescribed .webform-button--preview, .prescribed .webform-button--previous:not(.back--link),
+.prescribed .btn-primary-, .prescribed .btn-secondary, .prescribed .webform-button--preview, .prescribed .webform-button--previous:not(.back--link),
 .prescribed .webform-button--next:not(.back--link), .prescribed .webform-wizard-pages-link, .prescribed form#user-login-form #edit-submit, form#user-login-form .prescribed #edit-submit {
   cursor: pointer;
   background: #910048;
   border: 1px solid #910048;
   color: #fff;
 }
-.prescribed .btn-primary:hover, .prescribed .btn-secondary:hover, .prescribed .webform-button--preview:hover, .prescribed .webform-button--previous:hover:not(.back--link),
-.prescribed .webform-button--next:hover:not(.back--link), .prescribed .webform-wizard-pages-link:hover, .prescribed form#user-login-form #edit-submit:hover, form#user-login-form .prescribed #edit-submit:hover, .prescribed .btn-primary:focus, .prescribed .btn-secondary:focus, .prescribed .webform-button--preview:focus, .prescribed .webform-button--previous:focus:not(.back--link),
+.prescribed .btn-primary-:hover, .prescribed .btn-secondary:hover, .prescribed .webform-button--preview:hover, .prescribed .webform-button--previous:hover:not(.back--link),
+.prescribed .webform-button--next:hover:not(.back--link), .prescribed .webform-wizard-pages-link:hover, .prescribed form#user-login-form #edit-submit:hover, form#user-login-form .prescribed #edit-submit:hover, .prescribed .btn-primary-:focus, .prescribed .btn-secondary:focus, .prescribed .webform-button--preview:focus, .prescribed .webform-button--previous:focus:not(.back--link),
 .prescribed .webform-button--next:focus:not(.back--link), .prescribed .webform-wizard-pages-link:focus, .prescribed form#user-login-form #edit-submit:focus, form#user-login-form .prescribed #edit-submit:focus {
   background: #fff;
   border: 1px solid #910048;
